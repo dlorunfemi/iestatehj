@@ -33,20 +33,8 @@
                         </a>
                     </li>
                 @endcan
-                @can('tenant_access')
-                    <li class="nav-item">
-                        <a href="{{ route("admin.tenants.index") }}" class="nav-link {{ request()->is('admin/tenants') || request()->is('admin/tenants/*') ? 'active' : '' }}">
-                            <i class="fas fa-user-tag">
-
-                            </i>
-                            <p>
-                                <span>{{ trans('global.tenant.title') }}</span>
-                            </p>
-                        </a>
-                    </li>
-                @endcan
                 @can('product_management_access')
-                    <li class="nav-item has-treeview {{ request()->is('admin/product-categories*') ? 'menu-open' : '' }} {{ request()->is('admin/product-tags*') ? 'menu-open' : '' }} {{ request()->is('admin/products*') ? 'menu-open' : '' }}">
+                    <li class="nav-item has-treeview {{ request()->is('admin/product-categories*') ? 'menu-open' : '' }} {{ request()->is('admin/product-tags*') ? 'menu-open' : '' }} {{ request()->is('admin/products*') ? 'menu-open' : '' }} {{ request()->is('admin/vacancies*') ? 'menu-open' : '' }}">
                         <a class="nav-link nav-dropdown-toggle">
                             <i class="fas fa-building">
 
@@ -93,7 +81,31 @@
                                     </a>
                                 </li>
                             @endcan
+                            @can('vacancy_access')
+                                <li class="nav-item">
+                                    <a href="{{ route("admin.vacancies.index") }}" class="nav-link {{ request()->is('admin/vacancies') || request()->is('admin/vacancies/*') ? 'active' : '' }}">
+                                        <i class="far fa-circle">
+
+                                        </i>
+                                        <p>
+                                            <span>{{ trans('global.vacancy.title') }}</span>
+                                        </p>
+                                    </a>
+                                </li>
+                            @endcan
                         </ul>
+                    </li>
+                @endcan
+                @can('tenant_access')
+                    <li class="nav-item">
+                        <a href="{{ route("admin.tenants.index") }}" class="nav-link {{ request()->is('admin/tenants') || request()->is('admin/tenants/*') ? 'active' : '' }}">
+                            <i class="fas fa-user-tag">
+
+                            </i>
+                            <p>
+                                <span>{{ trans('global.tenant.title') }}</span>
+                            </p>
+                        </a>
                     </li>
                 @endcan
                 @can('payment_access')
@@ -104,6 +116,30 @@
                             </i>
                             <p>
                                 <span>{{ trans('global.payment.title') }}</span>
+                            </p>
+                        </a>
+                    </li>
+                @endcan
+                @can('receipt_access')
+                    <li class="nav-item">
+                        <a href="{{ route("admin.receipts.index") }}" class="nav-link {{ request()->is('admin/receipts') || request()->is('admin/receipts/*') ? 'active' : '' }}">
+                            <i class="fas fa-receipt">
+
+                            </i>
+                            <p>
+                                <span>{{ trans('global.receipt.title') }}</span>
+                            </p>
+                        </a>
+                    </li>
+                @endcan
+                @can('requistion_access')
+                    <li class="nav-item">
+                        <a href="{{ route("admin.requistions.index") }}" class="nav-link {{ request()->is('admin/requistions') || request()->is('admin/requistions/*') ? 'active' : '' }}">
+                            <i class="fas fa-donate">
+
+                            </i>
+                            <p>
+                                <span>{{ trans('global.requistion.title') }}</span>
                             </p>
                         </a>
                     </li>
@@ -181,6 +217,42 @@
                                 </li>
                             @endcan
                         </ul>
+                    </li>
+                @endcan
+                @can('message_access')
+                    <li class="nav-item">
+                        <a href="{{ route("admin.messages.index") }}" class="nav-link {{ request()->is('admin/messages') || request()->is('admin/messages/*') ? 'active' : '' }}">
+                            <i class="fas fa-comments">
+
+                            </i>
+                            <p>
+                                <span>{{ trans('global.message.title') }}</span>
+                            </p>
+                        </a>
+                    </li>
+                @endcan
+                @can('email_access')
+                    <li class="nav-item">
+                        <a href="{{ route("admin.emails.index") }}" class="nav-link {{ request()->is('admin/emails') || request()->is('admin/emails/*') ? 'active' : '' }}">
+                            <i class="fas fa-envelope">
+
+                            </i>
+                            <p>
+                                <span>{{ trans('global.email.title') }}</span>
+                            </p>
+                        </a>
+                    </li>
+                @endcan
+                @can('report_access')
+                    <li class="nav-item">
+                        <a href="{{ route("admin.reports.index") }}" class="nav-link {{ request()->is('admin/reports') || request()->is('admin/reports/*') ? 'active' : '' }}">
+                            <i class="fas fa-file-alt">
+
+                            </i>
+                            <p>
+                                <span>{{ trans('global.report.title') }}</span>
+                            </p>
+                        </a>
                     </li>
                 @endcan
                 @can('user_management_access')
