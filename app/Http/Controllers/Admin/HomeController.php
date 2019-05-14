@@ -132,32 +132,6 @@ class HomeController
             ->{$settings3['aggregate_function'] ?? 'count'}($settings3['aggregate_field'] ?? '*');
 
         $settings4 = [
-            'chart_title'           => 'Fund Requisition',
-            'chart_type'            => 'latest_entries',
-            'report_type'           => 'group_by_date',
-            'model'                 => 'App\\Requistion',
-            'group_by_field'        => 'acc_conf_date',
-            'group_by_period'       => 'day',
-            'aggregate_function'    => 'count',
-            'filter_field'          => 'created_at',
-            'group_by_field_format' => 'Y-m-d',
-            'column_class'          => 'col-md-6',
-            'entries_number'        => '5',
-            'fields'                => [
-                '0' => 'property',
-                '1' => 'amount_withdraw',
-                '2' => 'initiating_staff',
-                '3' => 'status',
-                '4' => 'accountant',
-                '5' => 'gm',
-            ],
-        ];
-
-        $settings4['data'] = $settings4['model']::latest()
-            ->take($settings4['entries_number'])
-            ->get();
-
-        $settings5 = [
             'chart_title'           => 'Vacancy',
             'chart_type'            => 'latest_entries',
             'report_type'           => 'group_by_date',
@@ -174,6 +148,29 @@ class HomeController
                 '1' => 'is_vacant',
                 '2' => 'property_tag',
                 '3' => 'rent',
+            ],
+        ];
+
+        $settings4['data'] = $settings4['model']::latest()
+            ->take($settings4['entries_number'])
+            ->get();
+
+        $settings5 = [
+            'chart_title'           => 'Fund Requisition',
+            'chart_type'            => 'latest_entries',
+            'report_type'           => 'group_by_date',
+            'model'                 => 'App\\Requistion',
+            'group_by_field'        => 'acc_conf_date',
+            'group_by_period'       => 'day',
+            'aggregate_function'    => 'count',
+            'filter_field'          => 'created_at',
+            'group_by_field_format' => 'Y-m-d',
+            'column_class'          => 'col-md-6',
+            'entries_number'        => '5',
+            'fields'                => [
+                '0' => 'property',
+                '1' => 'amount_withdraw',
+                '2' => 'status',
             ],
         ];
 
