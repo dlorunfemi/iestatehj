@@ -66,4 +66,12 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::resource('payments', 'PaymentController');
 
     Route::post('payments/media', 'PaymentController@storeMedia')->name('payments.storeMedia');
+
+    Route::delete('vacancies/destroy', 'VacancyController@massDestroy')->name('vacancies.massDestroy');
+
+    Route::resource('vacancies', 'VacancyController');
+
+    Route::delete('requistions/destroy', 'RequistionController@massDestroy')->name('requistions.massDestroy');
+
+    Route::resource('requistions', 'RequistionController');
 });
