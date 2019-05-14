@@ -28,4 +28,8 @@ Route::group(['prefix' => 'v1', 'as' => 'admin.', 'namespace' => 'Api\V1\Admin']
     Route::apiResource('tenants', 'TenantApiController');
 
     Route::apiResource('payments', 'PaymentApiController');
+
+    Route::apiResource('vacancies', 'VacancyApiController');
+
+    Route::apiResource('requistions', 'RequistionApiController');
 });

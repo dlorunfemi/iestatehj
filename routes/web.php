@@ -66,4 +66,28 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::resource('payments', 'PaymentController');
 
     Route::post('payments/media', 'PaymentController@storeMedia')->name('payments.storeMedia');
+
+    Route::delete('vacancies/destroy', 'VacancyController@massDestroy')->name('vacancies.massDestroy');
+
+    Route::resource('vacancies', 'VacancyController');
+
+    Route::delete('requistions/destroy', 'RequistionController@massDestroy')->name('requistions.massDestroy');
+
+    Route::resource('requistions', 'RequistionController');
+
+    Route::delete('reports/destroy', 'ReportController@massDestroy')->name('reports.massDestroy');
+
+    Route::resource('reports', 'ReportController', ['except' => ['create', 'store', 'edit', 'update', 'show', 'destroy']]);
+
+    Route::delete('emails/destroy', 'EmailController@massDestroy')->name('emails.massDestroy');
+
+    Route::resource('emails', 'EmailController', ['except' => ['create', 'store', 'edit', 'update', 'show', 'destroy']]);
+
+    Route::delete('messages/destroy', 'MessageController@massDestroy')->name('messages.massDestroy');
+
+    Route::resource('messages', 'MessageController', ['except' => ['create', 'store', 'edit', 'update', 'show', 'destroy']]);
+
+    Route::delete('receipts/destroy', 'ReceiptController@massDestroy')->name('receipts.massDestroy');
+
+    Route::resource('receipts', 'ReceiptController', ['except' => ['create', 'store', 'edit', 'update', 'show', 'destroy']]);
 });
