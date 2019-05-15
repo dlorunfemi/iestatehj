@@ -10,6 +10,7 @@ use App\Product;
 use App\ProductTag;
 use App\Tenant;
 use App\User;
+use Illuminate\Support\Facades\Auth;
 
 class TenantController extends Controller
 {
@@ -30,9 +31,9 @@ class TenantController extends Controller
 
         $apartments = ProductTag::all()->pluck('name', 'id');
 
-        $created_bies = User::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
+        $auth = Auth::user();
 
-        return view('admin.tenants.create', compact('properties', 'apartments', 'created_bies'));
+        return view('admin.tenants.create', compact('properties', 'apartments', 'auth'));
     }
 
     public function store(StoreTenantRequest $request)

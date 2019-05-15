@@ -10,6 +10,7 @@ use App\Product;
 use App\ProductTag;
 use App\User;
 use App\Vacancy;
+use Illuminate\Support\Facades\Auth;
 
 class VacancyController extends Controller
 {
@@ -30,9 +31,9 @@ class VacancyController extends Controller
 
         $property_tags = ProductTag::all()->pluck('name', 'id');
 
-        $created_bies = User::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
+        $auth = Auth::user();
 
-        return view('admin.vacancies.create', compact('properties', 'property_tags', 'created_bies'));
+        return view('admin.vacancies.create', compact('properties', 'property_tags', 'auth'));
     }
 
     public function store(StoreVacancyRequest $request)

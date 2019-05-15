@@ -13,6 +13,8 @@ use App\Product;
 use App\ProductTag;
 use App\Tenant;
 use App\User;
+use Illuminate\Support\Facades\Auth;
+
 
 class PaymentController extends Controller
 {
@@ -43,9 +45,9 @@ class PaymentController extends Controller
 
         $is_confirmed_gm_names = User::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
 
-        $created_bies = User::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
+        $auth = Auth::user();
 
-        return view('admin.payments.create', compact('properties', 'landlords', 'tenants', 'apartmernts', 'confirm_staffs', 'is_confirmed_gm_names', 'created_bies'));
+        return view('admin.payments.create', compact('properties', 'landlords', 'tenants', 'apartmernts', 'confirm_staffs', 'is_confirmed_gm_names', 'auth'));
     }
 
     public function store(StorePaymentRequest $request)

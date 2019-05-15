@@ -130,19 +130,7 @@
                     </p>
                 @endif
             </div>
-            <div class="form-group {{ $errors->has('created_by_id') ? 'has-error' : '' }}">
-                <label for="created_by">{{ trans('global.landlord.fields.created_by') }}*</label>
-                <select name="created_by_id" id="created_by" class="form-control select2">
-                    @foreach($created_bies as $id => $created_by)
-                        <option value="{{ $id }}" {{ (isset($landlord) && $landlord->created_by ? $landlord->created_by->id : old('created_by_id')) == $id ? 'selected' : '' }}>{{ $created_by }}</option>
-                    @endforeach
-                </select>
-                @if($errors->has('created_by_id'))
-                    <p class="help-block">
-                        {{ $errors->first('created_by_id') }}
-                    </p>
-                @endif
-            </div>
+            <input type="hidden" name="created_by_id" id="created_by" value="{{ $auth->id }}">
             <div>
                 <input class="btn btn-danger" type="submit" value="{{ trans('global.save') }}">
             </div>

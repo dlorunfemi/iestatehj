@@ -1,4 +1,4 @@
-<aside class="main-sidebar sidebar-dark-primary elevation-4" style="min-height: 917px;">
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
         <span class="brand-text font-weight-light">{{ trans('global.site_title') }}</span>
@@ -13,10 +13,10 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-item">
                     <a href="{{ route("admin.home") }}" class="nav-link">
-                        <p>
-                            <i class="fas fa-tachometer-alt">
+                      <i class="fas fa-tachometer-alt">
 
-                            </i>
+                      </i>
+                        <p>
                             <span>{{ trans('global.dashboard') }}</span>
                         </p>
                     </a>
@@ -147,7 +147,7 @@
                 @can('expense_management_access')
                     <li class="nav-item has-treeview {{ request()->is('admin/expense-categories*') ? 'menu-open' : '' }} {{ request()->is('admin/income-categories*') ? 'menu-open' : '' }} {{ request()->is('admin/expenses*') ? 'menu-open' : '' }} {{ request()->is('admin/incomes*') ? 'menu-open' : '' }} {{ request()->is('admin/expense-reports*') ? 'menu-open' : '' }}">
                         <a class="nav-link nav-dropdown-toggle">
-                            <i class="fas fa-money">
+                            <i class="fas fa-shopping-cart">
 
                             </i>
                             <p>

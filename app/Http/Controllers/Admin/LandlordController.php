@@ -7,7 +7,9 @@ use App\Http\Requests\MassDestroyLandlordRequest;
 use App\Http\Requests\StoreLandlordRequest;
 use App\Http\Requests\UpdateLandlordRequest;
 use App\Landlord;
+use App\Role;
 use App\User;
+use Illuminate\Support\Facades\Auth;
 
 class LandlordController extends Controller
 {
@@ -24,11 +26,16 @@ class LandlordController extends Controller
     {
         abort_unless(\Gate::allows('landlord_create'), 403);
 
-        $officers = User::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
+        $officers = User::whereHas('roles', function($q){
+                      $q->where('title', 'officer');
+                  })->get()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
+        // $officers = User::all(Role::whereTitle('Officer'))->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
 
-        $created_bies = User::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
+        // $created_bies = User::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
 
-        return view('admin.landlords.create', compact('officers', 'created_bies'));
+        $auth = Auth::user();
+
+        return view('admin.landlords.create', compact('officers', 'created_bies', 'auth'));
     }
 
     public function store(StoreLandlordRequest $request)

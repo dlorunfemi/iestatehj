@@ -10,6 +10,7 @@ use App\Landlord;
 use App\Product;
 use App\ProductCategory;
 use App\User;
+use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
@@ -30,11 +31,13 @@ class ProductController extends Controller
 
         $categories = ProductCategory::all()->pluck('name', 'id');
 
-        $officers = User::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
+        $officers = User::whereHas('roles', function($q){
+                      $q->where('title', 'officer');
+                  })->get()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
 
-        $created_bies = User::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
+        $auth = Auth::user();
 
-        return view('admin.products.create', compact('landlords', 'categories', 'officers', 'created_bies'));
+        return view('admin.products.create', compact('landlords', 'categories', 'officers', 'auth'));
     }
 
     public function store(StoreProductRequest $request)
