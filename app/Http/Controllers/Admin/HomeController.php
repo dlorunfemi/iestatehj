@@ -94,7 +94,7 @@ class HomeController
             'chart_title'           => 'Property',
             'chart_type'            => 'number_block',
             'report_type'           => 'group_by_date',
-            'model'                 => 'App\\Product',
+            'model'                 => 'App\\Property',
             'group_by_field'        => 'created_at',
             'group_by_period'       => 'day',
             'aggregate_function'    => 'count',

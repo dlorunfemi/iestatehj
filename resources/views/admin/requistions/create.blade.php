@@ -9,23 +9,31 @@
     <div class="card-body">
         <form action="{{ route("admin.requistions.store") }}" method="POST" enctype="multipart/form-data">
             @csrf
-            <div class="form-group {{ $errors->has('properties') ? 'has-error' : '' }}">
-                <label for="property">{{ trans('global.requistion.fields.property') }}*
-                    <span class="btn btn-info btn-xs select-all">Select all</span>
-                    <span class="btn btn-info btn-xs deselect-all">Deselect all</span></label>
-                <select name="properties[]" id="properties" class="form-control select2" multiple="multiple">
+            <div class="form-group {{ $errors->has('property_id') ? 'has-error' : '' }}">
+                <label for="property">{{ trans('global.requistion.fields.property') }}*</label>
+                <select name="property_id" id="property" class="form-control select2">
                     @foreach($properties as $id => $property)
-                        <option value="{{ $id }}" {{ (in_array($id, old('properties', [])) || isset($requistion) && $requistion->properties->contains($id)) ? 'selected' : '' }}>{{ $property }}</option>
+                        <option value="{{ $id }}" {{ (isset($requistion) && $requistion->property ? $requistion->property->id : old('property_id')) == $id ? 'selected' : '' }}>{{ $property }}</option>
                     @endforeach
                 </select>
-                @if($errors->has('properties'))
+                @if($errors->has('property_id'))
                     <p class="help-block">
-                        {{ $errors->first('properties') }}
+                        {{ $errors->first('property_id') }}
                     </p>
                 @endif
-                <p class="helper-block">
-                    {{ trans('global.requistion.fields.property_helper') }}
-                </p>
+            </div>
+            <div class="form-group {{ $errors->has('landlord_id') ? 'has-error' : '' }}">
+                <label for="landlord">{{ trans('global.requistion.fields.landlord') }}*</label>
+                <select name="landlord_id" id="landlord" class="form-control select2">
+                    @foreach($landlords as $id => $landlord)
+                        <option value="{{ $id }}" {{ (isset($requistion) && $requistion->landlord ? $requistion->landlord->id : old('landlord_id')) == $id ? 'selected' : '' }}>{{ $landlord }}</option>
+                    @endforeach
+                </select>
+                @if($errors->has('landlord_id'))
+                    <p class="help-block">
+                        {{ $errors->first('landlord_id') }}
+                    </p>
+                @endif
             </div>
             <div class="form-group {{ $errors->has('amount_withdraw') ? 'has-error' : '' }}">
                 <label for="amount_withdraw">{{ trans('global.requistion.fields.amount_withdraw') }}*</label>

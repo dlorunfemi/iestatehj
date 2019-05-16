@@ -27,26 +27,6 @@
                 </tr>
                 <tr>
                     <th>
-                        Property
-                    </th>
-                    <td>
-                        @foreach($tenant->properties as $id => $property)
-                            <span class="label label-info label-many">{{ $property->name }}</span>
-                        @endforeach
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        Apartment
-                    </th>
-                    <td>
-                        @foreach($tenant->apartments as $id => $apartment)
-                            <span class="label label-info label-many">{{ $apartment->name }}</span>
-                        @endforeach
-                    </td>
-                </tr>
-                <tr>
-                    <th>
                         {{ trans('global.tenant.fields.phone') }}
                     </th>
                     <td>
@@ -67,6 +47,22 @@
                     </th>
                     <td>
                         {!! $tenant->work_place !!}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {{ trans('global.tenant.fields.property') }}
+                    </th>
+                    <td>
+                        {{ $tenant->property->name ?? '' }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {{ trans('global.tenant.fields.apartment') }}
+                    </th>
+                    <td>
+                        {{ $tenant->apartment->name ?? '' }}
                     </td>
                 </tr>
                 <tr>

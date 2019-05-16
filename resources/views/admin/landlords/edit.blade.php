@@ -144,6 +144,54 @@
                     </p>
                 @endif
             </div>
+            <div class="form-group {{ $errors->has('bank_name') ? 'has-error' : '' }}">
+                <label for="bank_name">{{ trans('global.landlord.fields.bank_name') }}</label>
+                <input type="text" id="bank_name" name="bank_name" class="form-control" value="{{ old('bank_name', isset($landlord) ? $landlord->bank_name : '') }}">
+                @if($errors->has('bank_name'))
+                    <p class="help-block">
+                        {{ $errors->first('bank_name') }}
+                    </p>
+                @endif
+                <p class="helper-block">
+                    {{ trans('global.landlord.fields.bank_name_helper') }}
+                </p>
+            </div>
+            <div class="form-group {{ $errors->has('account_name') ? 'has-error' : '' }}">
+                <label for="account_name">{{ trans('global.landlord.fields.account_name') }}</label>
+                <input type="text" id="account_name" name="account_name" class="form-control" value="{{ old('account_name', isset($landlord) ? $landlord->account_name : '') }}">
+                @if($errors->has('account_name'))
+                    <p class="help-block">
+                        {{ $errors->first('account_name') }}
+                    </p>
+                @endif
+                <p class="helper-block">
+                    {{ trans('global.landlord.fields.account_name_helper') }}
+                </p>
+            </div>
+            <div class="form-group {{ $errors->has('account_no') ? 'has-error' : '' }}">
+                <label for="account_no">{{ trans('global.landlord.fields.account_no') }}</label>
+                <input type="text" id="account_no" name="account_no" class="form-control" value="{{ old('account_no', isset($landlord) ? $landlord->account_no : '') }}">
+                @if($errors->has('account_no'))
+                    <p class="help-block">
+                        {{ $errors->first('account_no') }}
+                    </p>
+                @endif
+                <p class="helper-block">
+                    {{ trans('global.landlord.fields.account_no_helper') }}
+                </p>
+            </div>
+            <div class="form-group {{ $errors->has('branch') ? 'has-error' : '' }}">
+                <label for="branch">{{ trans('global.landlord.fields.branch') }}</label>
+                <input type="text" id="branch" name="branch" class="form-control" value="{{ old('branch', isset($landlord) ? $landlord->branch : '') }}">
+                @if($errors->has('branch'))
+                    <p class="help-block">
+                        {{ $errors->first('branch') }}
+                    </p>
+                @endif
+                <p class="helper-block">
+                    {{ trans('global.landlord.fields.branch_helper') }}
+                </p>
+            </div>
             <div>
                 <input class="btn btn-danger" type="submit" value="{{ trans('global.save') }}">
             </div>

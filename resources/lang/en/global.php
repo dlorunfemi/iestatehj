@@ -195,9 +195,9 @@ return [
     'skype'                                => 'Skype',
     'photo'                                => 'Photo (max 8mb)',
     'category_name'                        => 'Category name',
-    'product_management'                   => 'Product management',
-    'products'                             => 'Products',
-    'product_name'                         => 'Product name',
+    'property_management'                   => 'Property management',
+    'properties'                             => 'Properties',
+    'property_name'                         => 'Property name',
     'price'                                => 'Price',
     'tags'                                 => 'Tags',
     'tag'                                  => 'Tag',
@@ -365,12 +365,12 @@ return [
             'deleted_at_helper' => '',
         ],
     ],
-    'productManagement'                    => [
+    'propertyManagement'                    => [
         'title'          => 'Property Management',
         'title_singular' => 'Property Management',
         'fields'         => [],
     ],
-    'productCategory'                      => [
+    'propertyCategory'                      => [
         'title'          => 'Property Type',
         'title_singular' => 'Property Type',
         'fields'         => [
@@ -388,7 +388,7 @@ return [
             'deleted_at_helper'  => '',
         ],
     ],
-    'productTag'                           => [
+    'propertyTag'                           => [
         'title'          => 'Apartment Type',
         'title_singular' => 'Apartment Type',
         'fields'         => [
@@ -404,13 +404,13 @@ return [
             'deleted_at_helper' => '',
         ],
     ],
-    'product'                              => [
-        'title'          => 'Products',
-        'title_singular' => 'Product',
+    'property'                              => [
+        'title'          => 'Properties',
+        'title_singular' => 'Property',
         'fields'         => [
             'id'                  => 'ID',
             'id_helper'           => '',
-            'name'                => 'Name',
+            'name'                => 'Property Address',
             'name_helper'         => '',
             'category'            => 'Property Type',
             'category_helper'     => '',
@@ -552,6 +552,14 @@ return [
             'updated_at_helper'        => '',
             'deleted_at'               => 'Deleted At',
             'deleted_at_helper'        => '',
+            'bank_name'                => 'Bank Name',
+            'bank_name_helper'         => '',
+            'account_name'             => 'Account Name',
+            'account_name_helper'      => '',
+            'account_no'               => 'Account No',
+            'account_no_helper'        => '',
+            'branch'                   => 'Branch',
+            'branch_helper'            => '',
         ],
     ],
     'tenant'                               => [
@@ -768,6 +776,16 @@ return [
     'account'                              => [
         'title'          => 'Account',
         'title_singular' => 'Account',
+        'fields'         => [],
+    ],
+    'landlordManagement'                   => [
+        'title'          => 'Landlord Management',
+        'title_singular' => 'Landlord Management',
+        'fields'         => [],
+    ],
+    'landlordBank'                         => [
+        'title'          => 'Landlord Bank',
+        'title_singular' => 'Landlord Bank',
         'fields'         => [],
     ],
 ];

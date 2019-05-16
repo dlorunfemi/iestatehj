@@ -22,61 +22,88 @@
                     </a>
                 </li>
                 @can('landlord_access')
-                    <li class="nav-item">
-                        <a href="{{ route("admin.landlords.index") }}" class="nav-link {{ request()->is('admin/landlords') || request()->is('admin/landlords/*') ? 'active' : '' }}">
-                            <i class="fas fa-user-shield">
+                <li class="nav-item has-treeview {{ request()->is('admin/landlords*') ? 'menu-open' : '' }} {{ request()->is('admin/landlord-banks*') ? 'menu-open' : '' }}">
+                    <a class="nav-link nav-dropdown-toggle">
+                        <i class="fas fa-user-shield">
 
-                            </i>
-                            <p>
-                                <span>{{ trans('global.landlord.title') }}</span>
-                            </p>
-                        </a>
-                    </li>
+                        </i>
+                        <p>
+                            <span>{{ trans('global.landlordManagement.title') }}</span>
+                            <i class="right fa fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        @can('landlord_access')
+                            <li class="nav-item">
+                                <a href="{{ route("admin.landlords.index") }}" class="nav-link {{ request()->is('admin/landlords') || request()->is('admin/landlords/*') ? 'active' : '' }}">
+                                    <i class="far fa-circle">
+
+                                    </i>
+                                    <p>
+                                        <span>{{ trans('global.landlord.title') }}</span>
+                                    </p>
+                                </a>
+                            </li>
+                        @endcan
+                        @can('landlord_bank_access')
+                            <li class="nav-item">
+                                <a href="{{ route("admin.landlord-banks.index") }}" class="nav-link {{ request()->is('admin/landlord-banks') || request()->is('admin/landlord-banks/*') ? 'active' : '' }}">
+                                    <i class="far fa-circle">
+
+                                    </i>
+                                    <p>
+                                        <span>{{ trans('global.landlordBank.title') }}</span>
+                                    </p>
+                                </a>
+                            </li>
+                        @endcan
+                    </ul>
+                </li>
                 @endcan
-                @can('product_management_access')
-                    <li class="nav-item has-treeview {{ request()->is('admin/product-categories*') ? 'menu-open' : '' }} {{ request()->is('admin/product-tags*') ? 'menu-open' : '' }} {{ request()->is('admin/products*') ? 'menu-open' : '' }} {{ request()->is('admin/vacancies*') ? 'menu-open' : '' }}">
+                @can('property_management_access')
+                    <li class="nav-item has-treeview {{ request()->is('admin/property-categories*') ? 'menu-open' : '' }} {{ request()->is('admin/property-tags*') ? 'menu-open' : '' }} {{ request()->is('admin/properties*') ? 'menu-open' : '' }} {{ request()->is('admin/vacancies*') ? 'menu-open' : '' }}">
                         <a class="nav-link nav-dropdown-toggle">
                             <i class="fas fa-building">
 
                             </i>
                             <p>
-                                <span>{{ trans('global.productManagement.title') }}</span>
+                                <span>{{ trans('global.propertyManagement.title') }}</span>
                                 <i class="right fa fa-angle-left"></i>
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
-                            @can('product_category_access')
+                            @can('property_category_access')
                                 <li class="nav-item">
-                                    <a href="{{ route("admin.product-categories.index") }}" class="nav-link {{ request()->is('admin/product-categories') || request()->is('admin/product-categories/*') ? 'active' : '' }}">
+                                    <a href="{{ route("admin.property-categories.index") }}" class="nav-link {{ request()->is('admin/property-categories') || request()->is('admin/property-categories/*') ? 'active' : '' }}">
                                         <i class="far fa-circle">
 
                                         </i>
                                         <p>
-                                            <span>{{ trans('global.productCategory.title') }}</span>
+                                            <span>{{ trans('global.propertyCategory.title') }}</span>
                                         </p>
                                     </a>
                                 </li>
                             @endcan
-                            @can('product_tag_access')
+                            @can('property_tag_access')
                                 <li class="nav-item">
-                                    <a href="{{ route("admin.product-tags.index") }}" class="nav-link {{ request()->is('admin/product-tags') || request()->is('admin/product-tags/*') ? 'active' : '' }}">
+                                    <a href="{{ route("admin.property-tags.index") }}" class="nav-link {{ request()->is('admin/property-tags') || request()->is('admin/property-tags/*') ? 'active' : '' }}">
                                         <i class="far fa-circle">
 
                                         </i>
                                         <p>
-                                            <span>{{ trans('global.productTag.title') }}</span>
+                                            <span>{{ trans('global.propertyTag.title') }}</span>
                                         </p>
                                     </a>
                                 </li>
                             @endcan
-                            @can('product_access')
+                            @can('property_access')
                                 <li class="nav-item">
-                                    <a href="{{ route("admin.products.index") }}" class="nav-link {{ request()->is('admin/products') || request()->is('admin/products/*') ? 'active' : '' }}">
+                                    <a href="{{ route("admin.properties.index") }}" class="nav-link {{ request()->is('admin/properties') || request()->is('admin/properties/*') ? 'active' : '' }}">
                                         <i class="far fa-circle">
 
                                         </i>
                                         <p>
-                                            <span>{{ trans('global.product.title') }}</span>
+                                            <span>{{ trans('global.property.title') }}</span>
                                         </p>
                                     </a>
                                 </li>

@@ -7,11 +7,11 @@ Route::group(['prefix' => 'v1', 'as' => 'admin.', 'namespace' => 'Api\V1\Admin']
 
     Route::apiResource('users', 'UsersApiController');
 
-    Route::apiResource('product-categories', 'ProductCategoryApiController');
+    Route::apiResource('property-categories', 'PropertyCategoryApiController');
 
-    Route::apiResource('product-tags', 'ProductTagApiController');
+    Route::apiResource('property-tags', 'PropertyTagApiController');
 
-    Route::apiResource('products', 'ProductApiController');
+    Route::apiResource('properties', 'PropertyApiController');
 
     Route::apiResource('expense-categories', 'ExpenseCategoryApiController');
 

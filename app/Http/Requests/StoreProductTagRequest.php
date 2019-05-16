@@ -2,14 +2,14 @@
 
 namespace App\Http\Requests;
 
-use App\ProductTag;
+use App\PropertyTag;
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreProductTagRequest extends FormRequest
+class StorePropertyTagRequest extends FormRequest
 {
     public function authorize()
     {
-        return \Gate::allows('product_tag_create');
+        return \Gate::allows('property_tag_create');
     }
 
     public function rules()

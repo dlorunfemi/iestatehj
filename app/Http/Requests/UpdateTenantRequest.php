@@ -18,24 +18,19 @@ class UpdateTenantRequest extends FormRequest
             'name'         => [
                 'required',
             ],
-            'properties.*' => [
-                'integer',
-            ],
-            'properties'   => [
-                'required',
-                'array',
-            ],
-            'apartments.*' => [
-                'integer',
-            ],
-            'apartments'   => [
-                'array',
-            ],
             'phone'        => [
                 'required',
             ],
             'email'        => [
                 'required',
+            ],
+            'property_id'  => [
+                'required',
+                'integer',
+            ],
+            'apartment_id' => [
+                'required',
+                'integer',
             ],
             'is_active'    => [
                 'required',

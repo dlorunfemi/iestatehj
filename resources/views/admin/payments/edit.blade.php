@@ -10,70 +10,55 @@
         <form action="{{ route("admin.payments.update", [$payment->id]) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
-            <div class="form-group {{ $errors->has('properties') ? 'has-error' : '' }}">
-                <label for="property">{{ trans('global.payment.fields.property') }}*
-                    <span class="btn btn-info btn-xs select-all">Select all</span>
-                    <span class="btn btn-info btn-xs deselect-all">Deselect all</span></label>
-                <select name="properties[]" id="properties" class="form-control select2" multiple="multiple">
+            <div class="form-group {{ $errors->has('property_id') ? 'has-error' : '' }}">
+                <label for="property">{{ trans('global.payment.fields.property') }}*</label>
+                <select name="property_id" id="property" class="form-control select2">
                     @foreach($properties as $id => $property)
-                        <option value="{{ $id }}" {{ (in_array($id, old('properties', [])) || isset($payment) && $payment->properties->contains($id)) ? 'selected' : '' }}>{{ $property }}</option>
+                        <option value="{{ $id }}" {{ (isset($payment) && $payment->property ? $payment->property->id : old('property_id')) == $id ? 'selected' : '' }}>{{ $property }}</option>
                     @endforeach
                 </select>
-                @if($errors->has('properties'))
+                @if($errors->has('property_id'))
                     <p class="help-block">
-                        {{ $errors->first('properties') }}
+                        {{ $errors->first('property_id') }}
                     </p>
                 @endif
-                <p class="helper-block">
-                    {{ trans('global.payment.fields.property_helper') }}
-                </p>
             </div>
-            <div class="form-group {{ $errors->has('landlords') ? 'has-error' : '' }}">
-                <label for="landlord">{{ trans('global.payment.fields.landlord') }}*
-                    <span class="btn btn-info btn-xs select-all">Select all</span>
-                    <span class="btn btn-info btn-xs deselect-all">Deselect all</span></label>
-                <select name="landlords[]" id="landlords" class="form-control select2" multiple="multiple">
+            <div class="form-group {{ $errors->has('landlord_id') ? 'has-error' : '' }}">
+                <label for="landlord">{{ trans('global.payment.fields.landlord') }}*</label>
+                <select name="landlord_id" id="landlord" class="form-control select2">
                     @foreach($landlords as $id => $landlord)
-                        <option value="{{ $id }}" {{ (in_array($id, old('landlords', [])) || isset($payment) && $payment->landlords->contains($id)) ? 'selected' : '' }}>{{ $landlord }}</option>
+                        <option value="{{ $id }}" {{ (isset($payment) && $payment->landlord ? $payment->landlord->id : old('landlord_id')) == $id ? 'selected' : '' }}>{{ $landlord }}</option>
                     @endforeach
                 </select>
-                @if($errors->has('landlords'))
+                @if($errors->has('landlord_id'))
                     <p class="help-block">
-                        {{ $errors->first('landlords') }}
+                        {{ $errors->first('landlord_id') }}
                     </p>
                 @endif
-                <p class="helper-block">
-                    {{ trans('global.payment.fields.landlord_helper') }}
-                </p>
             </div>
-            <div class="form-group {{ $errors->has('tenants') ? 'has-error' : '' }}">
-                <label for="tenant">{{ trans('global.payment.fields.tenant') }}*
-                    <span class="btn btn-info btn-xs select-all">Select all</span>
-                    <span class="btn btn-info btn-xs deselect-all">Deselect all</span></label>
-                <select name="tenants[]" id="tenants" class="form-control select2" multiple="multiple">
+            <div class="form-group {{ $errors->has('tenant_id') ? 'has-error' : '' }}">
+                <label for="tenant">{{ trans('global.payment.fields.tenant') }}*</label>
+                <select name="tenant_id" id="tenant" class="form-control select2">
                     @foreach($tenants as $id => $tenant)
-                        <option value="{{ $id }}" {{ (in_array($id, old('tenants', [])) || isset($payment) && $payment->tenants->contains($id)) ? 'selected' : '' }}>{{ $tenant }}</option>
+                        <option value="{{ $id }}" {{ (isset($payment) && $payment->tenant ? $payment->tenant->id : old('tenant_id')) == $id ? 'selected' : '' }}>{{ $tenant }}</option>
                     @endforeach
                 </select>
-                @if($errors->has('tenants'))
+                @if($errors->has('tenant_id'))
                     <p class="help-block">
-                        {{ $errors->first('tenants') }}
+                        {{ $errors->first('tenant_id') }}
                     </p>
                 @endif
-                <p class="helper-block">
-                    {{ trans('global.payment.fields.tenant_helper') }}
-                </p>
             </div>
-            <div class="form-group {{ $errors->has('apartmernt_id') ? 'has-error' : '' }}">
-                <label for="apartmernt">{{ trans('global.payment.fields.apartmernt') }}</label>
-                <select name="apartmernt_id" id="apartmernt" class="form-control select2">
-                    @foreach($apartmernts as $id => $apartmernt)
-                        <option value="{{ $id }}" {{ (isset($payment) && $payment->apartmernt ? $payment->apartmernt->id : old('apartmernt_id')) == $id ? 'selected' : '' }}>{{ $apartmernt }}</option>
+            <div class="form-group {{ $errors->has('apartment_id') ? 'has-error' : '' }}">
+                <label for="apartment">{{ trans('global.payment.fields.apartment') }}*</label>
+                <select name="apartment_id" id="apartment" class="form-control select2">
+                    @foreach($apartments as $id => $apartment)
+                        <option value="{{ $id }}" {{ (isset($payment) && $payment->apartment ? $payment->apartment->id : old('apartment_id')) == $id ? 'selected' : '' }}>{{ $apartment }}</option>
                     @endforeach
                 </select>
-                @if($errors->has('apartmernt_id'))
+                @if($errors->has('apartment_id'))
                     <p class="help-block">
-                        {{ $errors->first('apartmernt_id') }}
+                        {{ $errors->first('apartment_id') }}
                     </p>
                 @endif
             </div>
@@ -299,23 +284,18 @@
                     </p>
                 @endif
             </div>
-            <div class="form-group {{ $errors->has('confirm_staffs') ? 'has-error' : '' }}">
-                <label for="confirm_staff">{{ trans('global.payment.fields.confirm_staff') }}
-                    <span class="btn btn-info btn-xs select-all">Select all</span>
-                    <span class="btn btn-info btn-xs deselect-all">Deselect all</span></label>
-                <select name="confirm_staffs[]" id="confirm_staffs" class="form-control select2" multiple="multiple">
-                    @foreach($confirm_staffs as $id => $confirm_staff)
-                        <option value="{{ $id }}" {{ (in_array($id, old('confirm_staffs', [])) || isset($payment) && $payment->confirm_staffs->contains($id)) ? 'selected' : '' }}>{{ $confirm_staff }}</option>
+            <div class="form-group {{ $errors->has('is_confirm_by_id') ? 'has-error' : '' }}">
+                <label for="is_confirm_by">{{ trans('global.payment.fields.is_confirm_by') }}*</label>
+                <select name="is_confirm_by_id" id="is_confirm_by" class="form-control select2">
+                    @foreach($is_confirm_bies as $id => $is_confirm_by)
+                        <option value="{{ $id }}" {{ (isset($payment) && $payment->is_confirm_by ? $payment->is_confirm_by->id : old('is_confirm_by_id')) == $id ? 'selected' : '' }}>{{ $is_confirm_by }}</option>
                     @endforeach
                 </select>
-                @if($errors->has('confirm_staffs'))
+                @if($errors->has('is_confirm_by_id'))
                     <p class="help-block">
-                        {{ $errors->first('confirm_staffs') }}
+                        {{ $errors->first('is_confirm_by_id') }}
                     </p>
                 @endif
-                <p class="helper-block">
-                    {{ trans('global.payment.fields.confirm_staff_helper') }}
-                </p>
             </div>
             <div class="form-group {{ $errors->has('is_confirmed_date') ? 'has-error' : '' }}">
                 <label for="is_confirmed_date">{{ trans('global.payment.fields.is_confirmed_date') }}</label>

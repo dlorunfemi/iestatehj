@@ -10,23 +10,31 @@
         <form action="{{ route("admin.vacancies.update", [$vacancy->id]) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
-            <div class="form-group {{ $errors->has('properties') ? 'has-error' : '' }}">
-                <label for="property">{{ trans('global.vacancy.fields.property') }}*
-                    <span class="btn btn-info btn-xs select-all">Select all</span>
-                    <span class="btn btn-info btn-xs deselect-all">Deselect all</span></label>
-                <select name="properties[]" id="properties" class="form-control select2" multiple="multiple">
+            <div class="form-group {{ $errors->has('property_id') ? 'has-error' : '' }}">
+                <label for="property">{{ trans('global.vacancy.fields.property') }}*</label>
+                <select name="property_id" id="property" class="form-control select2">
                     @foreach($properties as $id => $property)
-                        <option value="{{ $id }}" {{ (in_array($id, old('properties', [])) || isset($vacancy) && $vacancy->properties->contains($id)) ? 'selected' : '' }}>{{ $property }}</option>
+                        <option value="{{ $id }}" {{ (isset($vacancy) && $vacancy->property ? $vacancy->property->id : old('property_id')) == $id ? 'selected' : '' }}>{{ $property }}</option>
                     @endforeach
                 </select>
-                @if($errors->has('properties'))
+                @if($errors->has('property_id'))
                     <p class="help-block">
-                        {{ $errors->first('properties') }}
+                        {{ $errors->first('property_id') }}
                     </p>
                 @endif
-                <p class="helper-block">
-                    {{ trans('global.vacancy.fields.property_helper') }}
-                </p>
+            </div>
+            <div class="form-group {{ $errors->has('property_tag_id') ? 'has-error' : '' }}">
+                <label for="property_tag">{{ trans('global.vacancy.fields.property_tag') }}*</label>
+                <select name="property_tag_id" id="property_tag" class="form-control select2">
+                    @foreach($property_tags as $id => $property_tag)
+                        <option value="{{ $id }}" {{ (isset($vacancy) && $vacancy->property_tag ? $vacancy->property_tag->id : old('property_tag_id')) == $id ? 'selected' : '' }}>{{ $property_tag }}</option>
+                    @endforeach
+                </select>
+                @if($errors->has('property_tag_id'))
+                    <p class="help-block">
+                        {{ $errors->first('property_tag_id') }}
+                    </p>
+                @endif
             </div>
             <div class="form-group {{ $errors->has('is_vacant') ? 'has-error' : '' }}">
                 <label for="is_vacant">{{ trans('global.vacancy.fields.is_vacant') }}*</label>
@@ -41,24 +49,6 @@
                         {{ $errors->first('is_vacant') }}
                     </p>
                 @endif
-            </div>
-            <div class="form-group {{ $errors->has('property_tags') ? 'has-error' : '' }}">
-                <label for="property_tag">{{ trans('global.vacancy.fields.property_tag') }}*
-                    <span class="btn btn-info btn-xs select-all">Select all</span>
-                    <span class="btn btn-info btn-xs deselect-all">Deselect all</span></label>
-                <select name="property_tags[]" id="property_tags" class="form-control select2" multiple="multiple">
-                    @foreach($property_tags as $id => $property_tag)
-                        <option value="{{ $id }}" {{ (in_array($id, old('property_tags', [])) || isset($vacancy) && $vacancy->property_tags->contains($id)) ? 'selected' : '' }}>{{ $property_tag }}</option>
-                    @endforeach
-                </select>
-                @if($errors->has('property_tags'))
-                    <p class="help-block">
-                        {{ $errors->first('property_tags') }}
-                    </p>
-                @endif
-                <p class="helper-block">
-                    {{ trans('global.vacancy.fields.property_tag_helper') }}
-                </p>
             </div>
             <div class="form-group {{ $errors->has('description') ? 'has-error' : '' }}">
                 <label for="description">{{ trans('global.vacancy.fields.description') }}</label>

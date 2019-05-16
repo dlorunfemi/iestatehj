@@ -6,6 +6,12 @@ $(document).ready(function () {
     ClassicEditor.create(allEditors[i]);
   }
 
+  $.ajaxSetup({
+      headers: {
+          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      }
+  })
+
   moment.updateLocale('en', {
     week: {dow: 1} // Monday is the first day of the week
   })

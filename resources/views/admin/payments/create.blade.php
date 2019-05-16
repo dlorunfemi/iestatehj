@@ -9,76 +9,55 @@
     <div class="card-body">
         <form action="{{ route("admin.payments.store") }}" method="POST" enctype="multipart/form-data">
             @csrf
-            <div class="form-group {{ $errors->has('properties') ? 'has-error' : '' }}">
-                <label for="property">{{ trans('global.payment.fields.property') }}*
-                    <span class="btn btn-info btn-xs select-all">Select all</span>
-                    <span class="btn btn-info btn-xs deselect-all">Deselect all</span></label>
-                <select name="properties[]" id="properties" class="form-control select2" multiple="multiple">
-                    @foreach($properties as $id => $property)
-                        <option value="{{ $id }}" {{ (in_array($id, old('properties', [])) || isset($payment) && $payment->properties->contains($id)) ? 'selected' : '' }}>{{ $property }}</option>
-                    @endforeach
+            <div class="form-group {{ $errors->has('tenant_id') ? 'has-error' : '' }}">
+              <label for="tenant">{{ trans('global.payment.fields.tenant') }}*</label>
+              <select name="tenant_id" id="tenant" class="form-control select2" onchange="fetchData(this.value)">
+                @foreach($tenants as $id => $tenant)
+                <option value="{{ $id }}" {{ (isset($payment) && $payment->tenant ? $payment->tenant->id : old('tenant_id')) == $id ? 'selected' : '' }}>{{ $tenant }}</option>
+                @endforeach
+              </select>
+              @if($errors->has('tenant_id'))
+              <p class="help-block">
+                {{ $errors->first('tenant_id') }}
+              </p>
+              @endif
+            </div>
+            <div class="form-group {{ $errors->has('property_id') ? 'has-error' : '' }}">
+                <label for="property">{{ trans('global.payment.fields.property') }}*</label>
+                <select name="property_id" id="property" class="form-control select2" readonly>
+                    <option value="">{{ trans('global.pleaseSelect') }} Tenant</option>
                 </select>
-                @if($errors->has('properties'))
+                @if($errors->has('property_id'))
                     <p class="help-block">
-                        {{ $errors->first('properties') }}
+                        {{ $errors->first('property_id') }}
                     </p>
                 @endif
-                <p class="helper-block">
-                    {{ trans('global.payment.fields.property_helper') }}
-                </p>
             </div>
-            <div class="form-group {{ $errors->has('landlords') ? 'has-error' : '' }}">
-                <label for="landlord">{{ trans('global.payment.fields.landlord') }}*
-                    <span class="btn btn-info btn-xs select-all">Select all</span>
-                    <span class="btn btn-info btn-xs deselect-all">Deselect all</span></label>
-                <select name="landlords[]" id="landlords" class="form-control select2" multiple="multiple">
-                    @foreach($landlords as $id => $landlord)
-                        <option value="{{ $id }}" {{ (in_array($id, old('landlords', [])) || isset($payment) && $payment->landlords->contains($id)) ? 'selected' : '' }}>{{ $landlord }}</option>
-                    @endforeach
+            <div class="form-group {{ $errors->has('landlord_id') ? 'has-error' : '' }}">
+                <label for="landlord">{{ trans('global.payment.fields.landlord') }}*</label>
+                <select name="landlord_id" id="landlord" class="form-control select2" readonly>
+                  <option value="">{{ trans('global.pleaseSelect') }} Tenant</option>
                 </select>
-                @if($errors->has('landlords'))
+                @if($errors->has('landlord_id'))
                     <p class="help-block">
-                        {{ $errors->first('landlords') }}
+                        {{ $errors->first('landlord_id') }}
                     </p>
                 @endif
-                <p class="helper-block">
-                    {{ trans('global.payment.fields.landlord_helper') }}
-                </p>
             </div>
-            <div class="form-group {{ $errors->has('tenants') ? 'has-error' : '' }}">
-                <label for="tenant">{{ trans('global.payment.fields.tenant') }}*
-                    <span class="btn btn-info btn-xs select-all">Select all</span>
-                    <span class="btn btn-info btn-xs deselect-all">Deselect all</span></label>
-                <select name="tenants[]" id="tenants" class="form-control select2" multiple="multiple">
-                    @foreach($tenants as $id => $tenant)
-                        <option value="{{ $id }}" {{ (in_array($id, old('tenants', [])) || isset($payment) && $payment->tenants->contains($id)) ? 'selected' : '' }}>{{ $tenant }}</option>
-                    @endforeach
+            <div class="form-group {{ $errors->has('apartment_id') ? 'has-error' : '' }}">
+                <label for="apartment">{{ trans('global.payment.fields.apartment') }}*</label>
+                <select name="apartment_id" id="apartment" class="form-control select2" readonly>
+                  <option value="">{{ trans('global.pleaseSelect') }} Tenant</option>
                 </select>
-                @if($errors->has('tenants'))
+                @if($errors->has('apartment_id'))
                     <p class="help-block">
-                        {{ $errors->first('tenants') }}
-                    </p>
-                @endif
-                <p class="helper-block">
-                    {{ trans('global.payment.fields.tenant_helper') }}
-                </p>
-            </div>
-            <div class="form-group {{ $errors->has('apartmernt_id') ? 'has-error' : '' }}">
-                <label for="apartmernt">{{ trans('global.payment.fields.apartmernt') }}</label>
-                <select name="apartmernt_id" id="apartmernt" class="form-control select2">
-                    @foreach($apartmernts as $id => $apartmernt)
-                        <option value="{{ $id }}" {{ (isset($payment) && $payment->apartmernt ? $payment->apartmernt->id : old('apartmernt_id')) == $id ? 'selected' : '' }}>{{ $apartmernt }}</option>
-                    @endforeach
-                </select>
-                @if($errors->has('apartmernt_id'))
-                    <p class="help-block">
-                        {{ $errors->first('apartmernt_id') }}
+                        {{ $errors->first('apartment_id') }}
                     </p>
                 @endif
             </div>
             <div class="form-group {{ $errors->has('annual_charge') ? 'has-error' : '' }}">
                 <label for="annual_charge">{{ trans('global.payment.fields.annual_charge') }}*</label>
-                <input type="number" id="annual_charge" name="annual_charge" class="form-control" value="{{ old('annual_charge', isset($payment) ? $payment->annual_charge : '') }}" step="0.01">
+                <input type="number" id="annual_charge" name="annual_charge" class="form-control" value="{{ old('annual_charge', isset($payment) ? $payment->annual_charge : '') }}" step="0.01" readonly>
                 @if($errors->has('annual_charge'))
                     <p class="help-block">
                         {{ $errors->first('annual_charge') }}
@@ -90,7 +69,7 @@
             </div>
             <div class="form-group {{ $errors->has('service_charge') ? 'has-error' : '' }}">
                 <label for="service_charge">{{ trans('global.payment.fields.service_charge') }}</label>
-                <input type="number" id="service_charge" name="service_charge" class="form-control" value="{{ old('service_charge', isset($payment) ? $payment->service_charge : '') }}" step="0.01">
+                <input type="number" id="service_charge" name="service_charge" class="form-control" value="{{ old('service_charge', isset($payment) ? $payment->service_charge : '') }}" step="0.01" readonly>
                 @if($errors->has('service_charge'))
                     <p class="help-block">
                         {{ $errors->first('service_charge') }}
@@ -102,7 +81,7 @@
             </div>
             <div class="form-group {{ $errors->has('legal_fee') ? 'has-error' : '' }}">
                 <label for="legal_fee">{{ trans('global.payment.fields.legal_fee') }}</label>
-                <input type="number" id="legal_fee" name="legal_fee" class="form-control" value="{{ old('legal_fee', isset($payment) ? $payment->legal_fee : '') }}" step="0.01">
+                <input type="number" id="legal_fee" name="legal_fee" class="form-control" value="{{ old('legal_fee', isset($payment) ? $payment->legal_fee : '') }}" step="0.01" readonly>
                 @if($errors->has('legal_fee'))
                     <p class="help-block">
                         {{ $errors->first('legal_fee') }}
@@ -114,7 +93,7 @@
             </div>
             <div class="form-group {{ $errors->has('caution_deposit') ? 'has-error' : '' }}">
                 <label for="caution_deposit">{{ trans('global.payment.fields.caution_deposit') }}</label>
-                <input type="number" id="caution_deposit" name="caution_deposit" class="form-control" value="{{ old('caution_deposit', isset($payment) ? $payment->caution_deposit : '') }}" step="0.01">
+                <input type="number" id="caution_deposit" name="caution_deposit" class="form-control" value="{{ old('caution_deposit', isset($payment) ? $payment->caution_deposit : '') }}" step="0.01" readonly>
                 @if($errors->has('caution_deposit'))
                     <p class="help-block">
                         {{ $errors->first('caution_deposit') }}
@@ -126,7 +105,7 @@
             </div>
             <div class="form-group {{ $errors->has('agency_fee') ? 'has-error' : '' }}">
                 <label for="agency_fee">{{ trans('global.payment.fields.agency_fee') }}</label>
-                <input type="number" id="agency_fee" name="agency_fee" class="form-control" value="{{ old('agency_fee', isset($payment) ? $payment->agency_fee : '') }}" step="0.01">
+                <input type="number" id="agency_fee" name="agency_fee" class="form-control" value="{{ old('agency_fee', isset($payment) ? $payment->agency_fee : '') }}" step="0.01" readonly>
                 @if($errors->has('agency_fee'))
                     <p class="help-block">
                         {{ $errors->first('agency_fee') }}
@@ -138,7 +117,7 @@
             </div>
             <div class="form-group {{ $errors->has('management_fee') ? 'has-error' : '' }}">
                 <label for="management_fee">{{ trans('global.payment.fields.management_fee') }}</label>
-                <input type="number" id="management_fee" name="management_fee" class="form-control" value="{{ old('management_fee', isset($payment) ? $payment->management_fee : '') }}" step="0.01">
+                <input type="number" id="management_fee" name="management_fee" class="form-control" value="{{ old('management_fee', isset($payment) ? $payment->management_fee : '') }}" step="0.01" readonly>
                 @if($errors->has('management_fee'))
                     <p class="help-block">
                         {{ $errors->first('management_fee') }}
@@ -148,6 +127,7 @@
                     {{ trans('global.payment.fields.management_fee_helper') }}
                 </p>
             </div>
+            <hr>
             <div class="form-group {{ $errors->has('amount_paid') ? 'has-error' : '' }}">
                 <label for="amount_paid">{{ trans('global.payment.fields.amount_paid') }}</label>
                 <input type="number" id="amount_paid" name="amount_paid" class="form-control" value="{{ old('amount_paid', isset($payment) ? $payment->amount_paid : '') }}" step="0.01">
@@ -186,7 +166,7 @@
             </div>
             <div class="form-group {{ $errors->has('payment_date') ? 'has-error' : '' }}">
                 <label for="payment_date">{{ trans('global.payment.fields.payment_date') }}*</label>
-                <input type="text" id="payment_date" name="payment_date" class="form-control date" value="{{ old('payment_date', isset($payment) ? $payment->payment_date : '') }}">
+                <input type="text" id="payment_date" name="payment_date" class="form-control date" value="{{ date('Y-m-d H:i:s') }}" readonly>
                 @if($errors->has('payment_date'))
                     <p class="help-block">
                         {{ $errors->first('payment_date') }}
@@ -223,7 +203,7 @@
             <div class="form-group {{ $errors->has('payment_type') ? 'has-error' : '' }}">
                 <label for="payment_type">{{ trans('global.payment.fields.payment_type') }}*</label>
                 <select id="payment_type" name="payment_type" class="form-control">
-                    <option value="" disabled {{ old('payment_type', null) === null ? 'selected' : '' }}>@lang('global.pleaseSelect')</option>
+                    <option value="" readonly {{ old('payment_type', null) === null ? 'selected' : '' }}>@lang('global.pleaseSelect')</option>
                     @foreach(App\Payment::PAYMENT_TYPE_SELECT as $key => $label)
                         <option value="{{ $key }}" {{ old('payment_type', null) === (string)$key ? 'selected' : '' }}>{{ $label }}</option>
                     @endforeach
@@ -284,79 +264,10 @@
                     {{ trans('global.payment.fields.note_helper') }}
                 </p>
             </div>
-            <div class="form-group {{ $errors->has('is_confirmed') ? 'has-error' : '' }}">
-                <label for="is_confirmed">{{ trans('global.payment.fields.is_confirmed') }}</label>
-                <select id="is_confirmed" name="is_confirmed" class="form-control">
-                    <option value="" disabled {{ old('is_confirmed', null) === null ? 'selected' : '' }}>@lang('global.pleaseSelect')</option>
-                    @foreach(App\Payment::IS_CONFIRMED_SELECT as $key => $label)
-                        <option value="{{ $key }}" {{ old('is_confirmed', null) === (string)$key ? 'selected' : '' }}>{{ $label }}</option>
-                    @endforeach
-                </select>
-                @if($errors->has('is_confirmed'))
-                    <p class="help-block">
-                        {{ $errors->first('is_confirmed') }}
-                    </p>
-                @endif
-            </div>
-            <div class="form-group {{ $errors->has('confirm_staffs') ? 'has-error' : '' }}">
-                <label for="confirm_staff">{{ trans('global.payment.fields.confirm_staff') }}
-                    <span class="btn btn-info btn-xs select-all">Select all</span>
-                    <span class="btn btn-info btn-xs deselect-all">Deselect all</span></label>
-                <select name="confirm_staffs[]" id="confirm_staffs" class="form-control select2" multiple="multiple">
-                    @foreach($confirm_staffs as $id => $confirm_staff)
-                        <option value="{{ $id }}" {{ (in_array($id, old('confirm_staffs', [])) || isset($payment) && $payment->confirm_staffs->contains($id)) ? 'selected' : '' }}>{{ $confirm_staff }}</option>
-                    @endforeach
-                </select>
-                @if($errors->has('confirm_staffs'))
-                    <p class="help-block">
-                        {{ $errors->first('confirm_staffs') }}
-                    </p>
-                @endif
-                <p class="helper-block">
-                    {{ trans('global.payment.fields.confirm_staff_helper') }}
-                </p>
-            </div>
-            <div class="form-group {{ $errors->has('is_confirmed_date') ? 'has-error' : '' }}">
-                <label for="is_confirmed_date">{{ trans('global.payment.fields.is_confirmed_date') }}</label>
-                <input type="text" id="is_confirmed_date" name="is_confirmed_date" class="form-control datetime" value="{{ old('is_confirmed_date', isset($payment) ? $payment->is_confirmed_date : '') }}">
-                @if($errors->has('is_confirmed_date'))
-                    <p class="help-block">
-                        {{ $errors->first('is_confirmed_date') }}
-                    </p>
-                @endif
-                <p class="helper-block">
-                    {{ trans('global.payment.fields.is_confirmed_date_helper') }}
-                </p>
-            </div>
-            <div class="form-group {{ $errors->has('is_confirmed_gm_name_id') ? 'has-error' : '' }}">
-                <label for="is_confirmed_gm_name">{{ trans('global.payment.fields.is_confirmed_gm_name') }}</label>
-                <select name="is_confirmed_gm_name_id" id="is_confirmed_gm_name" class="form-control select2">
-                    @foreach($is_confirmed_gm_names as $id => $is_confirmed_gm_name)
-                        <option value="{{ $id }}" {{ (isset($payment) && $payment->is_confirmed_gm_name ? $payment->is_confirmed_gm_name->id : old('is_confirmed_gm_name_id')) == $id ? 'selected' : '' }}>{{ $is_confirmed_gm_name }}</option>
-                    @endforeach
-                </select>
-                @if($errors->has('is_confirmed_gm_name_id'))
-                    <p class="help-block">
-                        {{ $errors->first('is_confirmed_gm_name_id') }}
-                    </p>
-                @endif
-            </div>
-            <div class="form-group {{ $errors->has('is_confirmed_gm_date') ? 'has-error' : '' }}">
-                <label for="is_confirmed_gm_date">{{ trans('global.payment.fields.is_confirmed_gm_date') }}</label>
-                <input type="text" id="is_confirmed_gm_date" name="is_confirmed_gm_date" class="form-control datetime" value="{{ old('is_confirmed_gm_date', isset($payment) ? $payment->is_confirmed_gm_date : '') }}">
-                @if($errors->has('is_confirmed_gm_date'))
-                    <p class="help-block">
-                        {{ $errors->first('is_confirmed_gm_date') }}
-                    </p>
-                @endif
-                <p class="helper-block">
-                    {{ trans('global.payment.fields.is_confirmed_gm_date_helper') }}
-                </p>
-            </div>
             <div class="form-group {{ $errors->has('is_full_payment') ? 'has-error' : '' }}">
                 <label for="is_full_payment">{{ trans('global.payment.fields.is_full_payment') }}</label>
-                <select id="is_full_payment" name="is_full_payment" class="form-control">
-                    <option value="" disabled {{ old('is_full_payment', null) === null ? 'selected' : '' }}>@lang('global.pleaseSelect')</option>
+                <select id="is_full_payment" name="is_full_payment" class="form-control" onchange="isPayment(this.value)">
+                    <option value="" {{ old('is_full_payment', null) === null ? 'selected' : '' }}>@lang('global.pleaseSelect')</option>
                     @foreach(App\Payment::IS_FULL_PAYMENT_SELECT as $key => $label)
                         <option value="{{ $key }}" {{ old('is_full_payment', null) === (string)$key ? 'selected' : '' }}>{{ $label }}</option>
                     @endforeach
@@ -367,22 +278,9 @@
                     </p>
                 @endif
             </div>
-            <div class="form-group {{ $errors->has('is_part_payment') ? 'has-error' : '' }}">
-                <label for="is_part_payment">{{ trans('global.payment.fields.is_part_payment') }}</label>
-                <select id="is_part_payment" name="is_part_payment" class="form-control">
-                    <option value="" disabled {{ old('is_part_payment', null) === null ? 'selected' : '' }}>@lang('global.pleaseSelect')</option>
-                    @foreach(App\Payment::IS_PART_PAYMENT_SELECT as $key => $label)
-                        <option value="{{ $key }}" {{ old('is_part_payment', null) === (string)$key ? 'selected' : '' }}>{{ $label }}</option>
-                    @endforeach
-                </select>
-                @if($errors->has('is_part_payment'))
-                    <p class="help-block">
-                        {{ $errors->first('is_part_payment') }}
-                    </p>
-                @endif
-            </div>
+            <!-- <input type="hidden" id="is_part_payment" name="is_part_payment" value=""> -->
+            <input type="hidden" id="is_part_payment" name="is_part_payment" value="No">
             <input type="hidden" name="created_by_id" id="created_by" value="{{ $auth->id }}">
-
             <div>
                 <input class="btn btn-danger" type="submit" value="{{ trans('global.save') }}">
             </div>
@@ -392,6 +290,47 @@
 @endsection
 
 @section('scripts')
+<script type='text/javascript'>
+   function fetchData(id){
+     $('#apartment').empty();
+     $.get('create/gettenant/'+id, function( data ) {
+       console.log(data);
+       var tenant = data.tenant;
+       var property = data.property;
+       var landlord = data.landlord;
+       var apartment = data.apartment;
+       var vacant = data.vacant;
+       console.log(tenant);
+       console.log(property);
+       console.log(landlord);
+       $('#property').empty();
+       $('#property').append($('<option/>', {
+           value: property.id,
+           text : property.name
+       }));
+       $('#landlord').empty();
+       $('#landlord').append($('<option/>', {
+           value: landlord.id,
+           text : landlord.name
+       }));
+       $('#apartment').empty();
+       $('#apartment').append($('<option/>', {
+           value: apartment.id,
+           text : apartment.name
+       }));
+       $('#annual_charge').empty();
+       $('#annual_charge').val(vacant.rent);
+      });
+   }
+
+   function isPayment(id) {
+     console.log(id);
+     if (id === 'No') {
+       $('#is_part_payment').empty();
+       $('#is_part_payment').val('Yes');
+     }
+   }
+</script>
 <script>
     var uploadedDocumentMap = {}
 Dropzone.options.documentDropzone = {

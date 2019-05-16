@@ -21,17 +21,17 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
 
     Route::resource('users', 'UsersController');
 
-    Route::delete('product-categories/destroy', 'ProductCategoryController@massDestroy')->name('product-categories.massDestroy');
+    Route::delete('property-categories/destroy', 'PropertyCategoryController@massDestroy')->name('property-categories.massDestroy');
 
-    Route::resource('product-categories', 'ProductCategoryController');
+    Route::resource('property-categories', 'PropertyCategoryController');
 
-    Route::delete('product-tags/destroy', 'ProductTagController@massDestroy')->name('product-tags.massDestroy');
+    Route::delete('property-tags/destroy', 'PropertyTagController@massDestroy')->name('property-tags.massDestroy');
 
-    Route::resource('product-tags', 'ProductTagController');
+    Route::resource('property-tags', 'PropertyTagController');
 
-    Route::delete('products/destroy', 'ProductController@massDestroy')->name('products.massDestroy');
+    Route::delete('properties/destroy', 'PropertyController@massDestroy')->name('properties.massDestroy');
 
-    Route::resource('products', 'ProductController');
+    Route::resource('properties', 'PropertyController');
 
     Route::delete('expense-categories/destroy', 'ExpenseCategoryController@massDestroy')->name('expense-categories.massDestroy');
 
@@ -61,9 +61,13 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
 
     Route::resource('tenants', 'TenantController');
 
+    Route::get('tenants/create/getvacant/{id}', 'TenantController@getvacant')->name('tenants.create.getvacant');
+
     Route::delete('payments/destroy', 'PaymentController@massDestroy')->name('payments.massDestroy');
 
     Route::resource('payments', 'PaymentController');
+
+    Route::get('payments/create/gettenant/{id}', 'PaymentController@gettenant')->name('payments.create.gettenant');
 
     Route::post('payments/media', 'PaymentController@storeMedia')->name('payments.storeMedia');
 
@@ -90,4 +94,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::delete('receipts/destroy', 'ReceiptController@massDestroy')->name('receipts.massDestroy');
 
     Route::resource('receipts', 'ReceiptController', ['except' => ['create', 'store', 'edit', 'update', 'show', 'destroy']]);
+
+    Route::delete('landlord-banks/destroy', 'LandlordBankController@massDestroy')->name('landlord-banks.massDestroy');
+
+    Route::resource('landlord-banks', 'LandlordBankController', ['except' => ['create', 'store', 'edit', 'update', 'show', 'destroy']]);
 });

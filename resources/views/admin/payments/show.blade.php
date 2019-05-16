@@ -11,40 +11,34 @@
             <tbody>
                 <tr>
                     <th>
-                        Property
+                        {{ trans('global.payment.fields.property') }}
                     </th>
                     <td>
-                        @foreach($payment->properties as $id => $property)
-                            <span class="label label-info label-many">{{ $property->name }}</span>
-                        @endforeach
+                        {{ $payment->property->name ?? '' }}
                     </td>
                 </tr>
                 <tr>
                     <th>
-                        Landlord
+                        {{ trans('global.payment.fields.landlord') }}
                     </th>
                     <td>
-                        @foreach($payment->landlords as $id => $landlord)
-                            <span class="label label-info label-many">{{ $landlord->name }}</span>
-                        @endforeach
+                        {{ $payment->landlord->name ?? '' }}
                     </td>
                 </tr>
                 <tr>
                     <th>
-                        Tenant
+                        {{ trans('global.payment.fields.tenant') }}
                     </th>
                     <td>
-                        @foreach($payment->tenants as $id => $tenant)
-                            <span class="label label-info label-many">{{ $tenant->name }}</span>
-                        @endforeach
+                        {{ $payment->tenant->name ?? '' }}
                     </td>
                 </tr>
                 <tr>
                     <th>
-                        {{ trans('global.payment.fields.apartmernt') }}
+                        {{ trans('global.payment.fields.apartment') }}
                     </th>
                     <td>
-                        {{ $payment->apartmernt->name ?? '' }}
+                        {{ $payment->apartment->name ?? '' }}
                     </td>
                 </tr>
                 <tr>
@@ -193,12 +187,10 @@
                 </tr>
                 <tr>
                     <th>
-                        Confirm Staff
+                        {{ trans('global.payment.fields.is_confirm_by') }}
                     </th>
                     <td>
-                        @foreach($payment->confirm_staffs as $id => $confirm_staff)
-                            <span class="label label-info label-many">{{ $confirm_staff->name }}</span>
-                        @endforeach
+                        {{ $payment->is_confirm_by->name ?? '' }}
                     </td>
                 </tr>
                 <tr>

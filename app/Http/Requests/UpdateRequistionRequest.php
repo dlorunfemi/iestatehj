@@ -15,12 +15,13 @@ class UpdateRequistionRequest extends FormRequest
     public function rules()
     {
         return [
-            'properties.*'        => [
+            'property_id'         => [
+                'required',
                 'integer',
             ],
-            'properties'          => [
+            'landlord_id'         => [
                 'required',
-                'array',
+                'integer',
             ],
             'amount_withdraw'     => [
                 'required',

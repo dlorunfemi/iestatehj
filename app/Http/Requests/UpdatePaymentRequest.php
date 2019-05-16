@@ -15,26 +15,21 @@ class UpdatePaymentRequest extends FormRequest
     public function rules()
     {
         return [
-            'properties.*'          => [
+            'property_id'           => [
+                'required',
                 'integer',
             ],
-            'properties'            => [
+            'landlord_id'           => [
                 'required',
-                'array',
-            ],
-            'landlords.*'           => [
                 'integer',
             ],
-            'landlords'             => [
+            'tenant_id'             => [
                 'required',
-                'array',
-            ],
-            'tenants.*'             => [
                 'integer',
             ],
-            'tenants'               => [
+            'apartment_id'          => [
                 'required',
-                'array',
+                'integer',
             ],
             'annual_charge'         => [
                 'required',
@@ -54,11 +49,9 @@ class UpdatePaymentRequest extends FormRequest
             'payment_type'          => [
                 'required',
             ],
-            'confirm_staffs.*'      => [
+            'is_confirm_by_id'      => [
+                'required',
                 'integer',
-            ],
-            'confirm_staffs'        => [
-                'array',
             ],
             'is_confirmed_date'     => [
                 'date_format:' . config('panel.date_format') . ' ' . config('panel.time_format'),

@@ -67,34 +67,38 @@ class Payment extends Model implements HasMedia
     protected $fillable = [
         'note',
         'rent_to',
-        'legal_fee',
-        'cheque_no',
-        'bank_name',
         'rent_from',
-        'deleted_at',
+        'tenant_id',
+        'cheque_no',
+        'legal_fee',
+        'bank_name',
         'updated_at',
         'created_at',
+        'deleted_at',
         'agency_fee',
         'amount_paid',
-        'is_cancelled',
-        'is_confirmed',
+        'landlord_id',
+        'property_id',
         'payment_type',
+        'is_cancelled',
         'payment_date',
+        'is_confirmed',
+        'apartment_id',
+        'annual_charge',
         'updated_by_id',
         'created_by_id',
-        'apartmernt_id',
-        'annual_charge',
-        'date_cancelled',
-        'service_charge',
         'management_fee',
-        'caution_deposit',
-        'company_account',
+        'service_charge',
+        'date_cancelled',
         'is_confirmed_gm',
         'cancelled_by_id',
-        'is_full_payment',
+        'company_account',
         'is_part_payment',
-        'landlord_account',
+        'is_full_payment',
+        'caution_deposit',
         'is_confirmed_ceo',
+        'landlord_account',
+        'is_confirm_by_id',
         'is_confirmed_date',
         'is_confirmed_gm_date',
         'is_confirmed_ceo_date',
@@ -102,24 +106,24 @@ class Payment extends Model implements HasMedia
         'is_confirmed_ceo_name_id',
     ];
 
-    public function properties()
+    public function property()
     {
-        return $this->belongsToMany(Product::class);
+        return $this->belongsTo(Property::class, 'property_id');
     }
 
-    public function landlords()
+    public function landlord()
     {
-        return $this->belongsToMany(Landlord::class);
+        return $this->belongsTo(Landlord::class, 'landlord_id');
     }
 
-    public function tenants()
+    public function tenant()
     {
-        return $this->belongsToMany(Tenant::class);
+        return $this->belongsTo(Tenant::class, 'tenant_id');
     }
 
-    public function apartmernt()
+    public function apartment()
     {
-        return $this->belongsTo(ProductTag::class, 'apartmernt_id');
+        return $this->belongsTo(PropertyTag::class, 'apartment_id');
     }
 
     public function getPaymentDateAttribute($value)
@@ -157,9 +161,9 @@ class Payment extends Model implements HasMedia
         return $this->getMedia('document');
     }
 
-    public function confirm_staffs()
+    public function is_confirm_by()
     {
-        return $this->belongsToMany(User::class);
+        return $this->belongsTo(User::class, 'is_confirm_by_id');
     }
 
     public function getIsConfirmedDateAttribute($value)

@@ -89,6 +89,38 @@
                         {{ $landlord->officer->name ?? '' }}
                     </td>
                 </tr>
+                <tr>
+                    <th>
+                        {{ trans('global.landlord.fields.bank_name') }}
+                    </th>
+                    <td>
+                        {{ $landlord->bank_name }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {{ trans('global.landlord.fields.account_name') }}
+                    </th>
+                    <td>
+                        {{ $landlord->account_name }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {{ trans('global.landlord.fields.account_no') }}
+                    </th>
+                    <td>
+                        {{ $landlord->account_no }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {{ trans('global.landlord.fields.branch') }}
+                    </th>
+                    <td>
+                        {{ $landlord->branch }}
+                    </td>
+                </tr>
             </tbody>
         </table>
     </div>

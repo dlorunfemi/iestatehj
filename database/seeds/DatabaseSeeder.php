@@ -13,9 +13,9 @@ class DatabaseSeeder extends Seeder
             UsersTableSeeder::class,
             RoleUserTableSeeder::class,
             LandlordsTableSeeder::class,
-            ProductCategoriesTableSeeder::class,
-            ProductTagsTableSeeder::class,
-            ProductsTableSeeder::class,
+            PropertyCategoriesTableSeeder::class,
+            PropertyTagsTableSeeder::class,
+            PropertiesTableSeeder::class,
             TenantsTableSeeder::class,
         ]);
     }

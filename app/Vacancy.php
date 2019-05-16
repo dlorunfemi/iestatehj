@@ -28,19 +28,21 @@ class Vacancy extends Model
         'created_at',
         'updated_at',
         'deleted_at',
+        'property_id',
         'description',
         'created_by_id',
         'updated_by_id',
+        'property_tag_id',
     ];
 
-    public function properties()
+    public function property()
     {
-        return $this->belongsToMany(Product::class);
+        return $this->belongsTo(Property::class, 'property_id');
     }
 
-    public function property_tags()
+    public function property_tag()
     {
-        return $this->belongsToMany(ProductTag::class);
+        return $this->belongsTo(PropertyTag::class, 'property_tag_id');
     }
 
     public function created_by()

@@ -26,6 +26,12 @@
                             {{ trans('global.requistion.fields.property') }}
                         </th>
                         <th>
+                            {{ trans('global.requistion.fields.landlord') }}
+                        </th>
+                        <th>
+                            {{ trans('global.landlord.fields.account') }}
+                        </th>
+                        <th>
                             {{ trans('global.requistion.fields.amount_withdraw') }}
                         </th>
                         <th>
@@ -67,9 +73,13 @@
 
                             </td>
                             <td>
-                                @foreach($requistion->properties as $key => $item)
-                                    <span class="badge badge-info">{{ $item->name }}</span>
-                                @endforeach
+                                {{ $requistion->property->name ?? '' }}
+                            </td>
+                            <td>
+                                {{ $requistion->landlord->name ?? '' }}
+                            </td>
+                            <td>
+                                {{ $requistion->landlord->account ?? '' }}
                             </td>
                             <td>
                                 {{ $requistion->amount_withdraw ?? '' }}

@@ -11,12 +11,18 @@
             <tbody>
                 <tr>
                     <th>
-                        Property
+                        {{ trans('global.vacancy.fields.property') }}
                     </th>
                     <td>
-                        @foreach($vacancy->properties as $id => $property)
-                            <span class="label label-info label-many">{{ $property->name }}</span>
-                        @endforeach
+                        {{ $vacancy->property->name ?? '' }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {{ trans('global.vacancy.fields.property_tag') }}
+                    </th>
+                    <td>
+                        {{ $vacancy->property_tag->name ?? '' }}
                     </td>
                 </tr>
                 <tr>
@@ -25,16 +31,6 @@
                     </th>
                     <td>
                         {{ App\Vacancy::IS_VACANT_SELECT[$vacancy->is_vacant] }}
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        Property Tag
-                    </th>
-                    <td>
-                        @foreach($vacancy->property_tags as $id => $property_tag)
-                            <span class="label label-info label-many">{{ $property_tag->name }}</span>
-                        @endforeach
                     </td>
                 </tr>
                 <tr>

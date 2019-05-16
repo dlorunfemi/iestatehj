@@ -52,23 +52,30 @@ class Requistion extends Model
         'gm',
         'ceo',
         'status',
-        'accountant',
-        'created_at',
-        'updated_at',
         'deleted_at',
-        'is_returned',
+        'updated_at',
+        'created_at',
+        'accountant',
         'return_date',
+        'is_returned',
+        'property_id',
+        'landlord_id',
         'gm_conf_date',
-        'acc_conf_date',
         'ceo_conf_date',
+        'acc_conf_date',
         'return_user_id',
         'amount_withdraw',
         'initiating_staff_id',
     ];
 
-    public function properties()
+    public function property()
     {
-        return $this->belongsToMany(Product::class);
+        return $this->belongsTo(Property::class, 'property_id');
+    }
+
+    public function landlord()
+    {
+        return $this->belongsTo(Landlord::class, 'landlord_id');
     }
 
     public function initiating_staff()

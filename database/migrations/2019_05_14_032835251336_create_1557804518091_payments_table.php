@@ -12,7 +12,7 @@ class Create1557804518091PaymentsTable extends Migration
             Schema::create('payments', function (Blueprint $table) {
                 $table->increments('id');
                 $table->unsignedInteger('apartmernt_id')->nullable();
-                $table->foreign('apartmernt_id', 'apartmernt_fk_53823')->references('id')->on('product_tags');
+                $table->foreign('apartmernt_id', 'apartmernt_fk_53823')->references('id')->on('property_tags');
                 $table->decimal('annual_charge', 15, 2);
                 $table->decimal('service_charge', 15, 2)->nullable();
                 $table->decimal('legal_fee', 15, 2)->nullable();

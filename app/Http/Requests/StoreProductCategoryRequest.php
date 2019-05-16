@@ -2,14 +2,14 @@
 
 namespace App\Http\Requests;
 
-use App\ProductCategory;
+use App\PropertyCategory;
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreProductCategoryRequest extends FormRequest
+class StorePropertyCategoryRequest extends FormRequest
 {
     public function authorize()
     {
-        return \Gate::allows('product_category_create');
+        return \Gate::allows('property_category_create');
     }
 
     public function rules()

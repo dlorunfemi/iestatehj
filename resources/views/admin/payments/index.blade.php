@@ -32,7 +32,7 @@
                             {{ trans('global.payment.fields.tenant') }}
                         </th>
                         <th>
-                            {{ trans('global.payment.fields.apartmernt') }}
+                            {{ trans('global.payment.fields.apartment') }}
                         </th>
                         <th>
                             {{ trans('global.payment.fields.annual_charge') }}
@@ -47,7 +47,7 @@
                             {{ trans('global.payment.fields.rent_to') }}
                         </th>
                         <th>
-                            {{ trans('global.payment.fields.confirm_staff') }}
+                            {{ trans('global.payment.fields.is_confirm_by') }}
                         </th>
                         <th>
                             {{ trans('global.payment.fields.is_confirmed_gm') }}
@@ -67,22 +67,16 @@
 
                             </td>
                             <td>
-                                @foreach($payment->properties as $key => $item)
-                                    <span class="badge badge-info">{{ $item->name }}</span>
-                                @endforeach
+                                {{ $payment->property->name ?? '' }}
                             </td>
                             <td>
-                                @foreach($payment->landlords as $key => $item)
-                                    <span class="badge badge-info">{{ $item->name }}</span>
-                                @endforeach
+                                {{ $payment->landlord->name ?? '' }}
                             </td>
                             <td>
-                                @foreach($payment->tenants as $key => $item)
-                                    <span class="badge badge-info">{{ $item->name }}</span>
-                                @endforeach
+                                {{ $payment->tenant->name ?? '' }}
                             </td>
                             <td>
-                                {{ $payment->apartmernt->name ?? '' }}
+                                {{ $payment->apartment->name ?? '' }}
                             </td>
                             <td>
                                 {{ $payment->annual_charge ?? '' }}
@@ -97,9 +91,7 @@
                                 {{ $payment->rent_to ?? '' }}
                             </td>
                             <td>
-                                @foreach($payment->confirm_staffs as $key => $item)
-                                    <span class="badge badge-info">{{ $item->name }}</span>
-                                @endforeach
+                                {{ $payment->is_confirm_by->name ?? '' }}
                             </td>
                             <td>
                                 {{ App\Payment::IS_CONFIRMED_GM_SELECT[$payment->is_confirmed_gm] ?? '' }}

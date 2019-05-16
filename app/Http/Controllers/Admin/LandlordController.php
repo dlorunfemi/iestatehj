@@ -29,13 +29,10 @@ class LandlordController extends Controller
         $officers = User::whereHas('roles', function($q){
                       $q->where('title', 'officer');
                   })->get()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
-        // $officers = User::all(Role::whereTitle('Officer'))->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
-
-        // $created_bies = User::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
 
         $auth = Auth::user();
 
-        return view('admin.landlords.create', compact('officers', 'created_bies', 'auth'));
+        return view('admin.landlords.create', compact('officers', 'auth'));
     }
 
     public function store(StoreLandlordRequest $request)

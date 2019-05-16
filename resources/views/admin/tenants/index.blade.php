@@ -46,14 +46,10 @@
                                 {{ $tenant->name ?? '' }}
                             </td>
                             <td>
-                                @foreach($tenant->properties as $key => $item)
-                                    <span class="badge badge-info">{{ $item->name }}</span>
-                                @endforeach
+                                {{ $tenant->property->name ?? '' }}
                             </td>
                             <td>
-                                @foreach($tenant->apartments as $key => $item)
-                                    <span class="badge badge-info">{{ $item->name }}</span>
-                                @endforeach
+                                {{ $tenant->apartment->name ?? '' }}
                             </td>
                             <td>
                                 @can('tenant_show')

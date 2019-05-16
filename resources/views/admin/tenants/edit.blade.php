@@ -34,42 +34,6 @@
                     {{ trans('global.tenant.fields.name_helper') }}
                 </p>
             </div>
-            <div class="form-group {{ $errors->has('properties') ? 'has-error' : '' }}">
-                <label for="property">{{ trans('global.tenant.fields.property') }}*
-                    <span class="btn btn-info btn-xs select-all">Select all</span>
-                    <span class="btn btn-info btn-xs deselect-all">Deselect all</span></label>
-                <select name="properties[]" id="properties" class="form-control select2" multiple="multiple">
-                    @foreach($properties as $id => $property)
-                        <option value="{{ $id }}" {{ (in_array($id, old('properties', [])) || isset($tenant) && $tenant->properties->contains($id)) ? 'selected' : '' }}>{{ $property }}</option>
-                    @endforeach
-                </select>
-                @if($errors->has('properties'))
-                    <p class="help-block">
-                        {{ $errors->first('properties') }}
-                    </p>
-                @endif
-                <p class="helper-block">
-                    {{ trans('global.tenant.fields.property_helper') }}
-                </p>
-            </div>
-            <div class="form-group {{ $errors->has('apartments') ? 'has-error' : '' }}">
-                <label for="apartment">{{ trans('global.tenant.fields.apartment') }}
-                    <span class="btn btn-info btn-xs select-all">Select all</span>
-                    <span class="btn btn-info btn-xs deselect-all">Deselect all</span></label>
-                <select name="apartments[]" id="apartments" class="form-control select2" multiple="multiple">
-                    @foreach($apartments as $id => $apartment)
-                        <option value="{{ $id }}" {{ (in_array($id, old('apartments', [])) || isset($tenant) && $tenant->apartments->contains($id)) ? 'selected' : '' }}>{{ $apartment }}</option>
-                    @endforeach
-                </select>
-                @if($errors->has('apartments'))
-                    <p class="help-block">
-                        {{ $errors->first('apartments') }}
-                    </p>
-                @endif
-                <p class="helper-block">
-                    {{ trans('global.tenant.fields.apartment_helper') }}
-                </p>
-            </div>
             <div class="form-group {{ $errors->has('phone') ? 'has-error' : '' }}">
                 <label for="phone">{{ trans('global.tenant.fields.phone') }}*</label>
                 <input type="text" id="phone" name="phone" class="form-control" value="{{ old('phone', isset($tenant) ? $tenant->phone : '') }}">
@@ -105,6 +69,32 @@
                 <p class="helper-block">
                     {{ trans('global.tenant.fields.work_place_helper') }}
                 </p>
+            </div>
+            <div class="form-group {{ $errors->has('property_id') ? 'has-error' : '' }}">
+                <label for="property">{{ trans('global.tenant.fields.property') }}*</label>
+                <select name="property_id" id="property" class="form-control select2">
+                    @foreach($properties as $id => $property)
+                        <option value="{{ $id }}" {{ (isset($tenant) && $tenant->property ? $tenant->property->id : old('property_id')) == $id ? 'selected' : '' }}>{{ $property }}</option>
+                    @endforeach
+                </select>
+                @if($errors->has('property_id'))
+                    <p class="help-block">
+                        {{ $errors->first('property_id') }}
+                    </p>
+                @endif
+            </div>
+            <div class="form-group {{ $errors->has('apartment_id') ? 'has-error' : '' }}">
+                <label for="apartment">{{ trans('global.tenant.fields.apartment') }}*</label>
+                <select name="apartment_id" id="apartment" class="form-control select2">
+                    @foreach($apartments as $id => $apartment)
+                        <option value="{{ $id }}" {{ (isset($tenant) && $tenant->apartment ? $tenant->apartment->id : old('apartment_id')) == $id ? 'selected' : '' }}>{{ $apartment }}</option>
+                    @endforeach
+                </select>
+                @if($errors->has('apartment_id'))
+                    <p class="help-block">
+                        {{ $errors->first('apartment_id') }}
+                    </p>
+                @endif
             </div>
             <div class="form-group {{ $errors->has('kin_name') ? 'has-error' : '' }}">
                 <label for="kin_name">{{ trans('global.tenant.fields.kin_name') }}</label>

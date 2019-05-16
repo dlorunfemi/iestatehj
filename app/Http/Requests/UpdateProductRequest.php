@@ -2,14 +2,14 @@
 
 namespace App\Http\Requests;
 
-use App\Product;
+use App\Property;
 use Illuminate\Foundation\Http\FormRequest;
 
-class UpdateProductRequest extends FormRequest
+class UpdatePropertyRequest extends FormRequest
 {
     public function authorize()
     {
-        return \Gate::allows('product_edit');
+        return \Gate::allows('property_edit');
     }
 
     public function rules()

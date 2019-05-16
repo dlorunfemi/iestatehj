@@ -11,12 +11,18 @@
             <tbody>
                 <tr>
                     <th>
-                        Property
+                        {{ trans('global.requistion.fields.property') }}
                     </th>
                     <td>
-                        @foreach($requistion->properties as $id => $property)
-                            <span class="label label-info label-many">{{ $property->name }}</span>
-                        @endforeach
+                        {{ $requistion->property->name ?? '' }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {{ trans('global.requistion.fields.landlord') }}
+                    </th>
+                    <td>
+                        {{ $requistion->landlord->name ?? '' }}
                     </td>
                 </tr>
                 <tr>

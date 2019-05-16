@@ -26,10 +26,10 @@
                             {{ trans('global.vacancy.fields.property') }}
                         </th>
                         <th>
-                            {{ trans('global.vacancy.fields.is_vacant') }}
+                            {{ trans('global.vacancy.fields.property_tag') }}
                         </th>
                         <th>
-                            {{ trans('global.vacancy.fields.property_tag') }}
+                            {{ trans('global.vacancy.fields.is_vacant') }}
                         </th>
                         <th>
                             {{ trans('global.vacancy.fields.rent') }}
@@ -46,17 +46,13 @@
 
                             </td>
                             <td>
-                                @foreach($vacancy->properties as $key => $item)
-                                    <span class="badge badge-info">{{ $item->name }}</span>
-                                @endforeach
+                                {{ $vacancy->property->name ?? '' }}
+                            </td>
+                            <td>
+                                {{ $vacancy->property_tag->name ?? '' }}
                             </td>
                             <td>
                                 {{ App\Vacancy::IS_VACANT_SELECT[$vacancy->is_vacant] ?? '' }}
-                            </td>
-                            <td>
-                                @foreach($vacancy->property_tags as $key => $item)
-                                    <span class="badge badge-info">{{ $item->name }}</span>
-                                @endforeach
                             </td>
                             <td>
                                 {{ $vacancy->rent ?? '' }}

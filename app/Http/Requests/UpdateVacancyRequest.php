@@ -15,22 +15,16 @@ class UpdateVacancyRequest extends FormRequest
     public function rules()
     {
         return [
-            'properties.*'    => [
+            'property_id'     => [
+                'required',
                 'integer',
             ],
-            'properties'      => [
+            'property_tag_id' => [
                 'required',
-                'array',
+                'integer',
             ],
             'is_vacant'       => [
                 'required',
-            ],
-            'property_tags.*' => [
-                'integer',
-            ],
-            'property_tags'   => [
-                'required',
-                'array',
             ],
             'rent'            => [
                 'required',
