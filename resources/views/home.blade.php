@@ -63,9 +63,19 @@
                             @forelse($settings4['data'] as $row)
                                 <tr>
                                     @foreach($settings4['fields'] as $field)
-                                        <td>
-                                            {{ $row->{$field} }}
-                                        </td>
+                                        @if($field=='property')
+                                            <td>
+                                                {{ $row->{$field}->name }}
+                                            </td>
+                                        @elseif($field=='property_tag')
+                                            <td>
+                                                {{ $row->{$field}->name }}
+                                            </td>
+                                        @else
+                                            <td>
+                                                {{ $row->{$field} }}
+                                            </td>
+                                        @endif
                                     @endforeach
                                 </tr>
                                 @empty

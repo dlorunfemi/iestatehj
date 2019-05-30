@@ -12,388 +12,2460 @@ class LandlordsTableSeeder extends Seeder
      */
     public function run()
     {
-      // $Landlord = new Landlord;
-      // $Landlord->delete();
-      DB::table('landlords')->delete();
-
-      $Landlord = new Landlord();
-      $Landlord->title = "Chief";
-      $Landlord->name = "OYO STATE SMALL SCALE INDUSTRIES COMPLEX, IYAGANKU, IBADAN.";
-      $Landlord->phone = "08034028415";
-      $Landlord->email = "null";
-      $Landlord->address_office = "IYAGANKU";
-      $Landlord->address_residence = "IYAGANKU";
-      $Landlord->bank_name = "ECO BANK NIG. PLC";
-      $Landlord->account_name = "OYO STATE SMALL SCALE INDUSTRY COMPLEX";
-      $Landlord->account_no = "2282053489";
-      $Landlord->branch = "NEW COURT ROAD";
-      $Landlord->kin_name = "HON MUFUTAU  SALAWU   DEPUTY GOVERNOR IYIOLA OLADOKUN";
-      $Landlord->kin_phone = "08023253814";
-      $Landlord->kin_address = "BASHORUN";
-      $Landlord->officer_id = 5;
-      $Landlord->account = 0.00;
-      $Landlord->created_by_id = 1;
-      $Landlord->save();
-
-      $Landlord = new Landlord();
-      $Landlord->title = "Barr";
-      $Landlord->name = "Kayode Olatunji";
-      $Landlord->phone = "08033592396";
-      $Landlord->email = "null";
-      $Landlord->address_office = "37, Muritala Muhammed way, Kano";
-      $Landlord->address_residence = "Felele Area, Ibadan";
-      $Landlord->bank_name = "Union Bank";
-      $Landlord->account_name = "Kayode Olatunji & Co";
-      $Landlord->account_no = "0021746586";
-      $Landlord->branch = "Lagos";
-      $Landlord->kin_name = "Mrs. Olatunji";
-      $Landlord->kin_phone = "null";
-      $Landlord->kin_address = "37, Muritala Muhammed way, Kano";
-      $Landlord->officer_id = 5;
-      $Landlord->account = 0.00;
-      $Landlord->created_by_id = 1;
-      $Landlord->save();
-
-      $Landlord = new Landlord();
-      $Landlord->title = "Alhaji";
-      $Landlord->name = "Aderemi Olofa (Ogunpa Shopping Complex)";
-      $Landlord->phone = "08023517336";
-      $Landlord->email = "remi.olofa@remiolofa.com";
-      $Landlord->address_office = "29, Lebanon Street, Old Gbagi, Ibadan";
-      $Landlord->address_residence = "Remi Olofa Estate, Akuru Area, Ibadan";
-      $Landlord->bank_name = "First City Monument Bank";
-      $Landlord->account_name = "Alhaji Aderemi Olofa";
-      $Landlord->account_no = "0649432018";
-      $Landlord->branch = "Lebanon Street, Gbagi, Ibadan";
-      $Landlord->kin_name = "Alhaja Kudirat Adenike Olofa";
-      $Landlord->kin_phone = "08077747815";
-      $Landlord->kin_address = "Remi Olofa Estate, Akuru Area, Ibadan";
-      $Landlord->officer_id = 5;
-      $Landlord->account = 0.00;
-      $Landlord->created_by_id = 1;
-      $Landlord->save();
-
-      $Landlord = new Landlord();
-      $Landlord->title = "Alhaji";
-      $Landlord->name = "Ibrahim Oyeleye";
-      $Landlord->phone = "08033575556";
-      $Landlord->email = "null";
-      $Landlord->address_office = "New Gbagi Market";
-      $Landlord->address_residence = "No 2, Road 219 Ilupeju Estate, Bodija";
-      $Landlord->bank_name = "First Bank";
-      $Landlord->account_name = "Mrs. Oluwatoyin Ibrahim";
-      $Landlord->account_no = "3048985247";
-      $Landlord->branch = "Ibadan";
-      $Landlord->kin_name = "Biola Adedoja";
-      $Landlord->kin_phone = "null";
-      $Landlord->kin_address = "Ibadan";
-      $Landlord->officer_id = 5;
-      $Landlord->account = 0.00;
-      $Landlord->created_by_id = 1;
-      $Landlord->save();
-
-      $Landlord = new Landlord();
-      $Landlord->title = "Mrs";
-      $Landlord->name = "Modupe Okoaye";
-      $Landlord->phone = "08077296398";
-      $Landlord->email = "null";
-      $Landlord->address_office = "Lagos";
-      $Landlord->address_residence = "Lagos";
-      $Landlord->bank_name = "null";
-      $Landlord->account_name = "null";
-      $Landlord->account_no = "null";
-      $Landlord->branch = "null";
-      $Landlord->kin_name = "null";
-      $Landlord->kin_phone = "08077296398";
-      $Landlord->kin_address = "Lagos";
-      $Landlord->officer_id = 5;
-      $Landlord->account = 0.00;
-      $Landlord->created_by_id = 1;
-      $Landlord->save();
-
-      $Landlord = new Landlord();
-      $Landlord->title = "Mr";
-      $Landlord->name = "Akorede Adisa";
-      $Landlord->phone = "08070801171";
-      $Landlord->email = "null";
-      $Landlord->address_office = "4th Floor Providence Court, Coca cola, Ibadan";
-      $Landlord->address_residence = "Oke Ado";
-      $Landlord->bank_name = "First Bank Plc";
-      $Landlord->account_name = "Adisa Akorede Kamoru";
-      $Landlord->account_no = "3002267693";
-      $Landlord->branch = "Dugbe";
-      $Landlord->kin_name = "Nike Adisa";
-      $Landlord->kin_phone = "08090801171";
-      $Landlord->kin_address = "4th Floor Providence Court, Coca cola, Ibadan";
-      $Landlord->officer_id = 5;
-      $Landlord->account = 0.00;
-      $Landlord->created_by_id = 1;
-      $Landlord->save();
-
-      $Landlord = new Landlord();
-      $Landlord->title = "Mr";
-      $Landlord->name = "A. O Aderinokun";
-      $Landlord->phone = "08033446220";
-      $Landlord->email = "null";
-      $Landlord->address_office = "Oke Itunu Area, Mokola, Ibadan";
-      $Landlord->address_residence = "Oke Itunu Area, Mokola, Ibadan";
-      $Landlord->bank_name = "Stanbic Bank Plc";
-      $Landlord->account_name = "O. A . Aderionkun";
-      $Landlord->account_no = "0005933960";
-      $Landlord->branch = "Lebanon";
-      $Landlord->kin_name = "Mrs. Aderiokun";
-      $Landlord->kin_phone = "09090475919";
-      $Landlord->kin_address = "Oke Itunu Area, Mokola, Ibadan";
-      $Landlord->officer_id = 5;
-      $Landlord->account = 0.00;
-      $Landlord->created_by_id = 1;
-      $Landlord->save();
-
-      $Landlord = new Landlord();
-      $Landlord->title = "Mr";
-      $Landlord->name = "Remi Adedeji";
-      $Landlord->phone = "08056526423";
-      $Landlord->email = "null";
-      $Landlord->address_office = "Felele Express";
-      $Landlord->address_residence = "Felele Area, Ibadan";
-      $Landlord->bank_name = "GTB";
-      $Landlord->account_name = "Remi Adedeji";
-      $Landlord->account_no = "0030302067";
-      $Landlord->branch = "Ibadan";
-      $Landlord->kin_name = "null";
-      $Landlord->kin_phone = "null";
-      $Landlord->kin_address = "Felele Area, Ibadan";
-      $Landlord->officer_id = 5;
-      $Landlord->account = 0.00;
-      $Landlord->created_by_id = 1;
-      $Landlord->save();
-
-      $Landlord = new Landlord();
-      $Landlord->title = "Alhaja";
-      $Landlord->name = "Aramid Store";
-      $Landlord->phone = "08033263294";
-      $Landlord->email = "remi.olofa@remiolofa.com";
-      $Landlord->address_office = "No 8 Robo Corner, Agbeni Ibadan";
-      $Landlord->address_residence = "Oke Bola Shopping, Complex";
-      $Landlord->bank_name = "null";
-      $Landlord->account_name = "null";
-      $Landlord->account_no = "null";
-      $Landlord->branch = "null";
-      $Landlord->kin_name = "Mr Remi Olofa";
-      $Landlord->kin_phone = "08056242985";
-      $Landlord->kin_address = "Ibadan";
-      $Landlord->officer_id = 5;
-      $Landlord->account = 0.00;
-      $Landlord->created_by_id = 1;
-      $Landlord->save();
-
-      $Landlord = new Landlord();
-      $Landlord->title = "Alhaja";
-      $Landlord->name = "Modinat Mustapha";
-      $Landlord->phone = "08034016829";
-      $Landlord->email = "null";
-      $Landlord->address_office = "null";
-      $Landlord->address_residence = "null";
-      $Landlord->bank_name = "First Bank";
-      $Landlord->account_name = "Mustapha Modinat Oluwatosin";
-      $Landlord->account_no = "3029232779";
-      $Landlord->branch = "Dugbe";
-      $Landlord->kin_name = "Omi Adio";
-      $Landlord->kin_phone = "null";
-      $Landlord->kin_address = "null";
-      $Landlord->officer_id = 5;
-      $Landlord->account = 0.00;
-      $Landlord->created_by_id = 1;
-      $Landlord->save();
-
-      $Landlord = new Landlord();
-      $Landlord->title = "Alhaji";
-      $Landlord->name = "Wasiu Sulaimon";
-      $Landlord->phone = "08036643740";
-      $Landlord->email = "null";
-      $Landlord->address_office = "Adegoke Street, Orita";
-      $Landlord->address_residence = "Orita Challenge, Ibadan";
-      $Landlord->bank_name = "First Bank";
-      $Landlord->account_name = "Wasgroup Enterprises";
-      $Landlord->account_no = "1212010009488";
-      $Landlord->branch = "Challenge";
-      $Landlord->kin_name = "Mrs. Sulaimon";
-      $Landlord->kin_phone = "08033603775";
-      $Landlord->kin_address = "Orita Challenge, Ibadan";
-      $Landlord->officer_id = 5;
-      $Landlord->account = 0.00;
-      $Landlord->created_by_id = 1;
-      $Landlord->save();
-
-      $Landlord = new Landlord();
-      $Landlord->title = "Alhaja";
-      $Landlord->name = "Nimota Mustapha";
-      $Landlord->phone = "07055983014";
-      $Landlord->email = "sholathomas@att.net";
-      $Landlord->address_office = "Orita Challenge";
-      $Landlord->address_residence = "Challenge Ibadan.";
-      $Landlord->bank_name = "null";
-      $Landlord->account_name = "null";
-      $Landlord->account_no = "null";
-      $Landlord->branch = "null";
-      $Landlord->kin_name = "Shola Thomas";
-      $Landlord->kin_phone = "08089053244";
-      $Landlord->kin_address = "London";
-      $Landlord->officer_id = 5;
-      $Landlord->account = 0.00;
-      $Landlord->created_by_id = 1;
-      $Landlord->save();
-
-      $Landlord = new Landlord();
-      $Landlord->title = "Alhaji";
-      $Landlord->name = "K.S.O Are";
-      $Landlord->phone = "08033480294";
-      $Landlord->email = "null";
-      $Landlord->address_office = "Oke Are";
-      $Landlord->address_residence = "Oke Are";
-      $Landlord->bank_name = "Sterling Bank";
-      $Landlord->account_name = "Estate of Alhaji K.S.O Are";
-      $Landlord->account_no = "0013670026";
-      $Landlord->branch = "Ibadan";
-      $Landlord->kin_name = "Mojeed Are";
-      $Landlord->kin_phone = "null";
-      $Landlord->kin_address = "Akobo, Ibadan";
-      $Landlord->officer_id = 5;
-      $Landlord->account = 0.00;
-      $Landlord->created_by_id = 1;
-      $Landlord->save();
-
-      $Landlord = new Landlord();
-      $Landlord->title = "Mr";
-      $Landlord->name = "Kayode Olugbenga";
-      $Landlord->phone = "08033088116";
-      $Landlord->email = "null";
-      $Landlord->address_office = "Oye Brothers, OYSSIC Complex, Iyaganku Ibadan";
-      $Landlord->address_residence = "Kabiru Ajao Street, Powerline Ajadi Ologuneru, Ibadan";
-      $Landlord->bank_name = "First Bank Plc";
-      $Landlord->account_name = "Olugbenga Olukayode";
-      $Landlord->account_no = "3040336056";
-      $Landlord->branch = "Dugbe";
-      $Landlord->kin_name = "Kayode";
-      $Landlord->kin_phone = "08033023750";
-      $Landlord->kin_address = "Kabiru Ajao Street, Powerline Ajadi Ologuneru, Ibadan";
-      $Landlord->officer_id = 5;
-      $Landlord->account = 0.00;
-      $Landlord->created_by_id = 1;
-      $Landlord->save();
-
-      $Landlord = new Landlord();
-      $Landlord->title = "Alhaji";
-      $Landlord->name = "Amusa Adedokun Olofa";
-      $Landlord->phone = "080595228931";
-      $Landlord->email = "null";
-      $Landlord->address_office = "Oke Odo, Ibadan";
-      $Landlord->address_residence = "Oke Odo, Ibadan";
-      $Landlord->bank_name = "null";
-      $Landlord->account_name = "null";
-      $Landlord->account_no = "null";
-      $Landlord->branch = "null";
-      $Landlord->kin_name = "Mrs. Ayoola";
-      $Landlord->kin_phone = "080595228931";
-      $Landlord->kin_address = "Odo Ona, Ibadan";
-      $Landlord->officer_id = 5;
-      $Landlord->account = 0.00;
-      $Landlord->created_by_id = 1;
-      $Landlord->save();
-
-      $Landlord = new Landlord();
-      $Landlord->title = "Mr";
-      $Landlord->name = "Moruff Kunle Kolapo & Others";
-      $Landlord->phone = "08033195108";
-      $Landlord->email = "null";
-      $Landlord->address_office = "Ogbomosho South L.G";
-      $Landlord->address_residence = "Bashorun";
-      $Landlord->bank_name = "UBA";
-      $Landlord->account_name = "Ayeni Taiwo";
-      $Landlord->account_no = "2012899201";
-      $Landlord->branch = "Osogbo";
-      $Landlord->kin_name = "Laide Kolapo";
-      $Landlord->kin_phone = "08032099237";
-      $Landlord->kin_address = "Eleyele";
-      $Landlord->officer_id = 5;
-      $Landlord->account = 0.00;
-      $Landlord->created_by_id = 1;
-      $Landlord->save();
-
-      $Landlord = new Landlord();
-      $Landlord->title = "Mr";
-      $Landlord->name = "O. Adeagbo";
-      $Landlord->phone = "08038304839";
-      $Landlord->email = "null";
-      $Landlord->address_office = "Ibadan";
-      $Landlord->address_residence = "Osungbade, Ibadan";
-      $Landlord->bank_name = "null";
-      $Landlord->account_name = "null";
-      $Landlord->account_no = "null";
-      $Landlord->branch = "null";
-      $Landlord->kin_name = "Mrs. Adeagbo";
-      $Landlord->kin_phone = "08032579433";
-      $Landlord->kin_address = "Osungbade, Ibadan";
-      $Landlord->officer_id = 5;
-      $Landlord->account = 0.00;
-      $Landlord->created_by_id = 1;
-      $Landlord->save();
-
-      $Landlord = new Landlord();
-      $Landlord->title = "Mr";
-      $Landlord->name = "Samuel Olanrewaju";
-      $Landlord->phone = "+2407319887";
-      $Landlord->email = "null";
-      $Landlord->address_office = "London";
-      $Landlord->address_residence = "London";
-      $Landlord->bank_name = "United Bank for Africa";
-      $Landlord->account_name = "Olanrewaju Samuel Folorunsho";
-      $Landlord->account_no = "1015633236";
-      $Landlord->branch = "Dugbe";
-      $Landlord->kin_name = "Segun Awolola";
-      $Landlord->kin_phone = "08054226794";
-      $Landlord->kin_address = "Mokola Area, Ibadan";
-      $Landlord->officer_id = 5;
-      $Landlord->account = 0.00;
-      $Landlord->created_by_id = 1;
-      $Landlord->save();
-
-      $Landlord = new Landlord();
-      $Landlord->title = "Mr";
-      $Landlord->name = "Adelokun Salami";
-      $Landlord->phone = "08053153900";
-      $Landlord->email = "null";
-      $Landlord->address_office = "Agbeni Market";
-      $Landlord->address_residence = "Beyerunka, Ibadan";
-      $Landlord->bank_name = "null";
-      $Landlord->account_name = "null";
-      $Landlord->account_no = "null";
-      $Landlord->branch = "null";
-      $Landlord->kin_name = "Muibat Salam";
-      $Landlord->kin_phone = "08053153900";
-      $Landlord->kin_address = "Ibadan";
-      $Landlord->officer_id = 5;
-      $Landlord->account = 0.00;
-      $Landlord->created_by_id = 1;
-      $Landlord->save();
-
-      $Landlord = new Landlord();
-      $Landlord->title = "Alhaja";
-      $Landlord->name = "R. A Badaru (Liberty)";
-      $Landlord->phone = "07061311542";
-      $Landlord->email = "null";
-      $Landlord->address_office = "Ibadan";
-      $Landlord->address_residence = "Behind Ibadan Grammar School Molete, Ibadan";
-      $Landlord->bank_name = "United Bank for Africa";
-      $Landlord->account_name = "Mutiat Adebola Olowo";
-      $Landlord->account_no = "2018671001";
-      $Landlord->branch = "Dugbe";
-      $Landlord->kin_name = "Alhaja Mutiat Olowo";
-      $Landlord->kin_phone = "07061311542";
-      $Landlord->kin_address = "Behind Ibadan Grammar School, Molete Ibadan";
-      $Landlord->officer_id = 5;
-      $Landlord->account = 0.00;
-      $Landlord->created_by_id = 1;
-      $Landlord->save();
+      $landlords = [
+        [
+            "id" => 1,
+            "created_at" => "2016-01-29 09:43:13",
+            "created_by_id" => 1,
+            "updated_at" => "2018-11-26 11:15:15",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Chief",
+            "name" => "OYO STATE SMALL SCALE INDUSTRIES COMPLEX, IYAGANKU, IBADAN.",
+            "phone" => "08034028415",
+            "email" => "",
+            "address_office" => "IYAGANKU",
+            "address_residence" => "IYAGANGU",
+            "kin_name" => "HON MUFUTAU  SALAWU   DEPUTY GOVERNOR IYIOLA OLADOKUN",
+            "kin_address" => "BASHORUN",
+            "kin_phone" => "08023253814",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 2,
+            "created_at" => "2016-01-29 12:13:37",
+            "created_by_id" => 1,
+            "updated_at" => "2016-01-29 12:13:37",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Barr.",
+            "name" => "Kayode Olatunji",
+            "phone" => "08033592396",
+            "email" => "",
+            "address_office" => "37, Muritala Muhammed way, Kano",
+            "address_residence" => "Felele Area, Ibadan",
+            "kin_name" => "Mrs. Olatunji",
+            "kin_address" => "37, Muritala Muhammed way, Kano",
+            "kin_phone" => "0000",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 3,
+            "created_at" => "2016-02-02 10:52:23",
+            "created_by_id" => 1,
+            "updated_at" => "2017-02-27 12:42:18",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaji",
+            "name" => "Aderemi Olofa (Ogunpa Shopping Complex)",
+            "phone" => "08023517336",
+            "email" => "remi.olofa@remiolofa.com",
+            "address_office" => "29, Lebanon Street, Old Gbagi, Ibadan",
+            "address_residence" => "Remi Olofa Estate, Akuru Area, Ibadan",
+            "kin_name" => "Alhaja Kudirat Adenike Olofa ",
+            "kin_address" => "Remi Olofa Estate, Akuru Area, Ibadan",
+            "kin_phone" => "08077747815",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 4,
+            "created_at" => "2016-02-02 14:17:05",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-02 14:17:05",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaji",
+            "name" => "Ibrahim Oyeleye",
+            "phone" => "08033575556",
+            "email" => "",
+            "address_office" => "New Gbagi Market",
+            "address_residence" => "No 2, Road 219 Ilupeju Estate, Bodija ",
+            "kin_name" => "Biola Adedoja",
+            "kin_address" => "Ibadan",
+            "kin_phone" => "000",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 5,
+            "created_at" => "2016-02-02 14:41:37",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-02 14:41:37",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mrs.",
+            "name" => "Modupe Okoaye",
+            "phone" => "08077296398",
+            "email" => "",
+            "address_office" => "Lagos",
+            "address_residence" => "Lagos",
+            "kin_name" => "",
+            "kin_address" => "Lagos",
+            "kin_phone" => "08077296398",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 6,
+            "created_at" => "2016-02-03 08:35:10",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-03 08:52:57",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mr.",
+            "name" => "Akorede Adisa",
+            "phone" => "08070801171",
+            "email" => "",
+            "address_office" => "4th Floor Providence Court, Coca cola, Ibadan",
+            "address_residence" => "Oke Ado",
+            "kin_name" => "Nike Adisa",
+            "kin_address" => "4th Floor Providence Court, Coca cola, Ibadan",
+            "kin_phone" => "08090801171",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 7,
+            "created_at" => "2016-02-03 08:59:47",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-03 08:59:47",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mr.",
+            "name" => "A. O Aderinokun",
+            "phone" => "08033446220",
+            "email" => "",
+            "address_office" => "Oke Itunu Area, Mokola, Ibadan",
+            "address_residence" => "Oke Itunu Area, Mokola, Ibadan",
+            "kin_name" => "Mrs. Aderiokun",
+            "kin_address" => "Oke Itunu Area, Mokola, Ibadan",
+            "kin_phone" => "09090475919",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 8,
+            "created_at" => "2016-02-03 09:11:13",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-03 09:11:13",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mr.",
+            "name" => "Remi Adedeji",
+            "phone" => "08056526423",
+            "email" => "",
+            "address_office" => "Felele Express",
+            "address_residence" => "Felele Area, Ibadan",
+            "kin_name" => "Mrs. Adedeji",
+            "kin_address" => "Felele Area",
+            "kin_phone" => "00",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 9,
+            "created_at" => "2016-02-03 09:14:19",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-03 09:14:19",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaja",
+            "name" => "Aramid Store",
+            "phone" => "08033263294",
+            "email" => "remi.olofa@remiolofa.com",
+            "address_office" => "No 8 Robo Corner, Agbeni Ibadan",
+            "address_residence" => "Oke Bola Shopping, Complex",
+            "kin_name" => "Mr Remi Olofa",
+            "kin_address" => "Ibadan",
+            "kin_phone" => "08056242985",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 10,
+            "created_at" => "2016-02-03 09:17:35",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-03 09:17:35",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaja",
+            "name" => "Modinat Mustapha",
+            "phone" => "08034016829",
+            "email" => "",
+            "address_office" => "",
+            "address_residence" => "Omi Adio",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 11,
+            "created_at" => "2016-02-03 09:17:51",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-03 09:17:51",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaji",
+            "name" => "Wasiu Sulaimon",
+            "phone" => "08036643740",
+            "email" => "",
+            "address_office" => "Adegoke Street, Orita",
+            "address_residence" => "Orita Challenge, Ibadan",
+            "kin_name" => "Mrs. Sulaimon",
+            "kin_address" => "Orita Challenge, Ibadan",
+            "kin_phone" => "00",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 12,
+            "created_at" => "2016-02-03 09:28:12",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-03 09:28:12",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaji",
+            "name" => "Wasiu Sulaimon",
+            "phone" => "08033603775",
+            "email" => "",
+            "address_office" => "Orita ",
+            "address_residence" => "Orita Challenge",
+            "kin_name" => "Mrs. Sulaimon",
+            "kin_address" => "Adegoke Street, Orita Challenge",
+            "kin_phone" => "00",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 13,
+            "created_at" => "2016-02-03 09:28:39",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-03 09:28:39",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaja",
+            "name" => "Nimota Mustapha",
+            "phone" => "07055983014",
+            "email" => "sholathomas@att.net",
+            "address_office" => "Orita Challenge",
+            "address_residence" => "Challenge Ibadan.",
+            "kin_name" => "Shola Thomas",
+            "kin_address" => "London",
+            "kin_phone" => "08089053244",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 14,
+            "created_at" => "2016-02-03 09:46:38",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-03 09:46:38",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaji",
+            "name" => "K.S.O Are",
+            "phone" => "08033480294",
+            "email" => "",
+            "address_office" => "Oke Are",
+            "address_residence" => "Oke Are",
+            "kin_name" => "Mojeed Are",
+            "kin_address" => "Akobo, Ibadan",
+            "kin_phone" => "00",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 15,
+            "created_at" => "2016-02-03 10:03:17",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-03 10:03:17",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mr.",
+            "name" => "Kayode Olugbenga",
+            "phone" => "08033088116",
+            "email" => "",
+            "address_office" => "Oye Brothers, OYSSIC Complex, Iyaganku Ibadan",
+            "address_residence" => "Kabiru Ajao Street, Powerline Ajadi Ologuneru, Ibadan",
+            "kin_name" => "Kayode",
+            "kin_address" => "Kabiru Ajao Street, Powerline Ajadi Ologuneru, Ibadan",
+            "kin_phone" => "08033023750",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 16,
+            "created_at" => "2016-02-03 10:04:07",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-03 10:04:07",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaji",
+            "name" => "Amusa Adedokun Olofa",
+            "phone" => "080595228931",
+            "email" => "",
+            "address_office" => "Oke Odo",
+            "address_residence" => "Oke Odo, Ibadan",
+            "kin_name" => "Mrs. Ayoola",
+            "kin_address" => "Odo Ona, Ibadan",
+            "kin_phone" => "080595228931",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 17,
+            "created_at" => "2016-02-03 10:13:20",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-03 10:13:20",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mr.",
+            "name" => "Moruff Kunle Kolapo & Others",
+            "phone" => "08033195108",
+            "email" => "",
+            "address_office" => "Ogbomosho South L.G",
+            "address_residence" => "Bashorun",
+            "kin_name" => "Laide Kolapo",
+            "kin_address" => "Eleyele",
+            "kin_phone" => "08032099237",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 18,
+            "created_at" => "2016-02-03 10:40:33",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-03 10:40:33",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mr.",
+            "name" => "O. Adeagbo",
+            "phone" => "08038304839",
+            "email" => "",
+            "address_office" => "Ibadan",
+            "address_residence" => "Osungbade, Ibadan",
+            "kin_name" => "Mrs. Adeagbo",
+            "kin_address" => "Osungbade",
+            "kin_phone" => "08032579433",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 19,
+            "created_at" => "2016-02-03 10:42:49",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-03 10:42:49",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mr.",
+            "name" => "Samuel Olanrewaju",
+            "phone" => "+2407319887",
+            "email" => "",
+            "address_office" => "London",
+            "address_residence" => "   London",
+            "kin_name" => "Segun Awolola",
+            "kin_address" => "Mokola Area, Ibadan",
+            "kin_phone" => "08054226794",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 20,
+            "created_at" => "2016-02-03 10:48:47",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-03 10:48:47",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mr.",
+            "name" => "adelokun Salami",
+            "phone" => "08053153900",
+            "email" => "",
+            "address_office" => "Agbeni Market, ",
+            "address_residence" => "Beyerunka, Ibadan",
+            "kin_name" => "Muibat Salam",
+            "kin_address" => "Ibadan",
+            "kin_phone" => "08053153900",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 21,
+            "created_at" => "2016-02-03 10:49:52",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-04 09:35:33",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaja",
+            "name" => "R. A Badaru (Liberty)",
+            "phone" => "07061311542",
+            "email" => "",
+            "address_office" => "Ibadan",
+            "address_residence" => "Behind Ibadan Grammar School Molete, Ibadan",
+            "kin_name" => "Alhaja Mutiat Olowo",
+            "kin_address" => "Behind Ibadan Grammar School, Molete Ibadan",
+            "kin_phone" => "07061311542",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 22,
+            "created_at" => "2016-02-03 11:05:59",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-03 11:05:59",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mrs.",
+            "name" => "N.A Adesanya",
+            "phone" => "08076482143",
+            "email" => "",
+            "address_office" => "Adeoyo Junction, Ring Road, Ibadan",
+            "address_residence" => "Old Lagos Road, Ologede Area, New Garage, Ibadan.",
+            "kin_name" => "",
+            "kin_address" => "Old Lagos Road, Ologede Area, New Garage, Ibadan.",
+            "kin_phone" => "08034546978",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 23,
+            "created_at" => "2016-02-03 11:28:56",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-03 11:28:56",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mr.",
+            "name" => "Sulaiman Wasiu",
+            "phone" => "08036643740",
+            "email" => "",
+            "address_office" => "SW9\/1771 Azeez Aina Street R\/Road",
+            "address_residence" => "Apete Village,Ibadan",
+            "kin_name" => "Mrs Wasiu Sulaiman",
+            "kin_address" => "SW9\/1771 Azeez Aina Street R\/Road",
+            "kin_phone" => "08036643740",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 24,
+            "created_at" => "2016-02-03 11:35:51",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-03 11:35:51",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaja",
+            "name" => "S .O Balogun",
+            "phone" => "08038176918",
+            "email" => "",
+            "address_office" => "",
+            "address_residence" => "Abayomi Area,Iwo Road Ibadan",
+            "kin_name" => "Mr Amoo Kabir Akinlolu",
+            "kin_address" => "No 53, Adaba,Akufo Rd Ibadan",
+            "kin_phone" => "08038176918",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 25,
+            "created_at" => "2016-02-03 11:42:15",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-03 11:42:15",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaji",
+            "name" => "Ibraheem Oyeleye",
+            "phone" => "08037271530",
+            "email" => "",
+            "address_office" => "No 2.Rd 219 Ilupeju Estate Bodija Ibadan",
+            "address_residence" => "P123 New Gbagi,Ibadan",
+            "kin_name" => "Mrs Abiola Adedoja",
+            "kin_address" => "No 2.Rd 219 Ilupeju Estate Bodija Ibadan",
+            "kin_phone" => "08037271530",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 26,
+            "created_at" => "2016-02-03 11:48:45",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-03 11:48:45",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaja",
+            "name" => "Saidat .B. Yusuf",
+            "phone" => "08066535806",
+            "email" => "",
+            "address_office" => "ii Jonathan Oyaedele Street Adeyemo Molete Ibadan",
+            "address_residence" => "8,Ifelodun Cresent Odo Oba,Ibadan",
+            "kin_name" => "Alahaji L.A.Yusuf  of Sami Adedeji",
+            "kin_address" => "ii Jonathan Oyaedele Street Adeyemo Molete Ibadan",
+            "kin_phone" => "08066535806",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 27,
+            "created_at" => "2016-02-03 11:48:58",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-03 11:48:58",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mrs.",
+            "name" => "Olaniyan Mary Funke",
+            "phone" => "09031172745",
+            "email" => "",
+            "address_office" => "",
+            "address_residence" => "Apete",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 28,
+            "created_at" => "2016-02-03 12:14:21",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-03 12:14:21",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Chief",
+            "name" => "Late L.F Igbosanya",
+            "phone" => "08033530696",
+            "email" => "",
+            "address_office" => "",
+            "address_residence" => "41\/43, Adeyi Avenue, Old Bodija,Ibadan",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 29,
+            "created_at" => "2016-02-03 12:24:53",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-03 12:24:53",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaja",
+            "name" => "Fausat Dasola Kzeem",
+            "phone" => "08023725188",
+            "email" => "",
+            "address_office" => "Bolaji Quater Oluyole Extension Elewure,Ibadan.",
+            "address_residence" => "Olunde Junction,Ibadan",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 30,
+            "created_at" => "2016-02-04 08:43:57",
+            "created_by_id" => 1,
+            "updated_at" => "2016-03-15 09:31:18",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaji",
+            "name" => "Abass Adeyemo",
+            "phone" => "0",
+            "email" => "",
+            "address_office" => "Felele Extention,Ibadan",
+            "address_residence" => "Felele Extention,Ibadan",
+            "kin_name" => "Mrs Adeyemo",
+            "kin_address" => "Felele Extention,Ibadan",
+            "kin_phone" => "0",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 31,
+            "created_at" => "2016-02-04 09:01:50",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-04 09:01:50",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaji",
+            "name" => "Sule Akinade",
+            "phone" => "0",
+            "email" => "",
+            "address_office" => "Raji Sekere,Molade Area,Ibadan",
+            "address_residence" => "Raji Sekere,Molade Area,Ibadan ",
+            "kin_name" => "Mrs Akinade",
+            "kin_address" => "Raji Sekere,Molade Area,Ibadan",
+            "kin_phone" => "0",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 32,
+            "created_at" => "2016-02-04 09:07:12",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-04 09:07:12",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaji",
+            "name" => "Lateef Adebayo",
+            "phone" => "0",
+            "email" => "",
+            "address_office" => "Osungbade,ibadan",
+            "address_residence" => "Osungbade,ibadan",
+            "kin_name" => "Mrs Adebayo",
+            "kin_address" => "Osungbade,ibadan",
+            "kin_phone" => "0",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 33,
+            "created_at" => "2016-02-04 09:13:21",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-04 09:13:21",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mr.",
+            "name" => "G.O Ajani",
+            "phone" => "0",
+            "email" => "",
+            "address_office" => "Elere Area,Odo Oba,Ibadan",
+            "address_residence" => "Elere Area,Odo Oba,Ibadan",
+            "kin_name" => "Mrs Ajani",
+            "kin_address" => "Elere Area,Odo Oba,Ibadan",
+            "kin_phone" => "0",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 34,
+            "created_at" => "2016-02-04 09:15:44",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-04 09:15:44",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Chief",
+            "name" => "L. F. Igbosanya",
+            "phone" => "08033530696",
+            "email" => "",
+            "address_office" => "Lagos",
+            "address_residence" => "41\/43, Adeyi Avenue, Old Bodija Ibadan",
+            "kin_name" => "Ronke Igbosanya",
+            "kin_address" => "Lagos",
+            "kin_phone" => "07040002650",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 35,
+            "created_at" => "2016-02-04 09:20:29",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-04 09:21:23",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mr.",
+            "name" => "Aina Oluwasesan(Gassy)",
+            "phone" => "08033256353",
+            "email" => "",
+            "address_office" => "Soka Area,Ibadan.",
+            "address_residence" => "Soka Area,Ibadan.",
+            "kin_name" => "Mrs Olusesan",
+            "kin_address" => "Soka Area,Ibadan.",
+            "kin_phone" => "08033256353",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 36,
+            "created_at" => "2016-02-04 09:28:13",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-19 11:50:32",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaji",
+            "name" => "Tairu Akinade",
+            "phone" => "08037000561",
+            "email" => "",
+            "address_office" => "Gbagi Market,Ibadan",
+            "address_residence" => "Orita Aperin Area,Ibadan",
+            "kin_name" => "Mrs Akinade",
+            "kin_address" => "Orita Aprin Area,Ibadan",
+            "kin_phone" => "0",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 37,
+            "created_at" => "2016-02-04 09:28:21",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-04 09:28:21",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaji",
+            "name" => "K. S. O Aree",
+            "phone" => "08033480294",
+            "email" => "",
+            "address_office" => "Ibadan",
+            "address_residence" => "Okumade Street, Mokola Ibadan",
+            "kin_name" => "Prince Mojeed Aree",
+            "kin_address" => "Akobo Ojurin, Ibadan",
+            "kin_phone" => "08033480294",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 38,
+            "created_at" => "2016-02-04 09:33:21",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-04 09:33:21",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mrs.",
+            "name" => "Enitan Aboaba",
+            "phone" => "0",
+            "email" => "",
+            "address_office" => "Olorunsogo Akanran Road,Ibadan.",
+            "address_residence" => "Olorunsogo Akanran Road,Ibadan.",
+            "kin_name" => "Mr. Aboaba",
+            "kin_address" => "Olorunsogo Akanran Road,Ibadan.",
+            "kin_phone" => "0",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 39,
+            "created_at" => "2016-02-04 09:38:39",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-04 09:38:39",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mrs.",
+            "name" => "Dasola Aboaba",
+            "phone" => "08025682173",
+            "email" => "",
+            "address_office" => "Olorunsogo Akanran Road,Ibadan.",
+            "address_residence" => "Olorunsogo Akanran Road,Ibadan.",
+            "kin_name" => "Mr. Aboaba",
+            "kin_address" => "Olorunsogo Akanran Road,Ibadan.",
+            "kin_phone" => "0",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 40,
+            "created_at" => "2016-02-04 09:45:06",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-04 09:46:28",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaji",
+            "name" => "Abass Adeyemo",
+            "phone" => "08033519840",
+            "email" => "",
+            "address_office" => "Ibadan",
+            "address_residence" => "Fodacis Area, Ibadan",
+            "kin_name" => "",
+            "kin_address" => "Elebu Area, Ibadan",
+            "kin_phone" => "08033519840",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 41,
+            "created_at" => "2016-02-04 09:45:34",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-04 09:45:34",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mr.",
+            "name" => "Adeyemo Aderemi",
+            "phone" => "08033180127",
+            "email" => "",
+            "address_office" => "Ayegun Ibadan.",
+            "address_residence" => "Ayegun Ibadan.",
+            "kin_name" => "Mrs Adeyemo Bolanle Mujidat ",
+            "kin_address" => "Ayegun Ibadan.",
+            "kin_phone" => "08033180127",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 42,
+            "created_at" => "2016-02-04 10:30:05",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-04 10:30:05",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Chief",
+            "name" => "J. A. Williams",
+            "phone" => "08059542659",
+            "email" => "adewolewilliams@yahoo.com",
+            "address_office" => "Idi Ayunre, Ibadan",
+            "address_residence" => "Idi Ayunre Ibadan",
+            "kin_name" => "Daniel Williams",
+            "kin_address" => "Lagos",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 43,
+            "created_at" => "2016-02-04 11:34:46",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-04 11:34:46",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Engr.",
+            "name" => "Tajudeen Adisa Adesanya",
+            "phone" => "08033467339",
+            "email" => "",
+            "address_office" => "No 13. Ajanlekoko Close,Old Ife Road,Jagun",
+            "address_residence" => "no 5.Adeniba Oludeni",
+            "kin_name" => "Abdul Fatai Adesanya",
+            "kin_address" => "No 13. Ajanlekoko Close,Old Ife Road,Jagun",
+            "kin_phone" => "08033467339",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 44,
+            "created_at" => "2016-02-04 11:39:29",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-04 11:39:29",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaja",
+            "name" => "Sikirat Akinade",
+            "phone" => "0",
+            "email" => "",
+            "address_office" => "Eyin Grammar",
+            "address_residence" => "Eyin Grammar",
+            "kin_name" => "Mr. Akinade",
+            "kin_address" => "Eyin Grammar",
+            "kin_phone" => "0",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 45,
+            "created_at" => "2016-02-04 11:55:53",
+            "created_by_id" => 1,
+            "updated_at" => "2016-04-22 11:05:24",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mr.",
+            "name" => "Kehinde Adeleye Anthony (Ile Anu Property)",
+            "phone" => "08038089817",
+            "email" => "",
+            "address_office" => "Fodacis Area, Ibadan.",
+            "address_residence" => "Odo Ona Elewe, Ibadan",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 46,
+            "created_at" => "2016-02-04 12:10:07",
+            "created_by_id" => 1,
+            "updated_at" => "2016-04-13 15:14:05",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mr.",
+            "name" => "Anthony Kehinde Adeleye",
+            "phone" => "08038089817",
+            "email" => "",
+            "address_office" => "Fodacis Area, Ibadan",
+            "address_residence" => "Odo Ona Elewe, Ibadan (Ijebu Igbo)",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 47,
+            "created_at" => "2016-02-04 12:14:56",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-04 12:14:56",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mrs.",
+            "name" => "Abiola Aramide",
+            "phone" => "08127026980",
+            "email" => "",
+            "address_office" => "Agbeni, Ibadan",
+            "address_residence" => "Oluyole Estate, Ibadan",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "08127026980",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 48,
+            "created_at" => "2016-02-04 12:22:39",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-04 12:22:39",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaja",
+            "name" => "M. A. Kolapo",
+            "phone" => "080",
+            "email" => "",
+            "address_office" => "Olunloyo Area, Ibadan",
+            "address_residence" => "Olunloyo Area, Ibadan (Yemetu)",
+            "kin_name" => "Mr. Hakeem Kolapo",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 49,
+            "created_at" => "2016-02-04 12:28:45",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-04 12:28:45",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mrs.",
+            "name" => "M. O. Adeagbo",
+            "phone" => "08032579433",
+            "email" => "",
+            "address_office" => "Odo Oba, Ibadan",
+            "address_residence" => "Odo Oba Ibadan",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 50,
+            "created_at" => "2016-02-04 13:21:27",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-04 13:21:27",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mrs.",
+            "name" => "G. O Ogunmola",
+            "phone" => "08050881099",
+            "email" => "",
+            "address_office" => "Aerodrome Samonda, Ibadan",
+            "address_residence" => "c\/o Mrs Oriade, Crown Chemist Sango, Ibadan",
+            "kin_name" => "Segun Ogunmola",
+            "kin_address" => "Samonda, Ibadan",
+            "kin_phone" => "08050881099",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 51,
+            "created_at" => "2016-02-08 12:30:51",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-08 12:30:51",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaja",
+            "name" => "R. A. Badaru (Agbokojo)",
+            "phone" => "08056181351",
+            "email" => "",
+            "address_office" => "Ibadan",
+            "address_residence" => "Behind Ibadan Grammar School, Molete, Ibadan",
+            "kin_name" => "Alhaja Mutiat Olowo",
+            "kin_address" => "Behind Ibadan Grammar School, Molete, Ibadan",
+            "kin_phone" => "08056181351",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 52,
+            "created_at" => "2016-02-09 12:15:05",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-09 12:15:05",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaji",
+            "name" => "Remi Olofa (labaowo)",
+            "phone" => "08023517336",
+            "email" => "remi.olofa@remiolofa.com",
+            "address_office" => "29, Lebanon Street, Old Gbagi, Ibadan",
+            "address_residence" => "Olofa Royal Estate, Akuru Village, Ibadan",
+            "kin_name" => "Alhaja Adenike Olofa",
+            "kin_address" => "Olofa Royal Estate, Akuru Village, Ibadan",
+            "kin_phone" => "08077747815",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 53,
+            "created_at" => "2016-02-09 12:18:09",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-09 12:18:09",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaji",
+            "name" => "Remi Olofa (Oke Seni)",
+            "phone" => "08023517336",
+            "email" => "remi.olofa@remiolofa.com",
+            "address_office" => "29, Lebanon Street, Old Gbagi, Ibadan",
+            "address_residence" => "Olofa Royal Estate, Akuru Village, Ibadan.",
+            "kin_name" => "Alhaja Adenike Olofa",
+            "kin_address" => "Olofa Royal Estate, Akuru Village, Ibadan.",
+            "kin_phone" => "08077747815",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 54,
+            "created_at" => "2016-02-09 12:22:18",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-09 12:22:18",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mr.",
+            "name" => "Kolapo Moruf, Kunle & Others (Sapati)",
+            "phone" => "09027245854",
+            "email" => "",
+            "address_office" => "Ibadan",
+            "address_residence" => "Bashorun, Ibadan",
+            "kin_name" => "Moruf Kolapo",
+            "kin_address" => "Ibadan",
+            "kin_phone" => "09027245854",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 55,
+            "created_at" => "2016-02-09 12:25:48",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-09 12:25:48",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mr.",
+            "name" => "Adejare Adedoja (Oja Oba)",
+            "phone" => "08033838520",
+            "email" => "",
+            "address_office" => "Lagos",
+            "address_residence" => "Lagos",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 56,
+            "created_at" => "2016-02-09 12:48:35",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-09 12:48:35",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mrs.",
+            "name" => "J. I. Adegbuyi",
+            "phone" => "08028157418",
+            "email" => "",
+            "address_office" => "Ibadan  ",
+            "address_residence" => "  Ososami Area, Ibadan",
+            "kin_name" => "Kunle Adegbuyi",
+            "kin_address" => "Ibadan",
+            "kin_phone" => "08028157418",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 57,
+            "created_at" => "2016-02-09 12:54:17",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-09 12:54:17",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mrs.",
+            "name" => "Yemi Oyewola",
+            "phone" => "07059765195",
+            "email" => "",
+            "address_office" => "Ibadan",
+            "address_residence" => "Aba Aladie Area, Apata, Ibadan",
+            "kin_name" => "",
+            "kin_address" => "Ibadan",
+            "kin_phone" => "07059765195",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 58,
+            "created_at" => "2016-02-09 12:58:16",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-09 12:58:16",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mr.",
+            "name" => "Kolapo Moruf, Kunle & Others (Benjamin)",
+            "phone" => "09027245854",
+            "email" => "",
+            "address_office" => "Ibadan",
+            "address_residence" => "Bashorun Area, Ibadan",
+            "kin_name" => "Moruf Kolapo",
+            "kin_address" => "Ibadan",
+            "kin_phone" => "9027245854",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 59,
+            "created_at" => "2016-02-09 13:01:30",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-09 13:01:30",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mr.",
+            "name" => "Adejare Adedoja",
+            "phone" => "08033838520",
+            "email" => "",
+            "address_office" => "Lagos",
+            "address_residence" => "Lagos",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 60,
+            "created_at" => "2016-02-09 14:49:04",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-09 14:49:04",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaji",
+            "name" => "Remi Olofa (Agbeni Olora)",
+            "phone" => "08056242985",
+            "email" => "remi.olofa@remiolofa.com",
+            "address_office" => "29,Lebanon Street, Old Gbagi, Ibadan",
+            "address_residence" => " Remi Olofa Estate, Akuru Village, Ibadan",
+            "kin_name" => "Alhaja Adenike Olofa",
+            "kin_address" => "Remi Olofa Estate, Akuru Village, Ibadan",
+            "kin_phone" => "08077747815",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 61,
+            "created_at" => "2016-02-17 12:54:59",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-17 12:54:59",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mrs.",
+            "name" => "D. O. Opasina",
+            "phone" => "08035768994",
+            "email" => "",
+            "address_office" => "S4\/611, Elekuro Ibadan",
+            "address_residence" => "S4\/611, Elekuro Ibadan",
+            "kin_name" => "Mrs. O.S Lawal",
+            "kin_address" => "Elebu, Ibadan",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 62,
+            "created_at" => "2016-02-17 13:01:47",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-17 13:01:47",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaji",
+            "name" => "Lateef Adebayo Yusuf (Bogije Lagos)",
+            "phone" => "07089277712",
+            "email" => "",
+            "address_office" => "11, Jonathan Oyedele Street, Adeyemo Layout, Molete Ibadan",
+            "address_residence" => "11, Jonathan Oyedele Street, Adeyemo Layout, Molete Ibadan",
+            "kin_name" => "Mukhtar Abiola Yusuf",
+            "kin_address" => "11, Jonathan Oyedele Street, Adeyemo Layout, Molete Ibadan",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 63,
+            "created_at" => "2016-02-17 13:12:07",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-17 13:12:07",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mr.",
+            "name" => "T. O. Akinkunmi",
+            "phone" => "08033852811",
+            "email" => "",
+            "address_office" => "1179 College Crescent, Ibadan",
+            "address_residence" => "13, Felele Rab Road, Ibadan",
+            "kin_name" => "Yemisi Akinkunmi",
+            "kin_address" => "13, Felele Rab Road, Ibadan",
+            "kin_phone" => "08037167233",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 64,
+            "created_at" => "2016-02-29 09:59:35",
+            "created_by_id" => 1,
+            "updated_at" => "2016-02-29 09:59:35",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaja",
+            "name" => "Badaru Olorunsog Molete",
+            "phone" => "08181625552",
+            "email" => "",
+            "address_office" => "Lagos",
+            "address_residence" => "Lagos",
+            "kin_name" => "Mr. Onafeko",
+            "kin_address" => "Lagos",
+            "kin_phone" => "080",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 65,
+            "created_at" => "2016-03-08 09:51:06",
+            "created_by_id" => 1,
+            "updated_at" => "2016-04-28 16:59:58",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaji",
+            "name" => "Amusa Adedokun Olofa (Alesinloye PPTY)",
+            "phone" => "08059528931",
+            "email" => "",
+            "address_office" => "Ibadan",
+            "address_residence" => "Oke Odo",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 66,
+            "created_at" => "2016-03-08 09:53:00",
+            "created_by_id" => 1,
+            "updated_at" => "2016-03-08 09:53:00",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaji",
+            "name" => "Adedokun Salam",
+            "phone" => "08053153900",
+            "email" => "",
+            "address_office" => "Agbeni",
+            "address_residence" => "Beyerunka",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 67,
+            "created_at" => "2016-03-08 09:54:06",
+            "created_by_id" => 1,
+            "updated_at" => "2016-03-08 09:54:06",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Chief",
+            "name" => "G.O. Ajani",
+            "phone" => "080",
+            "email" => "",
+            "address_office" => "",
+            "address_residence" => "Oke Ado, Ibadan",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 68,
+            "created_at" => "2016-03-15 09:40:38",
+            "created_by_id" => 1,
+            "updated_at" => "2016-03-15 09:40:38",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Chief",
+            "name" => "G.O Ajani",
+            "phone" => "080",
+            "email" => "",
+            "address_office" => "",
+            "address_residence" => "Oke Ado Area",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 69,
+            "created_at" => "2016-03-15 09:58:12",
+            "created_by_id" => 1,
+            "updated_at" => "2016-03-15 09:58:12",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaji",
+            "name" => "Salam Adelokun",
+            "phone" => "08053153900",
+            "email" => "",
+            "address_office" => "Agbeni Market",
+            "address_residence" => "Beyerunka Area, ",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 70,
+            "created_at" => "2016-03-17 14:55:47",
+            "created_by_id" => 1,
+            "updated_at" => "2016-03-17 15:00:12",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaja",
+            "name" => "Qudrat Olofa",
+            "phone" => "08033263294",
+            "email" => "",
+            "address_office" => "Agbeni Market",
+            "address_residence" => "Alafara Area, Ologuneru",
+            "kin_name" => "Adetayo Olofa",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 71,
+            "created_at" => "2016-04-01 11:35:42",
+            "created_by_id" => 1,
+            "updated_at" => "2016-04-01 11:35:42",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mrs.",
+            "name" => "B.K  Ayinde",
+            "phone" => "447740091364",
+            "email" => "",
+            "address_office" => "London",
+            "address_residence" => "Odo - Oba, Ibadan",
+            "kin_name" => "Sunbo Olofa",
+            "kin_address" => "Ibadan",
+            "kin_phone" => "08033",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 72,
+            "created_at" => "2016-04-14 15:02:12",
+            "created_by_id" => 1,
+            "updated_at" => "2016-04-14 15:02:12",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaja",
+            "name" => "M.A. Kolapo (Shop Wondo Corner) ",
+            "phone" => "080",
+            "email" => "",
+            "address_office" => "",
+            "address_residence" => "Olunloyo Area",
+            "kin_name" => "Akeem Kolapo",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 73,
+            "created_at" => "2016-04-14 15:03:56",
+            "created_by_id" => 1,
+            "updated_at" => "2016-04-14 15:03:56",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mrs.",
+            "name" => "Aboaba Family Trustee",
+            "phone" => "08077939056",
+            "email" => "",
+            "address_office" => "",
+            "address_residence" => "Olorunsogo",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 74,
+            "created_at" => "2016-04-22 10:00:57",
+            "created_by_id" => 1,
+            "updated_at" => "2016-04-22 10:00:57",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaja",
+            "name" => "Mulikat Kolapo",
+            "phone" => "080",
+            "email" => "",
+            "address_office" => "Ibadan",
+            "address_residence" => "Olunloyo Area, Ibadan (Sapati)",
+            "kin_name" => "Hakeem Kolapo",
+            "kin_address" => "Ibadan",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 75,
+            "created_at" => "2016-04-28 14:58:38",
+            "created_by_id" => 1,
+            "updated_at" => "2016-04-28 14:58:38",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaji",
+            "name" => "Bello Adekunle",
+            "phone" => "08053314733",
+            "email" => "",
+            "address_office" => "Ibadan",
+            "address_residence" => "Ibadan",
+            "kin_name" => "Mrs. Bello",
+            "kin_address" => "",
+            "kin_phone" => "080",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 76,
+            "created_at" => "2016-04-28 15:19:09",
+            "created_by_id" => 1,
+            "updated_at" => "2016-04-28 15:19:09",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mr.",
+            "name" => "A. O Aderinokun (Odo Ona Elewe)",
+            "phone" => "08033446220",
+            "email" => "",
+            "address_office" => "Oke Itunu Area, Ibadan",
+            "address_residence" => "Oke Itunu Area, Ibadan",
+            "kin_name" => "Mrs. Aderinokun",
+            "kin_address" => "Oke Itunu Area, Ibadan",
+            "kin_phone" => "09090475919",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 77,
+            "created_at" => "2016-04-28 15:31:41",
+            "created_by_id" => 1,
+            "updated_at" => "2016-04-28 15:31:41",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mr.",
+            "name" => "Adeleye Kehinde Anthony (Majerita PPTY)",
+            "phone" => "080",
+            "email" => "",
+            "address_office" => "Fodasis Area, Ibadan",
+            "address_residence" => "Odo Ona Elewe, Ibadan",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 78,
+            "created_at" => "2016-04-29 14:24:53",
+            "created_by_id" => 1,
+            "updated_at" => "2016-04-29 14:24:53",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mr.",
+            "name" => "Samuel Olanrewaju (Ila Property)",
+            "phone" => "+2407319887",
+            "email" => "",
+            "address_office" => "London",
+            "address_residence" => "London",
+            "kin_name" => "Segun Awolola",
+            "kin_address" => "Mokola Ibadan",
+            "kin_phone" => "08054226794",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 79,
+            "created_at" => "2016-05-03 15:54:24",
+            "created_by_id" => 1,
+            "updated_at" => "2016-05-03 15:54:24",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mr.",
+            "name" => "Michael Akande",
+            "phone" => "080",
+            "email" => "",
+            "address_office" => "Ibadan",
+            "address_residence" => "Oluyole Estate, Ibadan",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "080",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 80,
+            "created_at" => "2016-05-05 14:32:38",
+            "created_by_id" => 1,
+            "updated_at" => "2016-05-05 14:32:38",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Chief",
+            "name" => "Joel Ayoade Adeyemi",
+            "phone" => "12409884471",
+            "email" => "",
+            "address_office" => "USA",
+            "address_residence" => "USA",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 81,
+            "created_at" => "2016-10-20 09:46:10",
+            "created_by_id" => 1,
+            "updated_at" => "2017-01-16 11:53:35",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaji",
+            "name" => "Remi Olofa (Arijo Shopping Complex)",
+            "phone" => "08056242985",
+            "email" => "remi.olofa@remiolofa.com",
+            "address_office" => "29, Lebanon Street Old Gbagi, Ibadan",
+            "address_residence" => "Akuru",
+            "kin_name" => "Alhaja Kudirat Adenike Olofa",
+            "kin_address" => "Akuru",
+            "kin_phone" => "08077747815",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 82,
+            "created_at" => "2017-01-17 09:39:15",
+            "created_by_id" => 1,
+            "updated_at" => "2017-01-17 09:39:15",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mrs.",
+            "name" => "Abimbola Osunsanmi",
+            "phone" => "00913166554348",
+            "email" => "",
+            "address_office" => "Ile Tuntun, Near NIHORT, Ibadan",
+            "address_residence" => "Ile Tuntun, Near NIHORT, Ibadan",
+            "kin_name" => "Tumi Osunsanmi",
+            "kin_address" => "Ile Tuntun, Near NIHORT, Ibadan",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 83,
+            "created_at" => "2017-01-19 15:55:00",
+            "created_by_id" => 1,
+            "updated_at" => "2017-01-19 15:55:00",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mr.",
+            "name" => "Adejare Adedoja",
+            "phone" => "080",
+            "email" => "",
+            "address_office" => "Lagos",
+            "address_residence" => "Lagos",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 84,
+            "created_at" => "2017-01-27 10:30:38",
+            "created_by_id" => 1,
+            "updated_at" => "2017-01-27 10:30:38",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaji",
+            "name" => "Abass Adeyemo Felele property",
+            "phone" => "08033519840",
+            "email" => "",
+            "address_office" => "Adamawa State",
+            "address_residence" => "Felele Extension",
+            "kin_name" => "Mrs. Adeyemo",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 85,
+            "created_at" => "2017-01-27 11:32:12",
+            "created_by_id" => 1,
+            "updated_at" => "2017-01-27 11:32:12",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaji",
+            "name" => "Remi Olofa (Agbaje Shopping Complex)",
+            "phone" => "08023517336",
+            "email" => "remi.olofa@remiolofa.com",
+            "address_office" => "29, Lebanon Street, Old Gbagi, Ibadan",
+            "address_residence" => "Remi Olofa Ekuru Village, Ibadan",
+            "kin_name" => "Adenike Kudrat",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 86,
+            "created_at" => "2017-01-30 09:15:28",
+            "created_by_id" => 1,
+            "updated_at" => "2017-01-30 09:15:28",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaji",
+            "name" => "Remi Olofa (Ajimajasan building, Labaowo, Ibadan)",
+            "phone" => "08023517336",
+            "email" => "remi.olofa@remiolofa.com",
+            "address_office" => "29, Lebanon Street, Old Gbagi, Ibadan",
+            "address_residence" => "Remi Olofa Estate, Akuru Village, Ibadan",
+            "kin_name" => "Kudirat Adenike Olofa",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 87,
+            "created_at" => "2017-01-30 10:33:50",
+            "created_by_id" => 1,
+            "updated_at" => "2017-01-30 10:33:50",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaja",
+            "name" => "Sikiratu Adisa (Ekotedo)",
+            "phone" => "080",
+            "email" => "",
+            "address_office" => "Ibadan",
+            "address_residence" => "Olomi Area Ibadan",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 88,
+            "created_at" => "2017-02-09 09:41:50",
+            "created_by_id" => 1,
+            "updated_at" => "2017-02-09 09:41:50",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Chief",
+            "name" => "Ayodele Ajanaku",
+            "phone" => "08030406392",
+            "email" => "",
+            "address_office" => "Ilesha",
+            "address_residence" => "Ilesha",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 89,
+            "created_at" => "2017-02-16 15:46:12",
+            "created_by_id" => 1,
+            "updated_at" => "2017-02-16 15:46:12",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mr.",
+            "name" => "HALEEM FAMILY",
+            "phone" => "08148936656",
+            "email" => "",
+            "address_office" => "",
+            "address_residence" => "9 SEGUN ODETOLA CLOSE, AGORO VILLAGE, IBADAN",
+            "kin_name" => "MR HALEEM ABDULLAHI ABIOLA",
+            "kin_address" => "9 SEGUN ODETOLA CLOSE, AGORO VILLAGE, IBADAN",
+            "kin_phone" => "08052254307",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 90,
+            "created_at" => "2017-02-16 16:14:43",
+            "created_by_id" => 1,
+            "updated_at" => "2017-02-16 16:14:43",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaja",
+            "name" => "Haleem Kudirat A",
+            "phone" => "08148936656",
+            "email" => "",
+            "address_office" => "Ibadan",
+            "address_residence" => "Kumopayi Area, Olodo Ibadan",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 91,
+            "created_at" => "2017-02-17 11:21:24",
+            "created_by_id" => 1,
+            "updated_at" => "2017-02-17 11:21:24",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaja",
+            "name" => "BALOGUN S OMOLARA",
+            "phone" => "08038176918",
+            "email" => "",
+            "address_office" => "",
+            "address_residence" => "E9\/875C, BESTWAY, CHEMIST, IWO-ROAD, IBADAN",
+            "kin_name" => "MR BALOGUN I AKINYEMI",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 92,
+            "created_at" => "2017-02-17 12:29:16",
+            "created_by_id" => 1,
+            "updated_at" => "2017-02-17 12:29:16",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaja",
+            "name" => "HALEEM KUDIRAT ABIMBOLA",
+            "phone" => "08148936656",
+            "email" => "",
+            "address_office" => "",
+            "address_residence" => "9 SEGUN ODETAYO CLOSE, AGORO VILLAGE, IBADAN",
+            "kin_name" => "MR. HALEEM ABDULLIHI",
+            "kin_address" => "",
+            "kin_phone" => "08052254307",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 93,
+            "created_at" => "2017-02-17 13:57:36",
+            "created_by_id" => 1,
+            "updated_at" => "2017-02-17 13:57:36",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaja",
+            "name" => "Nimota Oluwakemi (Agbokojo)",
+            "phone" => "080",
+            "email" => "",
+            "address_office" => "Ibadan",
+            "address_residence" => "Ibadan",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 94,
+            "created_at" => "2017-02-17 16:02:36",
+            "created_by_id" => 1,
+            "updated_at" => "2017-02-17 16:02:36",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaja",
+            "name" => "HALEEM KUDIRAT A (GALILI)",
+            "phone" => "08148936656",
+            "email" => "",
+            "address_office" => "",
+            "address_residence" => "9 SEGUN ODETOLA CLOSE, AGORO, IWO ROAD , IBADAN",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 95,
+            "created_at" => "2017-02-17 16:29:54",
+            "created_by_id" => 1,
+            "updated_at" => "2017-02-17 16:29:54",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaja",
+            "name" => "Haleem Kudirat A (Alalubarika II)",
+            "phone" => "08148936656",
+            "email" => "",
+            "address_office" => "",
+            "address_residence" => "9 Segun Adetola Close, Agoro, Iwo Road, Ibadan",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 96,
+            "created_at" => "2017-02-20 09:03:47",
+            "created_by_id" => 1,
+            "updated_at" => "2017-02-20 09:03:47",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaja",
+            "name" => "R.A Badaru",
+            "phone" => "08181625552",
+            "email" => "",
+            "address_office" => "",
+            "address_residence" => "Olorunsogo Area, Molete, Ibadan",
+            "kin_name" => "Adepeju Badaru",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 97,
+            "created_at" => "2017-03-06 16:38:09",
+            "created_by_id" => 1,
+            "updated_at" => "2017-03-06 16:38:09",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaji",
+            "name" => "Ahmed Eleyele",
+            "phone" => "08033612331",
+            "email" => "",
+            "address_office" => "Ibadan",
+            "address_residence" => "Aba Pan Area, Ibadan",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 98,
+            "created_at" => "2017-03-10 07:55:55",
+            "created_by_id" => 1,
+            "updated_at" => "2017-03-10 07:55:55",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaji",
+            "name" => "K O. S. AARE (APATA)",
+            "phone" => "080",
+            "email" => "",
+            "address_office" => "IBADAN",
+            "address_residence" => "IBADAN",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 99,
+            "created_at" => "2017-03-20 13:32:57",
+            "created_by_id" => 1,
+            "updated_at" => "2017-03-20 13:32:57",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Chief",
+            "name" => "K. O. S Aare (Odo Oye)",
+            "phone" => "080",
+            "email" => "",
+            "address_office" => "Ibadan",
+            "address_residence" => "Ibadan",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 100,
+            "created_at" => "2017-03-21 17:05:17",
+            "created_by_id" => 1,
+            "updated_at" => "2017-04-13 08:30:40",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mrs.",
+            "name" => "Olubisi Oyewola (Anlugbua)",
+            "phone" => "080",
+            "email" => "",
+            "address_office" => "Ibadan",
+            "address_residence" => "Majawe Area, Alakia Ibadan",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 101,
+            "created_at" => "2017-03-27 12:29:25",
+            "created_by_id" => 1,
+            "updated_at" => "2017-03-27 12:29:25",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Pastor",
+            "name" => "M. O. Ojo",
+            "phone" => "08037273372",
+            "email" => "",
+            "address_office" => "Lagos",
+            "address_residence" => "Sanyo, Ibadan",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 102,
+            "created_at" => "2017-04-11 12:04:18",
+            "created_by_id" => 1,
+            "updated_at" => "2017-04-11 12:04:18",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaja",
+            "name" => "R. A. Badaru (Sango)",
+            "phone" => "080",
+            "email" => "",
+            "address_office" => "",
+            "address_residence" => "London",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 103,
+            "created_at" => "2017-04-12 16:30:46",
+            "created_by_id" => 1,
+            "updated_at" => "2017-04-12 16:30:46",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaja",
+            "name" => "HALEEM FAMILY",
+            "phone" => "08052254307",
+            "email" => "",
+            "address_office" => "",
+            "address_residence" => "9 SEGUN ODETOLA CLOSE, AGORO, VILLAGE, IBADAN",
+            "kin_name" => "MR HALEEM ABDULAHI",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 104,
+            "created_at" => "2017-04-13 12:27:55",
+            "created_by_id" => 1,
+            "updated_at" => "2017-04-13 12:27:55",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mr.",
+            "name" => "Sikiru Adetona",
+            "phone" => "080",
+            "email" => "",
+            "address_office" => "London",
+            "address_residence" => "London",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 105,
+            "created_at" => "2017-05-11 12:27:03",
+            "created_by_id" => 1,
+            "updated_at" => "2017-05-11 12:27:03",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaja",
+            "name" => "S O Balogun",
+            "phone" => "08038176918",
+            "email" => "",
+            "address_office" => "",
+            "address_residence" => "Iwo Road",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 106,
+            "created_at" => "2017-06-16 11:28:33",
+            "created_by_id" => 1,
+            "updated_at" => "2017-06-16 11:28:33",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mr.",
+            "name" => "Adejare Adedoja (Apata) ",
+            "phone" => "080",
+            "email" => "",
+            "address_office" => "Lagos",
+            "address_residence" => "Lagos",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 107,
+            "created_at" => "2017-08-17 14:45:18",
+            "created_by_id" => 1,
+            "updated_at" => "2017-08-17 14:45:18",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaja",
+            "name" => "Olanihun Asake",
+            "phone" => "080",
+            "email" => "",
+            "address_office" => "",
+            "address_residence" => "Ibadan",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 108,
+            "created_at" => "2017-08-29 15:16:41",
+            "created_by_id" => 1,
+            "updated_at" => "2017-08-29 15:16:41",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mrs.",
+            "name" => "Obiwale Olawumi Temilolu",
+            "phone" => "08032398237",
+            "email" => "",
+            "address_office" => "",
+            "address_residence" => "No 7, Oke Anu Beula Church Area, Oba Ido Adetokun Ologuneru, Ibadan.",
+            "kin_name" => "Akinwale Ayo Obiwale",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 109,
+            "created_at" => "2017-10-31 12:36:33",
+            "created_by_id" => 1,
+            "updated_at" => "2017-10-31 12:36:33",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mrs.",
+            "name" => "R. M. Oyewola",
+            "phone" => "080",
+            "email" => "",
+            "address_office" => "",
+            "address_residence" => "Ibadan",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 110,
+            "created_at" => "2017-11-06 08:26:44",
+            "created_by_id" => 1,
+            "updated_at" => "2017-11-06 08:26:44",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mr.",
+            "name" => "LANIPEKUN MOSES OLABAMIJI",
+            "phone" => "08033593600",
+            "email" => "",
+            "address_office" => "",
+            "address_residence" => "OGUNSOLA LAYOUT, OWOLEMI STREET,ODO OBA, IBADAN",
+            "kin_name" => "MRS. J.F OLANIPEKUN ",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 111,
+            "created_at" => "2017-11-16 13:49:11",
+            "created_by_id" => 1,
+            "updated_at" => "2017-11-16 13:49:11",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mr.",
+            "name" => "E.K AJANI ",
+            "phone" => "08068929835",
+            "email" => "",
+            "address_office" => "DEPARTMENT OF AQUARCURLTURE & FISHRIES , UNIVERSITY OF IBADAN",
+            "address_residence" => "",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 112,
+            "created_at" => "2017-11-20 09:29:02",
+            "created_by_id" => 1,
+            "updated_at" => "2017-11-20 09:29:02",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaja",
+            "name" => "Nimota Oluwakemi (Idi Odo)",
+            "phone" => "080",
+            "email" => "",
+            "address_office" => "Ibadan",
+            "address_residence" => "Challenge, Ibadan",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 113,
+            "created_at" => "2017-12-05 11:07:13",
+            "created_by_id" => 1,
+            "updated_at" => "2017-12-05 11:07:13",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaji",
+            "name" => "A. G. Olopade",
+            "phone" => "08023196300",
+            "email" => "",
+            "address_office" => "155, Owutu Road, Ikorodu Lagos.",
+            "address_residence" => "plot 36, Block F, Agbede Road, Agbede Ikorodu, Lagos",
+            "kin_name" => "Khadijat Tolulope Uzamot",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 114,
+            "created_at" => "2018-01-10 16:20:17",
+            "created_by_id" => 1,
+            "updated_at" => "2018-01-10 16:20:17",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaji",
+            "name" => "Muriana Akinlabi Ladeji",
+            "phone" => "080",
+            "email" => "",
+            "address_office" => "",
+            "address_residence" => "Yerokun Street, Academy Area, Ibadan",
+            "kin_name" => "Mrs. Abayomi Amunikoro (Nee Ladeji)",
+            "kin_address" => "",
+            "kin_phone" => "080",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 115,
+            "created_at" => "2018-01-11 14:10:49",
+            "created_by_id" => 1,
+            "updated_at" => "2018-01-11 14:10:49",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaji",
+            "name" => "Muraina Akinlabi Ladeji",
+            "phone" => "080",
+            "email" => "",
+            "address_office" => "",
+            "address_residence" => "Yerokun Street (House 2)",
+            "kin_name" => "Alhaja Mrs. Abayomi Amunikoro",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 116,
+            "created_at" => "2018-01-26 10:13:27",
+            "created_by_id" => 1,
+            "updated_at" => "2018-01-26 10:13:27",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mr.",
+            "name" => "Akinolu",
+            "phone" => "0",
+            "email" => "",
+            "address_office" => "t",
+            "address_residence" => "s",
+            "kin_name" => "a",
+            "kin_address" => "r",
+            "kin_phone" => "0",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 117,
+            "created_at" => "2018-02-12 09:07:17",
+            "created_by_id" => 1,
+            "updated_at" => "2018-02-12 09:07:17",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaji",
+            "name" => "Akinlabi Ladeji Muraina",
+            "phone" => "080",
+            "email" => "",
+            "address_office" => "",
+            "address_residence" => "Boluwaji Area, Sanyo Ibadan",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 118,
+            "created_at" => "2018-03-12 15:12:44",
+            "created_by_id" => 1,
+            "updated_at" => "2018-03-12 15:12:44",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaji",
+            "name" => "QUADR OLATUNJI",
+            "phone" => "08037156162",
+            "email" => "",
+            "address_office" => "",
+            "address_residence" => "2 SODEKE CLOSE, ELEBU OLOYOLE EXTENSION, IBADAN",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 119,
+            "created_at" => "2018-04-10 09:48:24",
+            "created_by_id" => 1,
+            "updated_at" => "2018-04-10 09:48:24",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaji",
+            "name" => "ABDUL LATEEF TIJANI",
+            "phone" => "08113134444",
+            "email" => "",
+            "address_office" => "PLOT 9 ADENEYE ADEOWO STREET, SHAGAMU ROAD",
+            "address_residence" => "",
+            "kin_name" => "MRS KHADIJAT TIJANI ",
+            "kin_address" => "",
+            "kin_phone" => "08050589168",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 120,
+            "created_at" => "2018-04-30 08:12:37",
+            "created_by_id" => 1,
+            "updated_at" => "2018-04-30 08:12:37",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mr.",
+            "name" => "IDOWU ADABALE",
+            "phone" => "08068013778",
+            "email" => "",
+            "address_office" => "",
+            "address_residence" => "ADABALE COMOUND, IYEMTU IBADAN",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 121,
+            "created_at" => "2018-05-07 13:08:19",
+            "created_by_id" => 1,
+            "updated_at" => "2018-05-07 13:08:19",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mr.",
+            "name" => "& Mrs Bamibe Samuel  and Busayo",
+            "phone" => "08034712340",
+            "email" => "oddysammy@yahoo.com",
+            "address_office" => "",
+            "address_residence" => "No 23, Onikeke, Ayegoro Junction, Opposite Kolapo Ishola Junction Akobo, Ibadan",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 122,
+            "created_at" => "2018-09-17 12:28:26",
+            "created_by_id" => 1,
+            "updated_at" => "2018-09-17 12:28:26",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mr.",
+            "name" => "OLANIYAN FAMILY",
+            "phone" => "080",
+            "email" => "",
+            "address_office" => "",
+            "address_residence" => "10 ONIGBAGBO STREET, ALARERE AREA, IWO ROAD, IBADAN",
+            "kin_name" => "MRS KEMI",
+            "kin_address" => "",
+            "kin_phone" => "080",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 123,
+            "created_at" => "2018-09-17 14:28:53",
+            "created_by_id" => 1,
+            "updated_at" => "2018-09-17 14:28:53",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mr.",
+            "name" => "OLANIYAN FAMILY Apata",
+            "phone" => "080",
+            "email" => "",
+            "address_office" => "",
+            "address_residence" => "Ogunshola Stree, Apata Area, Ibadan",
+            "kin_name" => "Mrs Kemi Olaniyan",
+            "kin_address" => "",
+            "kin_phone" => "080",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 124,
+            "created_at" => "2018-10-02 16:27:59",
+            "created_by_id" => 1,
+            "updated_at" => "2018-10-02 16:27:59",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Chief",
+            "name" => "OLANIYAN FAMILY",
+            "phone" => "08033147013",
+            "email" => "",
+            "address_office" => "",
+            "address_residence" => "",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 125,
+            "created_at" => "2018-10-03 09:54:47",
+            "created_by_id" => 1,
+            "updated_at" => "2018-10-03 09:54:47",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Chief",
+            "name" => "OLANIYAN FAMILY HOUSE",
+            "phone" => "080",
+            "email" => "",
+            "address_office" => "",
+            "address_residence" => "15 Shatola Street, Ajeigbe Area, Off Ring Road, Ibadan ",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "080",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 126,
+            "created_at" => "2018-10-12 09:09:49",
+            "created_by_id" => 1,
+            "updated_at" => "2018-10-12 09:09:49",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Chief",
+            "name" => "K.O.S ARE",
+            "phone" => "080",
+            "email" => "",
+            "address_office" => "",
+            "address_residence" => "ODO YE, SAPATI AREA",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 127,
+            "created_at" => "2019-01-25 13:16:49",
+            "created_by_id" => 1,
+            "updated_at" => "2019-01-25 13:16:49",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaji",
+            "name" => "Agboluaje Abdul Ganiyu Isiaka",
+            "phone" => "080",
+            "email" => "",
+            "address_office" => "Iyana Idi kan Agbeni Area Ibadan",
+            "address_residence" => "Elebu Extension Oluyole Area Ibadan",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 128,
+            "created_at" => "2019-02-06 12:13:15",
+            "created_by_id" => 1,
+            "updated_at" => "2019-02-06 12:13:15",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Alhaja",
+            "name" => "LAWAL BALIKISU",
+            "phone" => "08074103026",
+            "email" => "",
+            "address_office" => "",
+            "address_residence" => "",
+            "kin_name" => "LAWAL ADUNNI",
+            "kin_address" => "12 OBIWALE STREET, OLOGUNERU ROAD, IBADAN",
+            "kin_phone" => "08074096774",
+            "officer_id" => 1,
+            "account" => 0.00
+        ],
+        [
+            "id" => 129,
+            "created_at" => "2019-04-15 09:49:51",
+            "created_by_id" => 1,
+            "updated_at" => "2019-04-15 09:49:51",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mr.",
+            "name" => "Yusuf Tajudeen Abayomi",
+            "phone" => "08034794278",
+            "email" => "",
+            "address_office" => "",
+            "address_residence" => "12 Isale Alfa Zone 4, Kolajo Agric, Olomi Ibadan",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
+        ]
+        ];
+        Landlord::insert($landlords);
+      
     }
 }

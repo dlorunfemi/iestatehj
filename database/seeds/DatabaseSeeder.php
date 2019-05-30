@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
             PropertyCategoriesTableSeeder::class,
             PropertyTagsTableSeeder::class,
             PropertiesTableSeeder::class,
+            VacancyTableSeeder::class,
             TenantsTableSeeder::class,
         ]);
     }
