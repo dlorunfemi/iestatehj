@@ -157,7 +157,10 @@
    function fetchVacant(id){
      $('#apartment').empty();
      $.get('create/getvacant/'+id, function( data ) {
+    //  var object = $.parseJSON(data);
+     console.log(data);
         $.each(data, function(i, d) {
+         console.log(d);
           $('<option/>', {
             value:d.id,
             text:d.name

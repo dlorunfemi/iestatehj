@@ -41,11 +41,12 @@ class TenantController extends Controller
         {
 
             $vacantData = Tenant::getVacantApartment($id);
-
+            // dd($vacantData);
             $checks = Tenant::all()->pluck('apartment_id');
             foreach ($vacantData as $vacantdata) {
               $tag[] = PropertyTag::findorFail($vacantdata->property_tag_id);
             }
+            // dd($tag);
             $data = [];
             foreach ($tag as $key => $value) {
               if (isset($checks)) {
@@ -58,6 +59,7 @@ class TenantController extends Controller
               }
               $data[] = ['id' => $value->id, 'name' => $value->name];
             }
+            // dd($data);
             return response()->json($data);
         }
 

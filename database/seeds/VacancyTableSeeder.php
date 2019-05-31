@@ -137,7 +137,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 19,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 22,
                 "description" => "CADELLYS",
                 "rent" => 1141914.00
@@ -150,7 +150,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 19,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 22,
                 "description" => "CADELLYS 2",
                 "rent" => 91300.00
@@ -163,7 +163,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 19,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 22,
                 "description" => "LACASERA  BESIDE BAT",
                 "rent" => 5855200.00
@@ -176,7 +176,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 19,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 22,
                 "description" => "Sosaco, last role beside IDL",
                 "rent" => 1456000.00
@@ -189,7 +189,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 19,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 22,
                 "description" => "Intercontinental Distilers Limited",
                 "rent" => 1456000.00
@@ -761,7 +761,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 39,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "Left side shop at Enitan Aboaba property",
                 "rent" => 9600.00
@@ -956,7 +956,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 52,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "third room boys quarter",
                 "rent" => 12000.00
@@ -1177,7 +1177,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 27,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "Shop No 3, Fausat Dasola Kazeem at Olunde",
                 "rent" => 18000.00
@@ -1346,7 +1346,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 34,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "3rd room by the right, Remi Adedeji at Apete",
                 "rent" => 24000.00
@@ -1359,7 +1359,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 34,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 6,
                 "description" => "4th room by the left, Remi Adedeji at Apete",
                 "rent" => 24000.00
@@ -1372,7 +1372,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 34,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 6,
                 "description" => "2nd room by the right, Remi Adedeji at Apete",
                 "rent" => 24000.00
@@ -1385,7 +1385,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 34,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "4th room by the right, Remi Adedeji at Apete",
                 "rent" => 24000.00
@@ -1398,7 +1398,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 34,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 6,
                 "description" => "2nd roomby the left, Remi Adedeji at Apete",
                 "rent" => 24000.00
@@ -1411,7 +1411,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 34,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 6,
                 "description" => "3rd room by the right,Remi Adedeji at Apete",
                 "rent" => 24000.00
@@ -1424,7 +1424,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 34,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 6,
                 "description" => "3rd room by the left, Remi Adedeji at Apete",
                 "rent" => 24000.00
@@ -1437,7 +1437,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 34,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "3rd room by the left,Remi Adedeji at Apete",
                 "rent" => 24000.00
@@ -1450,7 +1450,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 34,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "5th room by the right, Remi Adedeji at Apete",
                 "rent" => 24000.00
@@ -1463,7 +1463,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 34,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "1st room by the left, Remi Adedeji at Apete",
                 "rent" => 24000.00
@@ -1489,7 +1489,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 34,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 6,
                 "description" => "3rd room by the right, Remi Adedeji at Apete",
                 "rent" => 24000.00
@@ -1502,7 +1502,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 34,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 6,
                 "description" => "1st room by the right, Remi Adedeji at Apete",
                 "rent" => 24000.00
@@ -1515,7 +1515,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 34,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 6,
                 "description" => "5th room by the left Remi Adedeji property at Apete",
                 "rent" => 24000.00
@@ -1528,7 +1528,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 34,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 6,
                 "description" => "4th room by the right side Remi Adedeji property at Apete",
                 "rent" => 24000.00
@@ -1541,7 +1541,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 34,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 6,
                 "description" => "1st room by the left Remi Adedeji Apete",
                 "rent" => 24000.00
@@ -1567,7 +1567,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 34,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 6,
                 "description" => "4th room by the right Remi Adedeji Apete",
                 "rent" => 24000.00
@@ -1580,7 +1580,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 34,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "5th room by the left Remi Adedeji Apete",
                 "rent" => 24000.00
@@ -2204,7 +2204,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 79,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 18,
                 "description" => "Block B First Floor Left Side",
                 "rent" => 220000.00
@@ -2724,7 +2724,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 61,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "1st & 2nd room ground floor right wing",
                 "rent" => 48000.00
@@ -2737,7 +2737,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 61,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "3rd room ground floor right wing",
                 "rent" => 24000.00
@@ -2763,7 +2763,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 61,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "1st & 2nd rooms ground floor left wing",
                 "rent" => 48000.00
@@ -2789,7 +2789,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 61,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "4th room ground floor left wing",
                 "rent" => 24000.00
@@ -2802,7 +2802,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 61,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 6,
                 "description" => "1st & 2nd rooms first floor right wing",
                 "rent" => 48000.00
@@ -2828,7 +2828,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 61,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 6,
                 "description" => "4th room first floor right wing",
                 "rent" => 24000.00
@@ -2841,7 +2841,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 61,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 6,
                 "description" => "1st & 2nd rooms first floor left wing",
                 "rent" => 48000.00
@@ -2867,7 +2867,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 61,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 6,
                 "description" => "4th room first floor left wing",
                 "rent" => 24000.00
@@ -2893,7 +2893,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 61,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 7,
                 "description" => "3rd room second floor right wing",
                 "rent" => 24000.00
@@ -2906,7 +2906,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 61,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 7,
                 "description" => "4th room second floor right wing",
                 "rent" => 24000.00
@@ -2932,7 +2932,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 61,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 7,
                 "description" => "3rd room second floor left wing",
                 "rent" => 24000.00
@@ -2945,7 +2945,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 61,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 7,
                 "description" => "4th room second floor left wing",
                 "rent" => 24000.00
@@ -3283,7 +3283,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 85,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 7,
                 "description" => "3rd & 4th rooms left wing second floor",
                 "rent" => 48000.00
@@ -3465,7 +3465,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 49,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 7,
                 "description" => "Second Floor Big Block",
                 "rent" => 180000.00
@@ -3491,7 +3491,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 49,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 6,
                 "description" => "First Floor Small Block",
                 "rent" => 120000.00
@@ -3504,7 +3504,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 49,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 7,
                 "description" => "Second Floor Small Block",
                 "rent" => 80000.00
@@ -3660,7 +3660,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 75,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 6,
                 "description" => "3 bedroom flat on first floor main building",
                 "rent" => 150000.00
@@ -3738,7 +3738,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 101,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 10,
                 "description" => "2nd flat at Ground Floor Left Side",
                 "rent" => 160000.00
@@ -3829,7 +3829,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 20,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "Ground Floor Sop No 6, Agbeni Olora Ibadan ",
                 "rent" => 120000.00
@@ -3868,7 +3868,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 20,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "Ground Floor Shop 9, Agbeni Olora, Ibadan",
                 "rent" => 120000.00
@@ -4206,7 +4206,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 102,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "Inner Shop No 9 Right Side",
                 "rent" => 60000.00
@@ -4310,7 +4310,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 103,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "ground floor side 3rd shop (shop No 6)",
                 "rent" => 84000.00
@@ -4440,7 +4440,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 20,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "ground floor right side attachment (3)",
                 "rent" => 36000.00
@@ -4609,7 +4609,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 105,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 1,
                 "description" => "3rd inside shop right wing",
                 "rent" => 36000.00
@@ -4622,7 +4622,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 105,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 1,
                 "description" => "4th inside shop right wing",
                 "rent" => 36000.00
@@ -4713,7 +4713,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 105,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 2,
                 "description" => "5th inside shop left wing",
                 "rent" => 36000.00
@@ -4856,7 +4856,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 108,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "3rd inner shop on left side (Shop No 7)",
                 "rent" => 30000.00
@@ -5324,7 +5324,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 114,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "1st & 2nd rooms on left side ground floor",
                 "rent" => 36000.00
@@ -5441,7 +5441,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 117,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "1st & 2nd rooms on right side",
                 "rent" => 36000.00
@@ -5480,7 +5480,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 117,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "4th room on right side and 4th room on left side",
                 "rent" => 36000.00
@@ -5623,7 +5623,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 120,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "1st room on right hand side ",
                 "rent" => 18000.00
@@ -6078,7 +6078,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 122,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "shop No 5 at ground floor front side",
                 "rent" => 96000.00
@@ -6364,7 +6364,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 112,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "shop at ground floor of main building",
                 "rent" => 75000.00
@@ -6442,7 +6442,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 112,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "Shop No 2 at ground floor of main building",
                 "rent" => 150000.00
@@ -6923,7 +6923,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 131,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "Second room at left hand side on ground floor ",
                 "rent" => 18000.00
@@ -6936,7 +6936,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 131,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 6,
                 "description" => "First room at the right hand side on first floor",
                 "rent" => 28000.00
@@ -7183,7 +7183,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 105,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "5th & 6th Shop inside",
                 "rent" => 72000.00
@@ -7261,7 +7261,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 65,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "Shop No 1 at left side",
                 "rent" => 54000.00
@@ -7313,7 +7313,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 65,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "Shop No 1 at Right side",
                 "rent" => 54000.00
@@ -7352,7 +7352,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 65,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "Shop No 4 at right side",
                 "rent" => 54000.00
@@ -7365,7 +7365,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 65,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "Shop No 6 at right side",
                 "rent" => 54000.00
@@ -7430,7 +7430,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 30,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 6,
                 "description" => "2bedroom flat in the 1st floor at wasiu sulaimon Orita Challenge ",
                 "rent" => 100000.00
@@ -7963,7 +7963,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 61,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 7,
                 "description" => "1st & 2nd rooms on left side of second floor",
                 "rent" => 48000.00
@@ -8132,7 +8132,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 64,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 6,
                 "description" => "1st floor of Block A",
                 "rent" => 200000.00
@@ -8652,7 +8652,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 146,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 7,
                 "description" => "1 and 2 room by the left side",
                 "rent" => 48000.00
@@ -8899,7 +8899,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 148,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 6,
                 "description" => "2nd room by the right",
                 "rent" => 30000.00
@@ -9016,7 +9016,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 60,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "A room and a parlour behind main building",
                 "rent" => 60000.00
@@ -9055,7 +9055,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 112,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "Shop3@ground floor",
                 "rent" => 36000.00
@@ -9068,7 +9068,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 152,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 2,
                 "description" => "A block of three bedroom flat",
                 "rent" => 300000.00
@@ -9094,7 +9094,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 92,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "A Room and Parlour on the right side",
                 "rent" => 24000.00
@@ -9107,7 +9107,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 125,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 8,
                 "description" => "basement",
                 "rent" => 60000.00
@@ -9120,7 +9120,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 125,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 6,
                 "description" => "first room and palour by the right side",
                 "rent" => 48000.00
@@ -9159,7 +9159,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 125,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 6,
                 "description" => "first room and palour by the left side",
                 "rent" => 48000.00
@@ -9172,7 +9172,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 125,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 6,
                 "description" => "Second room and palour by the left side",
                 "rent" => 48000.00
@@ -9185,7 +9185,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 125,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 6,
                 "description" => "5th room by the left side",
                 "rent" => 24000.00
@@ -9198,7 +9198,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 125,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 7,
                 "description" => "first room and palour on the right side",
                 "rent" => 48000.00
@@ -9211,7 +9211,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 125,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 7,
                 "description" => "second room and palour on the right side",
                 "rent" => 48000.00
@@ -9237,7 +9237,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 125,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 7,
                 "description" => "first roomand palour on the left side",
                 "rent" => 48000.00
@@ -9263,7 +9263,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 125,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 7,
                 "description" => "5th room on the left side",
                 "rent" => 24000.00
@@ -9276,7 +9276,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 125,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 8,
                 "description" => "second building basement",
                 "rent" => 36000.00
@@ -9289,7 +9289,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 125,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 6,
                 "description" => "the whole of second floor",
                 "rent" => 60000.00
@@ -9341,7 +9341,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 112,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "Restaurant at Ground floor",
                 "rent" => 50000.00
@@ -9380,7 +9380,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 98,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 6,
                 "description" => "First Floor by the left in the front, 2nd shop",
                 "rent" => 24000.00
@@ -9549,7 +9549,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 155,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 8,
                 "description" => "First Room by the Right side of the BQ",
                 "rent" => 50000.00
@@ -9575,7 +9575,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 155,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 8,
                 "description" => "Last Room at the BQ",
                 "rent" => 50000.00
@@ -9783,7 +9783,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 158,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 6,
                 "description" => "left wing flat at the first floor",
                 "rent" => 40000.00
@@ -9809,7 +9809,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 158,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "Right wing flat at the ground floor",
                 "rent" => 150000.00
@@ -9848,7 +9848,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 154,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "Front 3 bedroom flat at the ground floor",
                 "rent" => 144000.00
@@ -9861,7 +9861,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 154,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "Back 3 bedroom flat at the ground floor",
                 "rent" => 120000.00
@@ -9874,7 +9874,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 154,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 6,
                 "description" => "Front 3 bedroom flat at the First floor",
                 "rent" => 120000.00
@@ -9887,7 +9887,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 154,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 6,
                 "description" => "back 3 bedroom flat at the ground floor",
                 "rent" => 120000.00
@@ -9900,7 +9900,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 154,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 16,
                 "description" => "A room and palour self contain by the left side of the main building",
                 "rent" => 100000.00
@@ -9913,7 +9913,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 154,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 17,
                 "description" => "first room apartment at the back of the main building",
                 "rent" => 50000.00
@@ -9926,7 +9926,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 154,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 17,
                 "description" => "Second room behind the main building",
                 "rent" => 50000.00
@@ -9939,7 +9939,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 154,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 17,
                 "description" => "Third room behind the main building",
                 "rent" => 50000.00
@@ -9991,7 +9991,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 159,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 7,
                 "description" => "3 bedroom flat at second floor",
                 "rent" => 50000.00
@@ -10004,7 +10004,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 159,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 23,
                 "description" => "Shop at the ground floor",
                 "rent" => 24000.00
@@ -10069,7 +10069,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 148,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 6,
                 "description" => "2nd room by right",
                 "rent" => 30000.00
@@ -10082,7 +10082,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 148,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "2nd room by left",
                 "rent" => 30000.00
@@ -10095,7 +10095,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 148,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "4th room by right",
                 "rent" => 30000.00
@@ -10108,7 +10108,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 148,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "4th room by left",
                 "rent" => 30000.00
@@ -10134,7 +10134,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 148,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 6,
                 "description" => "3rd room by left",
                 "rent" => 30000.00
@@ -10147,7 +10147,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 148,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 6,
                 "description" => "3rd room by right",
                 "rent" => 30000.00
@@ -10160,7 +10160,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 148,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 6,
                 "description" => "4th room by right",
                 "rent" => 30000.00
@@ -10173,7 +10173,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 148,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 6,
                 "description" => "4th room by left",
                 "rent" => 30000.00
@@ -10186,7 +10186,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 148,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 7,
                 "description" => "1st and 2nd room by left",
                 "rent" => 66000.00
@@ -10199,7 +10199,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 148,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 7,
                 "description" => "3rd room by left",
                 "rent" => 30000.00
@@ -10212,7 +10212,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 148,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 7,
                 "description" => "4th room by left",
                 "rent" => 30000.00
@@ -10238,7 +10238,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 148,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "BQ by the right ",
                 "rent" => 42000.00
@@ -10329,7 +10329,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 166,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "First room by right hand side of the property",
                 "rent" => 24000.00
@@ -10342,7 +10342,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 166,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "Second room by the right hand side of the property",
                 "rent" => 24000.00
@@ -10355,7 +10355,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 166,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "Third room by the right hand side of the property",
                 "rent" => 24000.00
@@ -10368,7 +10368,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 166,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "First Room by the left hand side of the property",
                 "rent" => 24000.00
@@ -10381,7 +10381,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 166,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "Second room by the left hand side the property",
                 "rent" => 24000.00
@@ -10394,7 +10394,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 166,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "Third room by the left hand side of the property",
                 "rent" => 24000.00
@@ -10407,7 +10407,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 166,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 23,
                 "description" => "Shop attached the building at the front",
                 "rent" => 12000.00
@@ -10550,7 +10550,7 @@ class VacancyTableSeeder extends Seeder
                 "updated_by_id" => null,
                 "deleted_at" => null,
                 "property_id" => 118,
-                "is_vacant" => "yes",
+                "is_vacant" => "Yes",
                 "property_tag_id" => 5,
                 "description" => "Third and second room by the left hand side",
                 "rent" => 24000.00
