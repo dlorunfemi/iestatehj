@@ -25,6 +25,10 @@ class Create1557830353889RequistionsTable extends Migration
                 $table->unsignedInteger('return_user_id')->nullable();
                 $table->foreign('return_user_id', 'return_user_fk_53991')->references('id')->on('users');
                 $table->datetime('return_date')->nullable();
+                $table->unsignedInteger('property_id');
+                $table->foreign('property_id', 'property_fk_56068')->references('id')->on('properties');
+                $table->unsignedInteger('landlord_id');
+                $table->foreign('landlord_id', 'landlord_fk_56069')->references('id')->on('landlords');
                 $table->timestamps();
                 $table->softDeletes();
             });

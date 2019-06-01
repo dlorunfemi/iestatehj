@@ -49,6 +49,16 @@ class Create1557804518091PaymentsTable extends Migration
                 $table->foreign('created_by_id', 'created_by_fk_53855')->references('id')->on('users');
                 $table->unsignedInteger('updated_by_id')->nullable();
                 $table->foreign('updated_by_id', 'updated_by_fk_53856')->references('id')->on('users');
+                $table->unsignedInteger('property_id');
+                $table->foreign('property_id', 'property_fk_56063')->references('id')->on('properties');
+                $table->unsignedInteger('landlord_id');
+                $table->foreign('landlord_id', 'landlord_fk_56064')->references('id')->on('landlords');
+                $table->unsignedInteger('tenant_id');
+                $table->foreign('tenant_id', 'tenant_fk_56065')->references('id')->on('tenants');
+                $table->unsignedInteger('apartment_id');
+                $table->foreign('apartment_id', 'apartment_fk_56066')->references('id')->on('property_tags');
+                $table->unsignedInteger('is_confirm_by_id');
+                $table->foreign('is_confirm_by_id', 'is_confirm_by_fk_56067')->references('id')->on('users');
                 $table->timestamps();
                 $table->softDeletes();
             });

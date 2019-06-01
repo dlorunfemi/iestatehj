@@ -17,6 +17,10 @@ class Create1557797408092LandlordsTable extends Migration
                 $table->string('email')->nullable();
                 $table->longText('address_office');
                 $table->longText('address_residence')->nullable();
+                $table->string('bank_name')->nullable();
+                $table->string('account_name')->nullable();
+                $table->string('account_no')->nullable();
+                $table->string('branch')->nullable();
                 $table->string('kin_name')->nullable();
                 $table->string('kin_phone')->nullable();
                 $table->longText('kin_address')->nullable();

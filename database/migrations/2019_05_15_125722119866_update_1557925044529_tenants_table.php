@@ -14,7 +14,7 @@ class Update1557925044529TenantsTable extends Migration
             $table->unsignedInteger('property_id');
             $table->foreign('property_id', 'property_fk_56028')->references('id')->on('properties');
             $table->unsignedInteger('apartment_id');
-            $table->foreign('apartment_id', 'apartment_fk_56029')->references('id')->on('property_tags');
+            $table->foreign('apartment_id', 'apartment_fk_56029')->references('id')->on('vacancies');
         });
     }
 

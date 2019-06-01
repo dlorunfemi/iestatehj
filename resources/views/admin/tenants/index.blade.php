@@ -49,7 +49,7 @@
                                 {{ $tenant->property->name ?? '' }}
                             </td>
                             <td>
-                                {{ $tenant->apartment->name ?? '' }}
+                                {{ $tenant->apartment->description ?? '' }}
                             </td>
                             <td>
                                 @can('tenant_show')

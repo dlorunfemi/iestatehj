@@ -49,7 +49,7 @@ class Tenant extends Model
 
     public function apartment()
     {
-        return $this->belongsTo(PropertyTag::class, 'apartment_id');
+        return $this->belongsTo(Vacancy::class, 'apartment_id');
     }
 
     public function created_by()
