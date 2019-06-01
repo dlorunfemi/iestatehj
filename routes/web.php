@@ -93,7 +93,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
 
     Route::delete('receipts/destroy', 'ReceiptController@massDestroy')->name('receipts.massDestroy');
 
-    Route::resource('receipts', 'ReceiptController', ['except' => ['create', 'store', 'edit', 'update', 'show', 'destroy']]);
+    Route::resource('receipts', 'ReceiptController', ['except' => ['create', 'store', 'edit', 'update', 'destroy']]);
+    Route::get('receipts/downloadPDF/{$id}','ReceiptController@downloadPDF')->name('receipts.downloadPDF');
 
     Route::delete('landlord-banks/destroy', 'LandlordBankController@massDestroy')->name('landlord-banks.massDestroy');
 

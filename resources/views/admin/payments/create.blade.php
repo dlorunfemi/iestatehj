@@ -278,7 +278,7 @@
                     </p>
                 @endif
             </div>
-            <!-- <input type="hidden" id="is_part_payment" name="is_part_payment" value=""> -->
+            <input type="hidden" id="is_confirm_by_id" name="is_confirm_by_id" value="{{ $auth->id }}">
             <input type="hidden" id="is_part_payment" name="is_part_payment" value="No">
             <input type="hidden" name="created_by_id" id="created_by" value="{{ $auth->id }}">
             <div>

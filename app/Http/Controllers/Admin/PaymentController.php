@@ -72,6 +72,7 @@ class PaymentController extends Controller
         public function store(StorePaymentRequest $request)
         {
             abort_unless(\Gate::allows('payment_create'), 403);
+            // dd($request);
 
             $payment = Payment::create($request->all());
 

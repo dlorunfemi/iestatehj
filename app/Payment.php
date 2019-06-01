@@ -123,7 +123,7 @@ class Payment extends Model implements HasMedia
 
     public function apartment()
     {
-        return $this->belongsTo(PropertyTag::class, 'apartment_id');
+        return $this->belongsTo(Vacancy::class, 'apartment_id');
     }
 
     public function getPaymentDateAttribute($value)
@@ -230,4 +230,17 @@ class Payment extends Model implements HasMedia
     {
         return $this->belongsTo(User::class, 'updated_by_id');
     }
+
+    // public function getPdf($type = 'stream')
+    // {
+    //     $pdf = app('dompdf.wrapper')->loadView('order-pdf', ['order' => $this]);
+
+    //     if ($type == 'stream') {
+    //         return $pdf->stream('invoice.pdf');
+    //     }
+
+    //     if ($type == 'download') {
+    //         return $pdf->download('invoice.pdf');
+    //     }
+    // }
 }

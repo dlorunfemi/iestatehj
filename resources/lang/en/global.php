@@ -614,7 +614,7 @@ return [
             'landlord_helper'              => '',
             'tenant'                       => 'Tenant',
             'tenant_helper'                => '',
-            'apartmernt'                   => 'Apartmernt',
+            'apartment'                   => 'Apartment',
             'apartmernt_helper'            => '',
             'annual_charge'                => 'Annual Charge',
             'annual_charge_helper'         => '',

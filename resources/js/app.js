@@ -6,6 +6,8 @@
  */
 
 require('./bootstrap');
+require('jquery-ujs');
+require('./remote');
 
 window.Vue = require('vue');
 
