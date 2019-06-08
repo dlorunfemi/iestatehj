@@ -298,7 +298,7 @@
        var tenant = data.tenant;
        var property = data.property;
        var landlord = data.landlord;
-       var apartment = data.apartment;
+       var apartment = data.vacant;
        var vacant = data.vacant;
        console.log(tenant);
        console.log(property);
@@ -316,7 +316,7 @@
        $('#apartment').empty();
        $('#apartment').append($('<option/>', {
            value: apartment.id,
-           text : apartment.name
+           text : apartment.description
        }));
        $('#annual_charge').empty();
        $('#annual_charge').val(vacant.rent);

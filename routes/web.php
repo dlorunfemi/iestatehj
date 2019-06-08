@@ -90,13 +90,19 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::delete('messages/destroy', 'MessageController@massDestroy')->name('messages.massDestroy');
 
     Route::resource('messages', 'MessageController', ['except' => ['create', 'store', 'edit', 'update', 'show', 'destroy']]);
+    // Route::get('messages/messages', 'MessageController@fetchMessages');    
+    // Route::post('messages/messages', 'MessageController@sendMessage');
 
     Route::delete('receipts/destroy', 'ReceiptController@massDestroy')->name('receipts.massDestroy');
-
+    
     Route::resource('receipts', 'ReceiptController', ['except' => ['create', 'store', 'edit', 'update', 'destroy']]);
-    Route::get('receipts/downloadPDF/{$id}','ReceiptController@downloadPDF')->name('receipts.downloadPDF');
+    Route::get('receipts/{id}/download', 'ReceiptController@download')->name('receipts.download');
 
     Route::delete('landlord-banks/destroy', 'LandlordBankController@massDestroy')->name('landlord-banks.massDestroy');
 
     Route::resource('landlord-banks', 'LandlordBankController', ['except' => ['create', 'store', 'edit', 'update', 'show', 'destroy']]);
 });
+
+// Auth::routes();
+
+// Route::get('/home', 'HomeController@index')->name('home');

@@ -58,7 +58,7 @@
                                 {{ $receipt->tenant->name ?? '' }}
                             </td>
                             <td>
-                                {{ $receipt->apartment->name ?? '' }}
+                                {{ $receipt->apartment->description ?? '' }}
                             </td>
                             <td>
                                 {{ $receipt->annual_charge ?? '' }}
@@ -79,7 +79,7 @@
                                     </a>
                                 @endcan
                                 @can('payment_edit')
-                                    <a class="btn btn-xs btn-info" href="{{ route('admin.receipts.downloadPDF', $receipt->id)}}">
+                                    <a class="btn btn-xs btn-info" href="{{ route('admin.receipts.download', $receipt->id) }}">
                                         {{ trans('global.edit') }}
                                     </a>
                                 @endcan
@@ -99,19 +99,19 @@
 <script>
     $('#exampleModal').on('show.bs.modal', function (e) {
         $('.wrapper').fadeOut();
-        
+
         var a = $(e.relatedTarget);
         var modal = $(this);
-        
+
         // load content from HTML string
         //modal.find('.modal-body').html("Nice modal body baby...");
-        
+
         // or, load content from value of data-remote url
         modal.find('.modal-body').load(a.data("remoe"));
 
     });
     $('#exampleModal').on('hide.bs.modal', function (e) {
-        // location.reload(); 
+        // location.reload();
         $('.wrapper').fadeIn();
     })
 

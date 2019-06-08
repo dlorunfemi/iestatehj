@@ -39,7 +39,7 @@ class PaymentController extends Controller
 
         $tenants = Tenant::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
 
-        $apartments = PropertyTag::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
+        $apartments = Vacancy::all()->pluck('description', 'id')->prepend(trans('global.pleaseSelect'), '');
 
         $confirm_staffs = User::all()->pluck('name', 'id');
 
@@ -93,7 +93,7 @@ class PaymentController extends Controller
 
             $tenants = Tenant::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
 
-            $apartments = PropertyTag::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
+            $apartments = Vacancy::all()->pluck('description', 'id')->prepend(trans('global.pleaseSelect'), '');
 
             $is_confirm_bies = User::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
 

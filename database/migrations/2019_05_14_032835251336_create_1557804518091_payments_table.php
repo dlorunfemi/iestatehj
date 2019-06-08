@@ -56,7 +56,7 @@ class Create1557804518091PaymentsTable extends Migration
                 $table->unsignedInteger('tenant_id');
                 $table->foreign('tenant_id', 'tenant_fk_56065')->references('id')->on('tenants');
                 $table->unsignedInteger('apartment_id');
-                $table->foreign('apartment_id', 'apartment_fk_56066')->references('id')->on('property_tags');
+                $table->foreign('apartment_id', 'apartment_fk_56066')->references('id')->on('vacancies');
                 $table->unsignedInteger('is_confirm_by_id');
                 $table->foreign('is_confirm_by_id', 'is_confirm_by_fk_56067')->references('id')->on('users');
                 $table->timestamps();

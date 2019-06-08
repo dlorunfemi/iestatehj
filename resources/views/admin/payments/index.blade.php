@@ -76,7 +76,7 @@
                                 {{ $payment->tenant->name ?? '' }}
                             </td>
                             <td>
-                                {{ $payment->apartment->name ?? '' }}
+                                {{ $payment->apartment->description ?? '' }}
                             </td>
                             <td>
                                 {{ $payment->annual_charge ?? '' }}

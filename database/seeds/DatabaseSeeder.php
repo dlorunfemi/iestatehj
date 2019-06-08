@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
             PropertiesTableSeeder::class,
             VacancyTableSeeder::class,
             TenantsTableSeeder::class,
+            PaymentsTableSeeder::class,
         ]);
     }
 }

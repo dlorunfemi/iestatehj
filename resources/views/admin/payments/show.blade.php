@@ -38,7 +38,7 @@
                         {{ trans('global.payment.fields.apartment') }}
                     </th>
                     <td>
-                        {{ $payment->apartment->name ?? '' }}
+                        {{ $payment->apartment->description ?? '' }}
                     </td>
                 </tr>
                 <tr>

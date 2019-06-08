@@ -2463,6 +2463,25 @@ class LandlordsTableSeeder extends Seeder
             "kin_phone" => "",
             "officer_id" => 1,
             "account" => 0.00
+        ],
+        [
+            "id" => 130,
+            "created_at" => "2019-06-06 09:49:51",
+            "created_by_id" => 1,
+            "updated_at" => "2019-06-06 09:49:51",
+            "updated_by_id" => 1,
+            "deleted_at" => null,
+            "title" => "Mr.",
+            "name" => "Dominion Olorunfemi",
+            "phone" => "09091652799",
+            "email" => "",
+            "address_office" => "",
+            "address_residence" => "Ibadan",
+            "kin_name" => "",
+            "kin_address" => "",
+            "kin_phone" => "",
+            "officer_id" => 1,
+            "account" => 0.00
         ]
         ];
         Landlord::insert($landlords);
