@@ -17,9 +17,9 @@ class Custom1557794760748CreateMediaTable extends Migration
             $table->string('mime_type')->nullable();
             $table->string('disk');
             $table->unsignedInteger('size');
-            $table->json('manipulations');
-            $table->json('custom_properties');
-            $table->json('responsive_images');
+            $table->text('manipulations');
+            $table->text('custom_properties');
+            $table->text('responsive_images');
             $table->unsignedInteger('order_column')->nullable();
             $table->nullableTimestamps();
         });
