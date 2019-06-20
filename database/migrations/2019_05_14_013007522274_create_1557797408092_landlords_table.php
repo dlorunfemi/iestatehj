@@ -27,6 +27,8 @@ class Create1557797408092LandlordsTable extends Migration
                 $table->unsignedInteger('officer_id');
                 $table->foreign('officer_id', 'officer_fk_53760')->references('id')->on('users');
                 $table->float('account', 15, 2)->nullable();
+                $table->float('service_charge', 15, 2)->nullable();
+                $table->float('caution_deposit', 15, 2)->nullable();
                 $table->unsignedInteger('created_by_id');
                 $table->foreign('created_by_id', 'created_by_fk_53762')->references('id')->on('users');
                 $table->unsignedInteger('updated_by_id')->nullable();

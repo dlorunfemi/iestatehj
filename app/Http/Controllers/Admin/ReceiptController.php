@@ -37,9 +37,10 @@ class ReceiptController extends Controller
             // dd($receipt);
 
             $receipt->load('property', 'landlord', 'tenant', 'apartment', 'is_confirm_by', 'is_confirmed_gm_name', 'is_confirmed_ceo_name', 'cancelled_by', 'created_by', 'updated_by');
+            // \dd($receipt);
             return view('admin.receipts.show', compact('receipt', 'cT'));
         }
-    
+
         public function download($id)
     {
             // abort_unless(\Gate::allows('receipt_access'), 403);
@@ -50,6 +51,6 @@ class ReceiptController extends Controller
             dd($receipt);
             $pdf = PDF::loadView('admin.receipts.show', compact('receipt', 'cT'));
             // dd($pdf);
-            return $pdf->stream('receipt.pdf');    
+            return $pdf->stream('receipt.pdf');
         }
 }

@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 @section('content')
 <div class="card">
-<div class="card-header">
+    <div class="card-header">
         {{ trans('global.receipt.title_singular') }} {{ trans('global.list') }}
     </div>
 

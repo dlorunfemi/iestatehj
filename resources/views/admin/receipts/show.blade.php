@@ -28,7 +28,7 @@
                     padding: 20px;
                     margin: auto;
                     width: 700px;
-                    
+
                 }
                 #rp .no {
                     border: 0 !important;
@@ -115,7 +115,7 @@
                         <tr><td></td></tr>
                         <tr>
                             <td class="content-border">Received from</td>
-                            <td align="center" class="content-border">{{ $receipt->id }}</td>
+                            <td align="center" class="content-border">{{ $receipt->tenant->name }}</td>
                         </tr>
                         <tr><td></td></tr>
                         <tr>
@@ -124,7 +124,7 @@
                         </tr>
                         <tr><td></td></tr>
                         <tr>
-                            <td colspan="2" class="content-border" style="line-height:26px;">Being full/part/balance payment for : {{ ucwords($receipt->id) }} of {{ ucwords($receipt->id) }}</td>
+                            <td colspan="2" class="content-border" style="line-height:26px;">Being full/part/balance payment for : {{ ucwords($receipt->apartment->description) }} of {{ ucwords($receipt->property->name) }}</td>
                         </tr>
                         <tr><td></td></tr>
                         <tr>
@@ -134,8 +134,8 @@
                         <tr>
                             <td class="p-0 sub-text"><span class="border">{{ $receipt->amount_paid }}</span></td>
                             <td class="" align="right">
-                                <p class="pt-2 mb-0 sub-text">Officer's Name: <span class="text-center text-muted">{{ $receipt->id }}</span></p>
-                                <p class="pt-2 mb-0 sub-text">Accountant in Charge: <span class="text-center text-muted">{{ $receipt->id }}</span></p>
+                                <p class="pt-2 mb-0 sub-text">Officer's Name: <span class="text-center text-muted">{{ $receipt->is_confirm_by->name }}</span></p>
+                                <p class="pt-2 mb-0 sub-text">Accountant in Charge: <span class="text-center text-muted">{{ $receipt->is_confirm_by->name }}</span></p>
                             </td>
                         </tr>
                     </tbody>

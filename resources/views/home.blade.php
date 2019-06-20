@@ -104,9 +104,15 @@
                             @forelse($settings5['data'] as $row)
                                 <tr>
                                     @foreach($settings5['fields'] as $field)
-                                        <td>
-                                            {{ $row->{$field} }}
-                                        </td>
+                                        @if($field=='property')
+                                            <td>
+                                                {{ $row->{$field}->name }}
+                                            </td>
+                                        @else
+                                            <td>
+                                                {{ $row->{$field} }}
+                                            </td>
+                                        @endif
                                     @endforeach
                                 </tr>
                                 @empty

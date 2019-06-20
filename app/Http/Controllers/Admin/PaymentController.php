@@ -75,10 +75,11 @@ class PaymentController extends Controller
             // dd($request);
 
             $payment = Payment::create($request->all());
-
+            dd($payment);
             foreach ($request->input('document', []) as $file) {
                 $payment->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection('document');
             }
+            Landlord::update($payment->)->get()
 
             return redirect()->route('admin.payments.index');
         }

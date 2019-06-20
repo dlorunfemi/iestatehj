@@ -26,6 +26,9 @@
                             {{ trans('global.landlord.fields.name') }}
                         </th>
                         <th>
+                            {{ trans('global.landlord.fields.amount') }}
+                        </th>
+                        <th>
                             {{ trans('global.landlord.fields.phone') }}
                         </th>
                         <th>
@@ -44,6 +47,9 @@
                             </td>
                             <td>
                                 {{ $landlord->name ?? '' }}
+                            </td>
+                            <td>
+                                {{ $landlord->account ?? '' }}
                             </td>
                             <td>
                                 {{ $landlord->phone ?? '' }}
