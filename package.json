@@ -10,6 +10,8 @@
         "propertyion": "cross-env NODE_ENV=propertyion node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
     },
     "devDependencies": {
+        "@fortawesome/fontawesome-free": "^5.9.0",
+        "admin-lte": "^2.4.12",
         "axios": "^0.18",
         "bootstrap": "^4.0.0",
         "cross-env": "^5.1",
@@ -24,8 +26,24 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^1.2.19",
+        "@fortawesome/free-solid-svg-icons": "^5.9.0",
+        "@fortawesome/vue-fontawesome": "^0.1.6",
+        "bootstrap-datetimepicker": "0.0.7",
+        "ckeditor": "^4.11.4",
+        "datatables.net": "^1.10.19",
+        "datatables.net-dt": "^1.10.19",
+        "dropzone": "^5.5.1",
+        "emoji-mart-vue": "^2.6.6",
+        "font-awesome": "^4.7.0",
         "jquery-ujs": "^1.2.2",
-        "laravel-echo": "^1.5.3",
-        "pusher-js": "^4.4.0"
+        "jszip": "^3.2.1",
+        "laravel-echo": "^1.5.4",
+        "moment": "^2.24.0",
+        "pdfmake": "^0.1.57",
+        "pusher-js": "^4.4.0",
+        "select2": "^4.0.7",
+        "vue-upload-component": "^2.8.20",
+        "vuetify": "^1.5.16"
     }
 }

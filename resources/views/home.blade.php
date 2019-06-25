@@ -126,6 +126,7 @@
 
             </div>
         </div>
+        <example-component></example-component>
     </div>
 </div>
 @endsection

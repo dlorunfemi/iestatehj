@@ -6,8 +6,13 @@
  */
 
 require('./bootstrap');
+import Vue from 'vue';
+import Vuetify from 'vuetify';
+import 'vuetify/dist/vuetify.min.css';
 
-window.Vue = require('vue');
+
+Vue.use(Vuetify);
+
 
 /**
  * The following block of code may be used to automatically register your
@@ -20,44 +25,15 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+const VueUploadComponent = require('vue-upload-component')
+Vue.component('file-upload', VueUploadComponent)
 
-Vue.component('messages', require('./components/Messages.vue'));
-Vue.component('messages-form', require('./components/MessagesForm.vue'));
+// Vue.component('example-component', require('./components/ExampleComponent.vue'));
+Vue.component('Chat', require('./components/Chat.vue').default);
+Vue.component('PrivateChat', require('./components/PrivateChat.vue'));
 
 const app = new Vue({
-    el: '#app',
-
-    data: {
-        messages: []
-    },
-
-    created() {
-        this.fetchMessages();
-        Echo.private('message')
-		  .listen('MessageSent', (e) => {
-		    this.messages.push({
-		      message: e.message.message,
-		      user: e.user
-		    });
-		  });
-    },
-
-    methods: {
-        fetchMessages() {
-            axios.get('/messages').then(response => {
-                this.messages = response.data;
-            });
-        },
-
-        addMessage(message) {
-            this.messages.push(message);
-
-            axios.post('/messages', message).then(response => {
-              console.log(response.data);
-            });
-        }
-    }
+    el: '#app'
 });
 
 /**

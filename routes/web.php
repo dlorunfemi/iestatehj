@@ -90,8 +90,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::delete('messages/destroy', 'MessageController@massDestroy')->name('messages.massDestroy');
 
     Route::resource('messages', 'MessageController', ['except' => ['create', 'store', 'edit', 'update', 'show', 'destroy']]);
-    // Route::get('messages/messages', 'MessageController@fetchMessages');    
-    // Route::post('messages/messages', 'MessageController@sendMessage');
+    Route::get('messages/messages', 'MessageController@fetchMessages');    
+    Route::post('messages/messages', 'MessageController@sendMessage');
 
     Route::delete('receipts/destroy', 'ReceiptController@massDestroy')->name('receipts.massDestroy');
     

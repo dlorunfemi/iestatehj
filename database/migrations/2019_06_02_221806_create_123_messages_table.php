@@ -17,6 +17,8 @@ class Create123MessagesTable extends Migration
             $table->bigIncrements('id');
             $table->integer('user_id')->unsigned();
             $table->text('message');
+            $table->integer('receiver_id')->nullable();
+            $table->string('image')->nullable();
             $table->timestamps();       
         });
     }

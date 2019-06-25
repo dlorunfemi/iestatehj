@@ -40,7 +40,7 @@
     </style>
 @endsection
 @section('content')
-    <div class="container">
+<!--     <div class="container">
         <div class="row">
             <div class="col-md-8 md-offset-2">
                 <div class="card card-default">
@@ -50,7 +50,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
+    
+    <Chat :user="{{auth()->user()}}"></Chat>
 @endsection
 @section('scripts')
     <script src="{{ asset('js/app.js') }}"></script>
