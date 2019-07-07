@@ -128,7 +128,8 @@
                     </p>
                 @endif
             </div>
-            <div class="form-group {{ $errors->has('created_by_id') ? 'has-error' : '' }}">
+            <input type="hidden" name="updated_by_id" id="updated_by" value="{{ $auth->id }}">
+            {{-- <div class="form-group {{ $errors->has('created_by_id') ? 'has-error' : '' }}">
                 <label for="created_by">{{ trans('global.property.fields.created_by') }}*</label>
                 <select name="created_by_id" id="created_by" class="form-control select2">
                     @foreach($created_bies as $id => $created_by)
@@ -140,7 +141,7 @@
                         {{ $errors->first('created_by_id') }}
                     </p>
                 @endif
-            </div>
+            </div> --}}
             <div>
                 <input class="btn btn-danger" type="submit" value="{{ trans('global.save') }}">
             </div>

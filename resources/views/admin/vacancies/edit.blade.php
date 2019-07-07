@@ -74,9 +74,9 @@
                     {{ trans('global.vacancy.fields.rent_helper') }}
                 </p>
             </div>
-            <div class="form-group {{ $errors->has('updated_by_id') ? 'has-error' : '' }}">
+            {{-- <div class="form-group {{ $errors->has('updated_by_id') ? 'has-error' : '' }}">
                 <label for="updated_by">{{ trans('global.vacancy.fields.updated_by') }}</label>
-                <select name="updated_by_id" id="updated_by" class="form-control select2">
+                <select name="updated_by_id" id="updated_by" class="form-control select2" >
                     @foreach($updated_bies as $id => $updated_by)
                         <option value="{{ $id }}" {{ (isset($vacancy) && $vacancy->updated_by ? $vacancy->updated_by->id : old('updated_by_id')) == $id ? 'selected' : '' }}>{{ $updated_by }}</option>
                     @endforeach
@@ -86,7 +86,8 @@
                         {{ $errors->first('updated_by_id') }}
                     </p>
                 @endif
-            </div>
+            </div> --}}
+            <input type="hidden" name="updated_by_id" id="updated_by" value="{{ $auth->id }}">
             <div>
                 <input class="btn btn-danger" type="submit" value="{{ trans('global.save') }}">
             </div>

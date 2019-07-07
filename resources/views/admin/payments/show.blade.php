@@ -5,8 +5,16 @@
     <div class="card-header">
         {{ trans('global.show') }} {{ trans('global.payment.title') }}
     </div>
-
     <div class="card-body">
+        @if( $auth->roles[0]['title'] === 'Admin' || $auth->roles[0]['title'] === 'Ceo' || $auth->roles[0]['title'] === 'Gm')
+            <form action="{{ route("admin.payments.update", [$payment->id]) }}" method="POST" enctype="multipart/form-data">
+                @csrf
+                @method('PUT')
+                <div class="form-group">
+                    <input type="submit" name="confirm" class="form-control btn btn-success" value="Confirm Payment">
+                </div>
+            </form>
+        @endif
         <table class="table table-bordered table-striped">
             <tbody>
                 <tr>
@@ -206,7 +214,7 @@
                         {{ trans('global.payment.fields.is_confirmed_gm') }}
                     </th>
                     <td>
-                        {{ App\Payment::IS_CONFIRMED_GM_SELECT[$payment->is_confirmed_gm] }}
+                        {{ isset($property->is_confirmed_gm_select) ?  App\Payment::IS_CONFIRMED_GM_SELECT[$payment->is_confirmed_gm] : 'Pending' }}
                     </td>
                 </tr>
                 <tr>
@@ -230,7 +238,7 @@
                         {{ trans('global.payment.fields.is_confirmed_ceo') }}
                     </th>
                     <td>
-                        {{ App\Payment::IS_CONFIRMED_CEO_SELECT[$payment->is_confirmed_ceo] }}
+                        {{ isset($property->is_confirmed_ceo_select) ?  App\Payment::IS_CONFIRMED_CEO_SELECT[$payment->is_confirmed_ceo] : "Pending"}}
                     </td>
                 </tr>
                 <tr>
@@ -254,7 +262,7 @@
                         {{ trans('global.payment.fields.is_cancelled') }}
                     </th>
                     <td>
-                        {{ App\Payment::IS_CANCELLED_SELECT[$payment->is_cancelled] }}
+                        {{ isset($property->is_confirmed_ceo_select) ?  App\Payment::IS_CANCELLED_SELECT[$payment->is_cancelled] : "" }}
                     </td>
                 </tr>
                 <tr>

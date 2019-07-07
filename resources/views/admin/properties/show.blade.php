@@ -70,7 +70,7 @@
                         {{ trans('global.property.fields.is_dormant') }}
                     </th>
                     <td>
-                        {{ App\Property::IS_DORMANT_SELECT[$property->is_dormant] }}
+                        {{ isset($property->is_dormant_select) ?  App\Property::IS_DORMANT_SELECT[$property->is_dormant] : 'Yes'}}
                     </td>
                 </tr>
                 <tr>

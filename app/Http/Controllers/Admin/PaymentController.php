@@ -79,7 +79,7 @@ class PaymentController extends Controller
             foreach ($request->input('document', []) as $file) {
                 $payment->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection('document');
             }
-            Landlord::update($payment->)->get()
+            // Landlord::update($payment->)->get()
 
             return redirect()->route('admin.payments.index');
         }
@@ -137,8 +137,11 @@ class PaymentController extends Controller
             abort_unless(\Gate::allows('payment_show'), 403);
 
             $payment->load('property', 'landlord', 'tenant', 'apartment', 'is_confirm_by', 'is_confirmed_gm_name', 'is_confirmed_ceo_name', 'cancelled_by', 'created_by', 'updated_by');
+            
+            $auth = Auth::user();
+            // return json_encode($auth->roles[0]['title']);
 
-            return view('admin.payments.show', compact('payment'));
+            return view('admin.payments.show', compact('payment', 'auth'));
         }
 
         public function destroy(Payment $payment)

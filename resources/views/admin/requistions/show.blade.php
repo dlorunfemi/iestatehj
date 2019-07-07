@@ -54,7 +54,7 @@
                         {{ trans('global.requistion.fields.accountant') }}
                     </th>
                     <td>
-                        {{ App\Requistion::ACCOUNTANT_SELECT[$requistion->accountant] }}
+                        {{ isset($requistion->accountant) ? App\Requistion::ACCOUNTANT_SELECT[$requistion->accountant] : 'Waiting Approval'}}
                     </td>
                 </tr>
                 <tr>
@@ -70,7 +70,7 @@
                         {{ trans('global.requistion.fields.gm') }}
                     </th>
                     <td>
-                        {{ App\Requistion::GM_SELECT[$requistion->gm] }}
+                        {{ isset($requistion->gm) ? App\Requistion::GM_SELECT[$requistion->gm] : 'Waiting Approval' }}
                     </td>
                 </tr>
                 <tr>
@@ -86,7 +86,7 @@
                         {{ trans('global.requistion.fields.ceo') }}
                     </th>
                     <td>
-                        {{ App\Requistion::CEO_SELECT[$requistion->ceo] }}
+                        {{ isset($requistion->ceo) ? App\Requistion::CEO_SELECT[$requistion->ceo] : 'Waiting Approval' }}
                     </td>
                 </tr>
                 <tr>
@@ -102,7 +102,7 @@
                         {{ trans('global.requistion.fields.is_returned') }}
                     </th>
                     <td>
-                        {{ App\Requistion::IS_RETURNED_SELECT[$requistion->is_returned] }}
+                        {{ isset($requistion->is_required) ? App\Requistion::IS_RETURNED_SELECT[$requistion->is_returned] : 'Waiting Approval' }}
                     </td>
                 </tr>
                 <tr>

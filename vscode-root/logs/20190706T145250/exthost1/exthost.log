@@ -1,0 +1,88 @@
+[2019-07-06 14:53:01.143] [exthost] [info] extension host started
+[2019-07-06 14:53:01.278] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"activationEvent":"*"}
+[2019-07-06 14:53:01.278] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/vscodium/resources/app/extensions/debug-auto-launch/dist/extension
+[2019-07-06 14:53:01.294] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"activationEvent":"*"}
+[2019-07-06 14:53:01.295] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/vscodium/resources/app/extensions/emmet/dist/extension
+[2019-07-06 14:53:01.425] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"activationEvent":"*"}
+[2019-07-06 14:53:01.425] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/vscodium/resources/app/extensions/git/dist/main
+[2019-07-06 14:53:01.608] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"activationEvent":"*"}
+[2019-07-06 14:53:01.608] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/vscodium/resources/app/extensions/merge-conflict/dist/extension
+[2019-07-06 14:53:01.697] [exthost] [info] ExtensionService#_doActivateExtension christian-kohler.path-intellisense {"startup":true,"activationEvent":"*"}
+[2019-07-06 14:53:01.697] [exthost] [info] ExtensionService#loadCommonJSModule /root/.vscode-oss/extensions/christian-kohler.path-intellisense-1.4.2/out/src/extension
+[2019-07-06 14:53:01.795] [exthost] [info] ExtensionService#_doActivateExtension EditorConfig.EditorConfig {"startup":true,"activationEvent":"*"}
+[2019-07-06 14:53:01.795] [exthost] [info] ExtensionService#loadCommonJSModule /root/.vscode-oss/extensions/editorconfig.editorconfig-0.13.0/out/src/editorConfigMain
+[2019-07-06 14:53:01.948] [exthost] [info] ExtensionService#_doActivateExtension esbenp.prettier-vscode {"startup":true,"activationEvent":"*"}
+[2019-07-06 14:53:01.948] [exthost] [info] ExtensionService#loadCommonJSModule /root/.vscode-oss/extensions/esbenp.prettier-vscode-1.9.0/out/src/extension
+[2019-07-06 14:53:02.596] [exthost] [info] ExtensionService#_doActivateExtension gencer.html-slim-scss-css-class-completion {"startup":true,"activationEvent":"*"}
+[2019-07-06 14:53:02.596] [exthost] [info] ExtensionService#loadCommonJSModule /root/.vscode-oss/extensions/gencer.html-slim-scss-css-class-completion-1.5.17/out/src/extension
+[2019-07-06 14:53:03.751] [exthost] [info] ExtensionService#_doActivateExtension michelemelluso.code-beautifier {"startup":true,"activationEvent":"*"}
+[2019-07-06 14:53:03.751] [exthost] [info] ExtensionService#loadCommonJSModule /root/.vscode-oss/extensions/michelemelluso.code-beautifier-2.2.1/out/src/extension
+[2019-07-06 14:53:04.043] [exthost] [info] ExtensionService#_doActivateExtension ms-vsliveshare.vsliveshare {"startup":true,"activationEvent":"*"}
+[2019-07-06 14:53:04.043] [exthost] [info] ExtensionService#loadCommonJSModule /root/.vscode-oss/extensions/ms-vsliveshare.vsliveshare-1.0.470/out/prod/extension-prod
+[2019-07-06 14:53:05.379] [exthost] [info] ExtensionService#_doActivateExtension PKief.material-icon-theme {"startup":true,"activationEvent":"*"}
+[2019-07-06 14:53:05.379] [exthost] [info] ExtensionService#loadCommonJSModule /root/.vscode-oss/extensions/pkief.material-icon-theme-3.8.0/dist/extension
+[2019-07-06 14:53:05.434] [exthost] [info] ExtensionService#_doActivateExtension vscode-icons-team.vscode-icons {"startup":true,"activationEvent":"*"}
+[2019-07-06 14:53:05.434] [exthost] [info] ExtensionService#loadCommonJSModule /root/.vscode-oss/extensions/vscode-icons-team.vscode-icons-8.8.0/out/src/
+[2019-07-06 14:53:05.772] [exthost] [info] ExtensionService#_doActivateExtension Zignd.html-css-class-completion {"startup":true,"activationEvent":"*"}
+[2019-07-06 14:53:05.772] [exthost] [info] ExtensionService#loadCommonJSModule /root/.vscode-oss/extensions/zignd.html-css-class-completion-1.19.0/out/src/extension
+[2019-07-06 14:53:07.604] [exthost] [info] eager extensions activated
+[2019-07-06 14:53:40.558] [exthost] [info] ExtensionService#_doActivateExtension vscode.configuration-editing {"startup":false,"activationEvent":"onLanguage:jsonc"}
+[2019-07-06 14:53:40.558] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/vscodium/resources/app/extensions/configuration-editing/dist/extension
+[2019-07-06 14:53:40.661] [exthost] [info] ExtensionService#_doActivateExtension vscode.json-language-features {"startup":false,"activationEvent":"onLanguage:jsonc"}
+[2019-07-06 14:53:40.661] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/vscodium/resources/app/extensions/json-language-features/client/dist/jsonMain
+[2019-07-06 14:53:40.869] [exthost] [info] ExtensionService#_doActivateExtension vscode.typescript-language-features {"startup":false,"activationEvent":"onLanguage:jsonc"}
+[2019-07-06 14:53:40.869] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/vscodium/resources/app/extensions/typescript-language-features/dist/extension
+[2019-07-06 16:03:19.134] [exthost] [info] extension host started
+[2019-07-06 16:03:19.174] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"activationEvent":"*"}
+[2019-07-06 16:03:19.174] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/vscodium/resources/app/extensions/debug-auto-launch/dist/extension
+[2019-07-06 16:03:19.178] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"activationEvent":"*"}
+[2019-07-06 16:03:19.178] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/vscodium/resources/app/extensions/emmet/dist/extension
+[2019-07-06 16:03:19.197] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"activationEvent":"*"}
+[2019-07-06 16:03:19.197] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/vscodium/resources/app/extensions/git/dist/main
+[2019-07-06 16:03:19.335] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"activationEvent":"*"}
+[2019-07-06 16:03:19.335] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/vscodium/resources/app/extensions/merge-conflict/dist/extension
+[2019-07-06 16:03:19.345] [exthost] [info] ExtensionService#_doActivateExtension christian-kohler.path-intellisense {"startup":true,"activationEvent":"*"}
+[2019-07-06 16:03:19.345] [exthost] [info] ExtensionService#loadCommonJSModule /root/.vscode-oss/extensions/christian-kohler.path-intellisense-1.4.2/out/src/extension
+[2019-07-06 16:03:19.360] [exthost] [info] ExtensionService#_doActivateExtension EditorConfig.EditorConfig {"startup":true,"activationEvent":"*"}
+[2019-07-06 16:03:19.360] [exthost] [info] ExtensionService#loadCommonJSModule /root/.vscode-oss/extensions/editorconfig.editorconfig-0.13.0/out/src/editorConfigMain
+[2019-07-06 16:03:19.386] [exthost] [info] ExtensionService#_doActivateExtension esbenp.prettier-vscode {"startup":true,"activationEvent":"*"}
+[2019-07-06 16:03:19.386] [exthost] [info] ExtensionService#loadCommonJSModule /root/.vscode-oss/extensions/esbenp.prettier-vscode-1.9.0/out/src/extension
+[2019-07-06 16:03:19.587] [exthost] [info] ExtensionService#_doActivateExtension gencer.html-slim-scss-css-class-completion {"startup":true,"activationEvent":"*"}
+[2019-07-06 16:03:19.587] [exthost] [info] ExtensionService#loadCommonJSModule /root/.vscode-oss/extensions/gencer.html-slim-scss-css-class-completion-1.5.17/out/src/extension
+[2019-07-06 16:03:19.907] [exthost] [info] ExtensionService#_doActivateExtension michelemelluso.code-beautifier {"startup":true,"activationEvent":"*"}
+[2019-07-06 16:03:19.907] [exthost] [info] ExtensionService#loadCommonJSModule /root/.vscode-oss/extensions/michelemelluso.code-beautifier-2.2.1/out/src/extension
+[2019-07-06 16:03:19.930] [exthost] [info] ExtensionService#_doActivateExtension ms-vsliveshare.vsliveshare {"startup":true,"activationEvent":"*"}
+[2019-07-06 16:03:19.930] [exthost] [info] ExtensionService#loadCommonJSModule /root/.vscode-oss/extensions/ms-vsliveshare.vsliveshare-1.0.470/out/prod/extension-prod
+[2019-07-06 16:03:20.551] [exthost] [info] ExtensionService#_doActivateExtension PKief.material-icon-theme {"startup":true,"activationEvent":"*"}
+[2019-07-06 16:03:20.551] [exthost] [info] ExtensionService#loadCommonJSModule /root/.vscode-oss/extensions/pkief.material-icon-theme-3.8.0/dist/extension
+[2019-07-06 16:03:20.579] [exthost] [info] ExtensionService#_doActivateExtension vscode-icons-team.vscode-icons {"startup":true,"activationEvent":"*"}
+[2019-07-06 16:03:20.579] [exthost] [info] ExtensionService#loadCommonJSModule /root/.vscode-oss/extensions/vscode-icons-team.vscode-icons-8.8.0/out/src/
+[2019-07-06 16:03:20.682] [exthost] [info] ExtensionService#_doActivateExtension Zignd.html-css-class-completion {"startup":true,"activationEvent":"*"}
+[2019-07-06 16:03:20.683] [exthost] [info] ExtensionService#loadCommonJSModule /root/.vscode-oss/extensions/zignd.html-css-class-completion-1.19.0/out/src/extension
+[2019-07-06 16:03:23.409] [exthost] [info] ExtensionService#_doActivateExtension ryannaddy.laravel-artisan {"startup":true,"activationEvent":"workspaceContains:**/artisan"}
+[2019-07-06 16:03:23.409] [exthost] [info] ExtensionService#loadCommonJSModule /root/.vscode-oss/extensions/ryannaddy.laravel-artisan-0.0.25/out/src/extension
+[2019-07-06 16:03:25.680] [exthost] [info] ExtensionService#_doActivateExtension felixfbecker.php-intellisense {"startup":true,"activationEvent":"workspaceContains:**/*.php"}
+[2019-07-06 16:03:25.680] [exthost] [info] ExtensionService#loadCommonJSModule /root/.vscode-oss/extensions/felixfbecker.php-intellisense-2.3.10/out/extension
+[2019-07-06 16:03:46.449] [exthost] [info] eager extensions activated
+[2019-07-06 16:03:58.360] [exthost] [info] ExtensionService#_doActivateExtension vscode.php-language-features {"startup":false,"activationEvent":"onLanguage:php"}
+[2019-07-06 16:03:58.360] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/vscodium/resources/app/extensions/php-language-features/dist/phpMain
+[2019-07-06 16:03:58.424] [exthost] [info] ExtensionService#_doActivateExtension amiralizadeh9480.laravel-extra-intellisense {"startup":false,"activationEvent":"onLanguage:php"}
+[2019-07-06 16:03:58.424] [exthost] [info] ExtensionService#loadCommonJSModule /root/.vscode-oss/extensions/amiralizadeh9480.laravel-extra-intellisense-0.1.7/dist/extension.js
+[2019-07-06 16:03:58.484] [exthost] [info] ExtensionService#_doActivateExtension codingyu.laravel-goto-view {"startup":false,"activationEvent":"onLanguage:php"}
+[2019-07-06 16:03:58.484] [exthost] [info] ExtensionService#loadCommonJSModule /root/.vscode-oss/extensions/codingyu.laravel-goto-view-1.3.1/out/src/extension
+[2019-07-06 16:03:58.518] [exthost] [info] ExtensionService#_doActivateExtension ecmel.vscode-html-css {"startup":false,"activationEvent":"onLanguage:php"}
+[2019-07-06 16:03:58.518] [exthost] [info] ExtensionService#loadCommonJSModule /root/.vscode-oss/extensions/ecmel.vscode-html-css-0.2.0/out/src/extension
+[2019-07-06 16:04:00.189] [exthost] [info] ExtensionService#_doActivateExtension HvyIndustries.crane {"startup":false,"activationEvent":"onLanguage:php"}
+[2019-07-06 16:04:00.189] [exthost] [info] ExtensionService#loadCommonJSModule /root/.vscode-oss/extensions/hvyindustries.crane-0.3.8/out/src/extension
+[2019-07-06 16:04:52.710] [exthost] [info] ExtensionService#_doActivateExtension onecentlin.laravel-blade {"startup":false,"activationEvent":"onLanguage:blade"}
+[2019-07-06 16:04:52.710] [exthost] [info] ExtensionService#loadCommonJSModule /root/.vscode-oss/extensions/onecentlin.laravel-blade-1.20.0/out/src/extension
+[2019-07-06 16:05:08.309] [exthost] [info] ExtensionService#_doActivateExtension vscode.html-language-features {"startup":false,"activationEvent":"onLanguage:html"}
+[2019-07-06 16:05:08.309] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/vscodium/resources/app/extensions/html-language-features/client/dist/htmlMain
+[2019-07-06 16:05:08.519] [exthost] [info] ExtensionService#_doActivateExtension leizongmin.node-module-intellisense {"startup":false,"activationEvent":"onLanguage:html"}
+[2019-07-06 16:05:08.519] [exthost] [info] ExtensionService#loadCommonJSModule /root/.vscode-oss/extensions/leizongmin.node-module-intellisense-1.5.0/out/src/extension
+[2019-07-06 16:59:56.758] [exthost] [info] ExtensionService#_doActivateExtension vscode.configuration-editing {"startup":false,"activationEvent":"onLanguage:jsonc"}
+[2019-07-06 16:59:56.758] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/vscodium/resources/app/extensions/configuration-editing/dist/extension
+[2019-07-06 16:59:56.876] [exthost] [info] ExtensionService#_doActivateExtension vscode.json-language-features {"startup":false,"activationEvent":"onLanguage:jsonc"}
+[2019-07-06 16:59:56.876] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/vscodium/resources/app/extensions/json-language-features/client/dist/jsonMain
+[2019-07-06 16:59:57.016] [exthost] [info] ExtensionService#_doActivateExtension vscode.typescript-language-features {"startup":false,"activationEvent":"onLanguage:jsonc"}
+[2019-07-06 16:59:57.016] [exthost] [info] ExtensionService#loadCommonJSModule /usr/share/vscodium/resources/app/extensions/typescript-language-features/dist/extension

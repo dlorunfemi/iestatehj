@@ -131,7 +131,8 @@
                     </p>
                 @endif
             </div>
-            <div class="form-group {{ $errors->has('updated_by_id') ? 'has-error' : '' }}">
+            <input type="hidden" name="updated_by_id" id="updated_by" value="{{ $auth->id }}">
+            {{-- <div class="form-group {{ $errors->has('updated_by_id') ? 'has-error' : '' }}">
                 <label for="updated_by">{{ trans('global.landlord.fields.updated_by') }}</label>
                 <select name="updated_by_id" id="updated_by" class="form-control select2">
                     @foreach($updated_bies as $id => $updated_by)
@@ -143,7 +144,7 @@
                         {{ $errors->first('updated_by_id') }}
                     </p>
                 @endif
-            </div>
+            </div> --}}
             <div class="form-group {{ $errors->has('bank_name') ? 'has-error' : '' }}">
                 <label for="bank_name">{{ trans('global.landlord.fields.bank_name') }}</label>
                 <input type="text" id="bank_name" name="bank_name" class="form-control" value="{{ old('bank_name', isset($landlord) ? $landlord->bank_name : '') }}">

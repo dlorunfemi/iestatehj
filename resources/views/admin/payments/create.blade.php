@@ -69,7 +69,7 @@
             </div>
             <div class="form-group {{ $errors->has('service_charge') ? 'has-error' : '' }}">
                 <label for="service_charge">{{ trans('global.payment.fields.service_charge') }}</label>
-                <input type="number" id="service_charge" name="service_charge" class="form-control" value="{{ old('service_charge', isset($payment) ? $payment->service_charge : '') }}" step="0.01" readonly>
+                <input type="number" id="service_charge" name="service_charge" class="form-control a" value="{{ old('service_charge', isset($payment) ? $payment->service_charge : '') }}" step="0.01" >
                 @if($errors->has('service_charge'))
                     <p class="help-block">
                         {{ $errors->first('service_charge') }}
@@ -79,21 +79,9 @@
                     {{ trans('global.payment.fields.service_charge_helper') }}
                 </p>
             </div>
-            <div class="form-group {{ $errors->has('legal_fee') ? 'has-error' : '' }}">
-                <label for="legal_fee">{{ trans('global.payment.fields.legal_fee') }}</label>
-                <input type="number" id="legal_fee" name="legal_fee" class="form-control" value="{{ old('legal_fee', isset($payment) ? $payment->legal_fee : '') }}" step="0.01" readonly>
-                @if($errors->has('legal_fee'))
-                    <p class="help-block">
-                        {{ $errors->first('legal_fee') }}
-                    </p>
-                @endif
-                <p class="helper-block">
-                    {{ trans('global.payment.fields.legal_fee_helper') }}
-                </p>
-            </div>
             <div class="form-group {{ $errors->has('caution_deposit') ? 'has-error' : '' }}">
                 <label for="caution_deposit">{{ trans('global.payment.fields.caution_deposit') }}</label>
-                <input type="number" id="caution_deposit" name="caution_deposit" class="form-control" value="{{ old('caution_deposit', isset($payment) ? $payment->caution_deposit : '') }}" step="0.01" readonly>
+                <input type="number" id="caution_deposit" name="caution_deposit" class="form-control a" value="{{ old('caution_deposit', isset($payment) ? $payment->caution_deposit : '') }}" step="0.01" >
                 @if($errors->has('caution_deposit'))
                     <p class="help-block">
                         {{ $errors->first('caution_deposit') }}
@@ -103,9 +91,21 @@
                     {{ trans('global.payment.fields.caution_deposit_helper') }}
                 </p>
             </div>
+            <div class="form-group {{ $errors->has('legal_fee') ? 'has-error' : '' }}">
+                <label for="legal_fee">{{ trans('global.payment.fields.legal_fee') }}</label>
+                <input type="number" id="legal_fee" name="legal_fee" class="form-control" value="{{ old('legal_fee', isset($payment) ? $payment->legal_fee : '') }}" step="0.01" >
+                @if($errors->has('legal_fee'))
+                    <p class="help-block">
+                        {{ $errors->first('legal_fee') }}
+                    </p>
+                @endif
+                <p class="helper-block">
+                    {{ trans('global.payment.fields.legal_fee_helper') }}
+                </p>
+            </div>
             <div class="form-group {{ $errors->has('agency_fee') ? 'has-error' : '' }}">
                 <label for="agency_fee">{{ trans('global.payment.fields.agency_fee') }}</label>
-                <input type="number" id="agency_fee" name="agency_fee" class="form-control" value="{{ old('agency_fee', isset($payment) ? $payment->agency_fee : '') }}" step="0.01" readonly>
+                <input type="number" id="agency_fee" name="agency_fee" class="form-control" value="{{ old('agency_fee', isset($payment) ? $payment->agency_fee : '') }}" step="0.01" >
                 @if($errors->has('agency_fee'))
                     <p class="help-block">
                         {{ $errors->first('agency_fee') }}
@@ -117,7 +117,7 @@
             </div>
             <div class="form-group {{ $errors->has('management_fee') ? 'has-error' : '' }}">
                 <label for="management_fee">{{ trans('global.payment.fields.management_fee') }}</label>
-                <input type="number" id="management_fee" name="management_fee" class="form-control" value="{{ old('management_fee', isset($payment) ? $payment->management_fee : '') }}" step="0.01" readonly>
+                <input type="number" id="management_fee" name="management_fee" class="form-control" value="{{ old('management_fee', isset($payment) ? $payment->management_fee : '') }}" step="0.01" >
                 @if($errors->has('management_fee'))
                     <p class="help-block">
                         {{ $errors->first('management_fee') }}
@@ -130,7 +130,7 @@
             <hr>
             <div class="form-group {{ $errors->has('amount_paid') ? 'has-error' : '' }}">
                 <label for="amount_paid">{{ trans('global.payment.fields.amount_paid') }}</label>
-                <input type="number" id="amount_paid" name="amount_paid" class="form-control" value="{{ old('amount_paid', isset($payment) ? $payment->amount_paid : '') }}" step="0.01">
+                <input type="number" id="amount_paid" name="amount_paid" class="form-control  b" value="{{ old('amount_paid', isset($payment) ? $payment->amount_paid : '') }}" step="0.01">
                 @if($errors->has('amount_paid'))
                     <p class="help-block">
                         {{ $errors->first('amount_paid') }}
@@ -142,7 +142,7 @@
             </div>
             <div class="form-group {{ $errors->has('landlord_account') ? 'has-error' : '' }}">
                 <label for="landlord_account">{{ trans('global.payment.fields.landlord_account') }}</label>
-                <input type="number" id="landlord_account" name="landlord_account" class="form-control" value="{{ old('landlord_account', isset($payment) ? $payment->landlord_account : '') }}" step="0.01">
+                <input type="number" id="landlord_account" name="landlord_account" class="form-control" value="{{ old('landlord_account', isset($payment) ? $payment->landlord_account : '') }}" step="0.01" readonly>
                 @if($errors->has('landlord_account'))
                     <p class="help-block">
                         {{ $errors->first('landlord_account') }}
@@ -154,7 +154,7 @@
             </div>
             <div class="form-group {{ $errors->has('company_account') ? 'has-error' : '' }}">
                 <label for="company_account">{{ trans('global.payment.fields.company_account') }}</label>
-                <input type="number" id="company_account" name="company_account" class="form-control" value="{{ old('company_account', isset($payment) ? $payment->company_account : '') }}" step="0.01">
+                <input type="number" id="company_account" name="company_account" class="form-control" value="{{ old('company_account', isset($payment) ? $payment->company_account : '') }}" step="0.01" readonly>
                 @if($errors->has('company_account'))
                     <p class="help-block">
                         {{ $errors->first('company_account') }}
@@ -331,60 +331,134 @@
      }
    }
 </script>
+<script type='text/javascript'>
+        
+        $('.form-group').on('input', function() {
+            var a = 10;
+            var b = 0;
+            var c = 0;
+
+            if($('#service_charge').on('input', function() {
+                var getVal = $(this).val()
+                console.log(getVal)
+                if($.isNumeric(getVal)) {
+                    var a += parseFloat(getVal);
+                }
+            // console.log(a);
+            }));
+
+            console.log(a);
+            // $('#company_account').val(a + b + c);
+            $("#company_account").val(function() {
+                return this.value + a;
+            });
+        });
+
+        // if($('#caution_deposit').on('input', function() {
+        //     var getVal= $(this).val()
+        //     console.log(getVal)
+        //     if($.isNumeric(getVal)) {
+        //         b += parseFloat(getVal);
+        //     }
+        // }));
+
+        // if($('#amount_paid').on('input', function() {
+        //     var getVal = $(this).val();
+        //     console.log(getVal)
+        //     if($.isNumeric(getVal)) {
+        //         c += parseFloat(getVal);
+        //     }
+        // }));
+
+ 
+
+            // console.log(t);
+    // $('.form-group').on('input', '.a', '.b', function() {
+    //     $('.form-group .a').each(function() {
+    //         var inputVal = $(this).val();
+    //         console.log(inputVal);
+    //         if($.isNumeric(inputVal)) {
+    //             t += parseFloat(inputVal);
+    //         }
+    //         // return t;
+    //     });
+
+    //     // $('.form-group .b').each(function() {
+    //     //     var paid = $(this).val();
+    //     //     console.log(paid);
+    //     //     if($.isNumeric(paid)) {
+    //     //         t += 0.1 * parseFloat(paid);
+    //     //     }
+    //     // });
+
+    // });
+
+    // $('.form-group').on('input', '.b', function() {
+    //     $('.form-group .b').each(function() {
+    //         var paid = $(this).val();
+    //         if($.isNumeric(paid)) {
+    //             t += 0.1 * parseFloat(paid);
+    //         // return t;
+    //         }
+    //         console.log(t);
+    //     });
+    // })
+        
+</script>
 <script>
     var uploadedDocumentMap = {}
-Dropzone.options.documentDropzone = {
-    url: '{{ route('admin.payments.storeMedia') }}',
-    maxFilesize: 10, // MB
-    addRemoveLinks: true,
-    headers: {
-      'X-CSRF-TOKEN': "{{ csrf_token() }}"
-    },
-    params: {
-      size: 10
-    },
-    success: function (file, response) {
-      $('form').append('<input type="hidden" name="document[]" value="' + response.name + '">')
-      uploadedDocumentMap[file.name] = response.name
-    },
-    removedfile: function (file) {
-      file.previewElement.remove()
-      var name = ''
-      if (typeof file.file_name !== 'undefined') {
-        name = file.file_name
-      } else {
-        name = uploadedDocumentMap[file.name]
-      }
-      $('form').find('input[name="document[]"][value="' + name + '"]').remove()
-    },
-    init: function () {
-@if(isset($payment) && $payment->document)
-          var files =
-            {!! json_encode($payment->document) !!}
-              for (var i in files) {
-              var file = files[i]
-              this.options.addedfile.call(this, file)
-              file.previewElement.classList.add('dz-complete')
-              $('form').append('<input type="hidden" name="document[]" value="' + file.file_name + '">')
-            }
-@endif
-    },
-     error: function (file, response) {
-         if ($.type(response) === 'string') {
-             var message = response //dropzone sends it's own error messages in string
-         } else {
-             var message = response.errors.file
-         }
-         file.previewElement.classList.add('dz-error')
-         _ref = file.previewElement.querySelectorAll('[data-dz-errormessage]')
-         _results = []
-         for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-             node = _ref[_i]
-             _results.push(node.textContent = message)
-         }
+    Dropzone.options.documentDropzone = {
+        url: '{{ route('admin.payments.storeMedia') }}',
+        maxFilesize: 10, // MB
+        addRemoveLinks: true,
+        headers: {
+          'X-CSRF-TOKEN': "{{ csrf_token() }}"
+        },
+        params: {
+          size: 10
+        },
+        success: function (file, response) {
+          $('form').append('<input type="hidden" name="document[]" value="' + response.name + '">')
+          uploadedDocumentMap[file.name] = response.name
+        },
+        removedfile: function (file) {
+          file.previewElement.remove()
+          var name = ''
+          if (typeof file.file_name !== 'undefined') {
+            name = file.file_name
+          } else {
+            name = uploadedDocumentMap[file.name]
+          }
+          $('form').find('input[name="document[]"][value="' + name + '"]').remove()
+        },
+        init: function () {
+    @if(isset($payment) && $payment->document)
+              var files =
+                {!! json_encode($payment->document) !!}
+                  for (var i in files) {
+                  var file = files[i]
+                  this.options.addedfile.call(this, file)
+                  file.previewElement.classList.add('dz-complete')
+                  $('form').append('<input type="hidden" name="document[]" value="' + file.file_name + '">')
+                }
+    @endif
+        },
+         error: function (file, response) {
+             if ($.type(response) === 'string') {
+                 var message = response //dropzone sends it's own error messages in string
+             } else {
+                 var message = response.errors.file
+             }
+             file.previewElement.classList.add('dz-error')
+             _ref = file.previewElement.querySelectorAll('[data-dz-errormessage]')
+             _results = []
+             for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+                 node = _ref[_i]
+                 _results.push(node.textContent = message)
+             }
 
-         return _results
-     }
-}
+             return _results
+         }
+    }
 </script>
 @stop

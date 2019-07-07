@@ -167,7 +167,8 @@
                     </p>
                 @endif
             </div>
-            <div class="form-group {{ $errors->has('return_user_id') ? 'has-error' : '' }}">
+            <input type="hidden" name="return_user_id" id="return_user" value="{{ $auth->id }}">
+            {{-- <div class="form-group {{ $errors->has('return_user_id') ? 'has-error' : '' }}">
                 <label for="return_user">{{ trans('global.requistion.fields.return_user') }}</label>
                 <select name="return_user_id" id="return_user" class="form-control select2">
                     @foreach($return_users as $id => $return_user)
@@ -179,7 +180,7 @@
                         {{ $errors->first('return_user_id') }}
                     </p>
                 @endif
-            </div>
+            </div> --}}
             <div class="form-group {{ $errors->has('return_date') ? 'has-error' : '' }}">
                 <label for="return_date">{{ trans('global.requistion.fields.return_date') }}</label>
                 <input type="text" id="return_date" name="return_date" class="form-control datetime" value="{{ old('return_date', isset($requistion) ? $requistion->return_date : '') }}">

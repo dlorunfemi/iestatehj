@@ -29,7 +29,7 @@ class PropertyController extends Controller
 
         $landlords = Landlord::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
 
-        $categories = PropertyCategory::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
+        $property_types = PropertyCategory::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
 
         $officers = User::whereHas('roles', function($q){
                       $q->where('title', 'officer');
@@ -37,7 +37,7 @@ class PropertyController extends Controller
 
         $auth = Auth::user();
 
-        return view('admin.properties.create', compact('landlords', 'categories', 'officers', 'auth'));
+        return view('admin.properties.create', compact('landlords', 'property_types', 'officers', 'auth'));
     }
 
         public function store(StorePropertyRequest $request)

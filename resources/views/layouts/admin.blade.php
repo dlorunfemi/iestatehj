@@ -21,7 +21,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
     <link href="{{ asset('css/adminltev3.css') }}" rel="stylesheet" />
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet" />
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet" />
+    {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet" /> --}}
     @yield('styles')
 </head>
 
@@ -76,7 +76,7 @@
             <strong> &copy;</strong> {{ trans('global.allRightsReserved') }}
         </footer>
 
-        
+
         <form id="logoutform" action="{{ route('logout') }}" method="POST" style="display: none;">
             {{ csrf_field() }}
         </form>
@@ -86,7 +86,7 @@
       <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-body p-0 my-3">
-          
+
           </div>
         </div>
       </div>
@@ -97,7 +97,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.full.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script><!-- 
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script><!--
     <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.2.4/js/dataTables.buttons.min.js"></script>
     <script src="https://cdn.datatables.net/select/1.3.0/js/dataTables.select.min.js"></script>
@@ -114,8 +114,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.full.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.js"></scr -->ipt>
     <script src="{{ asset('js/main.js') }}"></script>
-    <script src="{{ asset('js/app.js') }}"></script>
-    
+    {{-- <script src="{{ asset('js/app.js') }}"></script> --}}
+
     <script>
         $(function() {
           let copyButtonTrans = '{{ trans('global.datatables.copy') }}'
@@ -124,11 +124,11 @@
           let pdfButtonTrans = '{{ trans('global.datatables.pdf') }}'
           let printButtonTrans = '{{ trans('global.datatables.print') }}'
           let colvisButtonTrans = '{{ trans('global.datatables.colvis') }}'
-          
+
           let languages = {
             'en': 'https://cdn.datatables.net/plug-ins/1.10.19/i18n/English.json'
           };
-          
+
           $.extend(true, $.fn.dataTable.Buttons.defaults.dom.button, { className: 'btn' })
           $.extend(true, $.fn.dataTable.defaults, {
             language: {
@@ -202,10 +202,10 @@
               }
             ]
           });
-          
+
           $.fn.dataTable.ext.classes.sPageButton = '';
         });
-        
+
         </script>
     @yield('scripts')
     <script>

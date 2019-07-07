@@ -10,6 +10,7 @@ use App\Landlord;
 use App\Property;
 use App\Requistion;
 use App\User;
+use Illuminate\Support\Facades\Auth;
 
 class RequistionController extends Controller
 {
@@ -54,9 +55,11 @@ class RequistionController extends Controller
 
         $initiating_staffs = User::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
 
+        $auth = Auth::user();
+
         $requistion->load('property', 'landlord', 'initiating_staff', 'return_user');
 
-        return view('admin.requistions.edit', compact('properties', 'landlords', 'initiating_staffs', 'requistion'));
+        return view('admin.requistions.edit', compact('properties', 'landlords', 'initiating_staffs', 'requistion', 'auth'));
     }
 
     public function update(UpdateRequistionRequest $request, Requistion $requistion)

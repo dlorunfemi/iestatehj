@@ -82,9 +82,11 @@ class TenantController extends Controller
 
             $created_bies = User::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
 
+            $auth = Auth::user();
+
             $tenant->load('property', 'apartment', 'created_by', 'updated_by');
 
-            return view('admin.tenants.edit', compact('properties', 'apartments', 'created_bies', 'tenant'));
+            return view('admin.tenants.edit', compact('properties', 'apartments', 'created_bies', 'tenant', 'auth'));
         }
 
         public function update(UpdateTenantRequest $request, Tenant $tenant)

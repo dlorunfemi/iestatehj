@@ -52,9 +52,11 @@ class LandlordController extends Controller
 
         $created_bies = User::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
 
+        $auth = Auth::user();
+
         $landlord->load('officer', 'created_by', 'updated_by');
 
-        return view('admin.landlords.edit', compact('officers', 'created_bies', 'landlord'));
+        return view('admin.landlords.edit', compact('officers', 'created_bies', 'landlord', 'auth'));
     }
 
     public function update(UpdateLandlordRequest $request, Landlord $landlord)
