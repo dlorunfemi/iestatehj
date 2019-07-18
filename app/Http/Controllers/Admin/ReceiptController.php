@@ -48,9 +48,10 @@ class ReceiptController extends Controller
             $cT = $numberToWords->getCurrencyTransformer('en');
             $receipt = Payment::findOrFail($id);
             $receipt->load('property', 'landlord', 'tenant', 'apartment', 'is_confirm_by', 'is_confirmed_gm_name', 'is_confirmed_ceo_name', 'cancelled_by', 'created_by', 'updated_by');
-            dd($receipt);
+            // dd($receipt);
+            // $pdf = PDF::loadView('admin.receipts.show', compact('receipt', 'cT'));
             $pdf = PDF::loadView('admin.receipts.show', compact('receipt', 'cT'));
             // dd($pdf);
-            return $pdf->stream('receipt.pdf');
+            return $pdf->download('receipt.pdf');
         }
 }

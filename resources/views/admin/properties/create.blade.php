@@ -1,6 +1,12 @@
 @extends('layouts.admin')
 @section('content')
-
+    <div style="margin-bottom: 10px;" class="row">
+        <div class="col-lg-12">
+            <a class="btn btn-success" href="{{ route("admin.properties.index") }}">
+                {{ trans('global.back') }} To {{ trans('global.property.title_singular') }}
+            </a>
+        </div>
+    </div>
 <div class="card">
     <div class="card-header">
         {{ trans('global.create') }} {{ trans('global.property.title_singular') }}
@@ -128,7 +134,7 @@
                     </p>
                 @endif
             </div>
-            <input type="hidden" name="updated_by_id" id="updated_by" value="{{ $auth->id }}">
+            <input type="hidden" name="created_by_id" id="created_by" value="{{ $auth->id }}">
             {{-- <div class="form-group {{ $errors->has('created_by_id') ? 'has-error' : '' }}">
                 <label for="created_by">{{ trans('global.property.fields.created_by') }}*</label>
                 <select name="created_by_id" id="created_by" class="form-control select2">

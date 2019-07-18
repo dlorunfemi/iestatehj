@@ -166,7 +166,7 @@
             </div>
             <div class="form-group {{ $errors->has('payment_date') ? 'has-error' : '' }}">
                 <label for="payment_date">{{ trans('global.payment.fields.payment_date') }}*</label>
-                <input type="text" id="payment_date" name="payment_date" class="form-control date" value="{{ date('Y-m-d H:i:s') }}" readonly>
+                <input type="text" id="payment_date" name="payment_date" class="form-control date" value="{{ date('Y-m-d') }}" readonly>
                 @if($errors->has('payment_date'))
                     <p class="help-block">
                         {{ $errors->first('payment_date') }}
@@ -332,78 +332,25 @@
    }
 </script>
 <script type='text/javascript'>
-        
-        $('.form-group').on('input', function() {
-            var a = 10;
-            var b = 0;
-            var c = 0;
+    function percent(a, e, i) {
+     $(a).on('input', function() {
+       var get10 = 0.1 * parseFloat($(this).val());
+       var get90 = 0.9 * parseFloat($(this).val());
+       valueExist(e, get90);
+       valueExist(i, get10);
+     })
+    }
 
-            if($('#service_charge').on('input', function() {
-                var getVal = $(this).val()
-                console.log(getVal)
-                if($.isNumeric(getVal)) {
-                    var a += parseFloat(getVal);
-                }
-            // console.log(a);
-            }));
-
-            console.log(a);
-            // $('#company_account').val(a + b + c);
-            $("#company_account").val(function() {
-                return this.value + a;
-            });
+    function valueExist(e, a) {
+      if($(e).val() !== null) {
+        $(e).val(a);
+      } else  {
+        $(e).val(function() {
+            return this.value + a
         });
-
-        // if($('#caution_deposit').on('input', function() {
-        //     var getVal= $(this).val()
-        //     console.log(getVal)
-        //     if($.isNumeric(getVal)) {
-        //         b += parseFloat(getVal);
-        //     }
-        // }));
-
-        // if($('#amount_paid').on('input', function() {
-        //     var getVal = $(this).val();
-        //     console.log(getVal)
-        //     if($.isNumeric(getVal)) {
-        //         c += parseFloat(getVal);
-        //     }
-        // }));
-
- 
-
-            // console.log(t);
-    // $('.form-group').on('input', '.a', '.b', function() {
-    //     $('.form-group .a').each(function() {
-    //         var inputVal = $(this).val();
-    //         console.log(inputVal);
-    //         if($.isNumeric(inputVal)) {
-    //             t += parseFloat(inputVal);
-    //         }
-    //         // return t;
-    //     });
-
-    //     // $('.form-group .b').each(function() {
-    //     //     var paid = $(this).val();
-    //     //     console.log(paid);
-    //     //     if($.isNumeric(paid)) {
-    //     //         t += 0.1 * parseFloat(paid);
-    //     //     }
-    //     // });
-
-    // });
-
-    // $('.form-group').on('input', '.b', function() {
-    //     $('.form-group .b').each(function() {
-    //         var paid = $(this).val();
-    //         if($.isNumeric(paid)) {
-    //             t += 0.1 * parseFloat(paid);
-    //         // return t;
-    //         }
-    //         console.log(t);
-    //     });
-    // })
-        
+      }
+    }
+    percent('#amount_paid', "#landlord_account", "#company_account");
 </script>
 <script>
     var uploadedDocumentMap = {}

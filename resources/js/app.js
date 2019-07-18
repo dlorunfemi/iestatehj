@@ -10,6 +10,8 @@ import Vue from 'vue';
 import Vuetify from 'vuetify';
 import 'vuetify/dist/vuetify.min.css';
 
+// import { CometChat } from "@cometchat-pro/chat";
+
 
 Vue.use(Vuetify);
 

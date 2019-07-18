@@ -1,6 +1,12 @@
 @extends('layouts.admin')
 @section('content')
-
+    <div style="margin-bottom: 10px;" class="row">
+        <div class="col-lg-12 ">
+            <a class="btn btn-success" href="{{ route("admin.landlords.index") }}">
+                {{ trans('global.back') }} To {{ trans('global.landlord.title_singular') }}
+            </a>
+        </div>
+    </div>
 <div class="card">
     <div class="card-header">
         {{ trans('global.show') }} {{ trans('global.landlord.title') }}
@@ -119,6 +125,30 @@
                     </th>
                     <td>
                         {{ $landlord->branch }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {{ trans('global.landlord.fields.account') }}
+                    </th>
+                    <td>
+                        {{ $landlord->account }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {{ trans('global.landlord.fields.service_charge') }}
+                    </th>
+                    <td>
+                        {{ $landlord->service_charge }}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        {{ trans('global.landlord.fields.caution_deposit') }}
+                    </th>
+                    <td>
+                        {{ $landlord->caution_deposit }}
                     </td>
                 </tr>
             </tbody>

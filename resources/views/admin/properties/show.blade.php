@@ -1,6 +1,12 @@
 @extends('layouts.admin')
 @section('content')
-
+    <div style="margin-bottom: 10px;" class="row">
+        <div class="col-lg-12">
+            <a class="btn btn-success" href="{{ route("admin.properties.index") }}">
+                {{ trans('global.back') }} To {{ trans('global.property.title_singular') }}
+            </a>
+        </div>
+    </div>
 <div class="card">
     <div class="card-header">
         {{ trans('global.show') }} {{ trans('global.property.title') }}

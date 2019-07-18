@@ -17,25 +17,10 @@
                             {{ trans('global.payment.fields.property') }}
                         </th>
                         <th>
-                            {{ trans('global.payment.fields.landlord') }}
-                        </th>
-                        <th>
                             {{ trans('global.payment.fields.tenant') }}
                         </th>
                         <th>
-                            {{ trans('global.payment.fields.apartment') }}
-                        </th>
-                        <th>
-                            {{ trans('global.payment.fields.annual_charge') }}
-                        </th>
-                        <th>
                             {{ trans('global.payment.fields.amount_paid') }}
-                        </th>
-                        <th>
-                            {{ trans('global.payment.fields.rent_from') }}
-                        </th>
-                        <th>
-                            {{ trans('global.payment.fields.rent_to') }}
                         </th>
                         <th>
                             &nbsp;
@@ -52,25 +37,10 @@
                                 {{ $receipt->property->name ?? '' }}
                             </td>
                             <td>
-                                {{ $receipt->landlord->name ?? '' }}
-                            </td>
-                            <td>
                                 {{ $receipt->tenant->name ?? '' }}
                             </td>
                             <td>
-                                {{ $receipt->apartment->description ?? '' }}
-                            </td>
-                            <td>
-                                {{ $receipt->annual_charge ?? '' }}
-                            </td>
-                            <td>
                                 {{ $receipt->amount_paid ?? '' }}
-                            </td>
-                            <td>
-                                {{ $receipt->rent_from ?? '' }}
-                            </td>
-                            <td>
-                                {{ $receipt->rent_to ?? '' }}
                             </td>
                             <td>
                                 @can('payment_show')

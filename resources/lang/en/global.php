@@ -11,6 +11,7 @@ return [
     'edit'                                 => 'Edit',
     'delete'                               => 'Delete',
     'save'                                 => 'Save',
+    'back'                                 => 'Back',
     'pleaseSelect'                         => 'Please select',
     'areYouSure'                           => 'Are you sure?',
     'allRightsReserved'                    => 'All rights reserved.',
@@ -440,6 +441,7 @@ return [
             'created_by_helper'   => '',
             'updated_by'          => 'Updated By',
             'updated_by_helper'   => '',
+            'property_type'       => 'Property Type',
         ],
     ],
     'expenseManagement'                    => [
@@ -560,6 +562,7 @@ return [
             'account_no_helper'        => '',
             'branch'                   => 'Branch',
             'branch_helper'            => '',
+            'amount'                   => 'Amount',
         ],
     ],
     'tenant'                               => [
@@ -688,6 +691,10 @@ return [
             'updated_at_helper'            => '',
             'deleted_at'                   => 'Deleted At',
             'deleted_at_helper'            => '',
+            'tenancy'                      => 'Tenancy',
+            'tenancy_helper'               => '',
+            'confirmed'                    => 'Confirmed',
+            'confirmed_helper'             => '',
         ],
     ],
     'vacancy'                              => [

@@ -6,7 +6,7 @@
             var printContent = document.getElementById(az).innerHTML;
             document.body.innerHTML = printContent;
             var printIcon = document.getElementById(za).innerHTML;
-            printIcon.style.display = 'none';
+            // printIcon.style.display = 'none';
             window.print();
             document.body.innerHTML = restorePage;
         }

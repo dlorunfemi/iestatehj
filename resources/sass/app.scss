@@ -1,12 +1,35 @@
 
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700");
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons');
 
 // Variables
 @import 'variables';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+@import '~bootstrap/scss/bootstrap';
+
+// Fontawesome
+@import "~@fortawesome/fontawesome-free/scss/fontawesome"; 
+
+@import "~select2/src/scss/core";
+
+
+@import "~datatables.net-dt/css/jquery.dataTables";
+
+
+@import "~datatables.net-bs/css/dataTables.bootstrap";
+
+// @import "~bootstrap-datetimepicker/src/less/bootstrap-datetimepicker";
+
+
+@import "~dropzone/dist/dropzone";
+
+
+@import "~admin-lte/dist/css/AdminLTE";
+
 
 .navbar-laravel {
   background-color: #fff;

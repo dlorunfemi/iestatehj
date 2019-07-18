@@ -37,6 +37,8 @@ class Landlord extends Model
         'created_by_id',
         'updated_by_id',
         'address_office',
+        'service_charge',
+        'caution_deposit',
         'address_residence',
     ];
 

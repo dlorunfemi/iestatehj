@@ -59,11 +59,12 @@ class PropertyController extends Controller
 
             $officers = User::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
 
-            $created_bies = User::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
+            $auth = Auth::user();
+            // $created_bies = User::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
 
             $property->load('landlord', 'property_type', 'officer', 'created_by', 'updated_by');
 
-            return view('admin.properties.edit', compact('landlords', 'property_types', 'officers', 'created_bies', 'property'));
+            return view('admin.properties.edit', compact('landlords', 'property_types', 'officers', 'auth', 'property'));
         }
 
         public function update(UpdatePropertyRequest $request, Property $property)

@@ -26,13 +26,7 @@
                             {{ trans('global.payment.fields.property') }}
                         </th>
                         <th>
-                            {{ trans('global.payment.fields.landlord') }}
-                        </th>
-                        <th>
                             {{ trans('global.payment.fields.tenant') }}
-                        </th>
-                        <th>
-                            {{ trans('global.payment.fields.apartment') }}
                         </th>
                         <th>
                             {{ trans('global.payment.fields.annual_charge') }}
@@ -41,19 +35,10 @@
                             {{ trans('global.payment.fields.amount_paid') }}
                         </th>
                         <th>
-                            {{ trans('global.payment.fields.rent_from') }}
+                            {{ trans('global.payment.fields.tenancy') }}
                         </th>
                         <th>
-                            {{ trans('global.payment.fields.rent_to') }}
-                        </th>
-                        <th>
-                            {{ trans('global.payment.fields.is_confirm_by') }}
-                        </th>
-                        <th>
-                            {{ trans('global.payment.fields.is_confirmed_gm') }}
-                        </th>
-                        <th>
-                            {{ trans('global.payment.fields.is_confirmed_ceo') }}
+                            {{ trans('global.payment.fields.confirmed') }}
                         </th>
                         <th>
                             &nbsp;
@@ -70,13 +55,7 @@
                                 {{ $payment->property->name ?? '' }}
                             </td>
                             <td>
-                                {{ $payment->landlord->name ?? '' }}
-                            </td>
-                            <td>
                                 {{ $payment->tenant->name ?? '' }}
-                            </td>
-                            <td>
-                                {{ $payment->apartment->description ?? '' }}
                             </td>
                             <td>
                                 {{ $payment->annual_charge ?? '' }}
@@ -85,19 +64,10 @@
                                 {{ $payment->amount_paid ?? '' }}
                             </td>
                             <td>
-                                {{ $payment->rent_from ?? '' }}
-                            </td>
-                            <td>
-                                {{ $payment->rent_to ?? '' }}
+                                {{ $payment->rent_from ?? '' }} -<br/> {{ $payment->rent_to ?? '' }}
                             </td>
                             <td>
                                 {{ $payment->is_confirm_by->name ?? '' }}
-                            </td>
-                            <td>
-                                {{ App\Payment::IS_CONFIRMED_GM_SELECT[$payment->is_confirmed_gm] ?? '' }}
-                            </td>
-                            <td>
-                                {{ App\Payment::IS_CONFIRMED_CEO_SELECT[$payment->is_confirmed_ceo] ?? '' }}
                             </td>
                             <td>
                                 @can('payment_show')

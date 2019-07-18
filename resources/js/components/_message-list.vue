@@ -1,8 +1,5 @@
 <template>
   <div>
-    <v-toolbar>
-      <v-toolbar-title>Messages</v-toolbar-title>
-    </v-toolbar>
       <!-- <v-list
               class="p-3"
               v-for="(message, index) in allMessages"
@@ -61,4 +58,7 @@
     max-height: 200px;
 }
 
+.message-wrapper {
+  height: 40%;
+}
 </style>

@@ -55,5 +55,21 @@
     <Chat :user="{{auth()->user()}}"></Chat>
 @endsection
 @section('scripts')
-    <script src="{{ asset('js/app.js') }}"></script>
+    {{-- <script type="text/javascript" src="https://unpkg.com/@cometchat-pro/chat@1.8.3/CometChat.js"></script> --}}
+    <script src="{{ asset('js/app.js') }}"></script> 
+
+    {{-- <script type="text/javascript">
+      var appID = "516732fb15f230";
+
+      CometChat.init(appID).then(
+        () => {
+          console.log("Initialization completed successfully");
+          // You can now call login function.
+        },
+        error => {
+          console.log("Initialization failed with error:", error);
+          // Check the reason for error and take appropriate action.
+        }
+      );
+    </script> --}}
 @endsection()
