@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/remioli8/public_html/new
+    - /bin/cp -r * $DEPLOYPATH 
