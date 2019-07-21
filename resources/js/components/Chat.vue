@@ -20,7 +20,7 @@
             </v-flex>
 
             <v-flex xs1 class="text-center">
-                <file-upload post-action="/messages" ref='upload' @input-file="$refs.upload.active = true" :headers="{'X-CSRF-TOKEN': token}">
+                <file-upload post-action="/admin/messages" ref='upload' @input-file="$refs.upload.active = true" :headers="{'X-CSRF-TOKEN': token}">
                     <v-icon class="mt-3">attach_file</v-icon>
                 </file-upload>
             </v-flex>
@@ -70,7 +70,7 @@
           return alert('Please enter message');
         }
 
-          axios.post('/messages', {message: this.message}).then(response => {
+          axios.post('/admin/messages', {message: this.message}).then(response => {
                     console.log(response.data.message)
                     this.message=null;
                     this.emoStatus=false;
@@ -79,7 +79,7 @@
           });
       },
       fetchMessages() {
-            axios.get('/messages').then(response => {
+            axios.get('/admin/messages').then(response => {
                 this.allMessages = response.data;
 
             });

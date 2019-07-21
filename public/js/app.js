@@ -1793,7 +1793,7 @@ __webpack_require__.r(__webpack_exports__);
         return alert('Please enter message');
       }
 
-      axios.post('/messages', {
+      axios.post('/admin/messages', {
         message: this.message
       }).then(function (response) {
         console.log(response.data.message);
@@ -1808,7 +1808,7 @@ __webpack_require__.r(__webpack_exports__);
     fetchMessages: function fetchMessages() {
       var _this2 = this;
 
-      axios.get('/messages').then(function (response) {
+      axios.get('/admin/messages').then(function (response) {
         _this2.allMessages = response.data;
       });
     },
@@ -54209,7 +54209,7 @@ var render = function() {
                     {
                       ref: "upload",
                       attrs: {
-                        "post-action": "/messages",
+                        "post-action": "/admin/messages",
                         headers: { "X-CSRF-TOKEN": _vm.token }
                       },
                       on: {

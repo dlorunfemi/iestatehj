@@ -35,7 +35,7 @@
 
           <v-flex xs1 class="text-center">
              <file-upload
-             post-action="/messages"
+             post-action="/admin/messages"
              ref='upload'
              @input-file="$refs.upload.active = true"
              :headers="{'X-CSRF-TOKEN': token}"
