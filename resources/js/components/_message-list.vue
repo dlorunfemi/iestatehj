@@ -1,18 +1,10 @@
 <template>
   <div>
-      <!-- <v-list
-              class="p-3"
-              v-for="(message, index) in allMessages"
-              :key="index"
-      >
+      <v-list class="p-3" v-for="(message, index) in allMessages" :key="index">
           <div class="message-wrapper">
               <v-flex>
-                  <span class="small font-italic">{{message.user.name}}</span>
+                  <span class="small font-italic">{{message.user_id}}</span>
               </v-flex>
-
-
-
-
 
               <div v-if="message.message" class="text-message-container">
                   <v-chip :color="(user.id===message.user_id)?'green':'red'" text-color="white">
@@ -29,7 +21,7 @@
 
               <v-flex class="caption font-italic">
                   {{message.created_at}}
-              </v-flex> -->
+              </v-flex>
           </div>
 
 

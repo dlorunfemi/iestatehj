@@ -154,7 +154,7 @@ class HomeController
         $settings4['data'] = $settings4['model']::latest()
             ->take($settings4['entries_number'])
             ->get();
-
+        // dd($settings4);
         $settings5 = [
             'chart_title'           => 'Fund Requisition',
             'chart_type'            => 'latest_entries',

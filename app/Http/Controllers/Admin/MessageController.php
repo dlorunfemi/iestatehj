@@ -24,18 +24,21 @@ class MessageController extends Controller
 	 *
 	 * @return \Illuminate\Http\Response
 	 */
-	public function index()
-	{
-        abort_unless(\Gate::allows('message_access'), 403);
-	  	
-	  	return view('admin.messages.index');
-	}
-    
+	// public function index()
+	// {
+
+	// }
+
 	public function fetchMessages()
     {
-        return Message::with('user')->get();
+        abort_unless(\Gate::allows('message_access'), 403);
+
+        $message = Message::with('user')->get();
+        // dd($message);
+
+	  	return view('admin.messages.index', compact('message'));
     }
-   
+
     public function privateMessages(User $user)
     {
         $privateCommunication= Message::with('user')
@@ -66,7 +69,7 @@ class MessageController extends Controller
 
 
         broadcast(new MessageSent(auth()->user(),$message->load('user')))->toOthers();
-        
+
         return response(['status'=>'Message sent successfully','message'=>$message]);
 
     }
@@ -87,9 +90,24 @@ class MessageController extends Controller
         }
 
         broadcast(new PrivateMessageSent($message->load('user')))->toOthers();
-        
+
         return response(['status'=>'Message private sent successfully','message'=>$message]);
 
+    }
+
+        /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function private()
+    {
+        return view('admin.messages.private');
+    }
+
+    public function users()
+    {
+        return User::all();
     }
 }
 

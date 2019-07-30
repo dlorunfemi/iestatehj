@@ -89,14 +89,23 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
 
     Route::delete('messages/destroy', 'MessageController@massDestroy')->name('messages.massDestroy');
 
-    Route::resource('messages', 'MessageController', ['except' => ['create', 'store', 'edit', 'update', 'show', 'destroy']]);
-    // Route::get('messages/messages', 'MessageController@fetchMessages');    
+    // Route::resource('messages', 'MessageController', ['except' => ['create', 'store', 'edit', 'update', 'show', 'destroy']]);
+    // Route::get('messages/messages', 'MessageController@fetchMessages');
     // Route::post('messages/messages', 'MessageController@sendMessage');
     // Route::get('messages', 'MessageController@index');
-    Route::post('messages', 'MessageController@index');
+    // Route::post('messages', 'MessageController@index');
+
+    // Route::get('messages', 'MessageController@index')->name('messages.index');
+    Route::get('messages/private', 'MessageController@private')->name('message.private');
+    Route::get('messages/users', 'MessageController@users')->name('message.users');
+
+    Route::get('messages', 'MessageController@fetchMessages')->name('messages.index');;
+    Route::post('messages', 'MessageController@sendMessage');
+    // Route::get('messages/private-messages/{user}', 'MessageController@privateMessages')->name('privateMessages');
+    // Route::post('messages/private-messages/{user}', 'MessageController@sendPrivateMessage')->name('privateMessages.store');
 
     Route::delete('receipts/destroy', 'ReceiptController@massDestroy')->name('receipts.massDestroy');
-    
+
     Route::resource('receipts', 'ReceiptController', ['except' => ['create', 'store', 'edit', 'update', 'destroy']]);
     Route::get('receipts/{id}/download', 'ReceiptController@download')->name('receipts.download');
 

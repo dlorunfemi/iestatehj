@@ -6,14 +6,13 @@
  */
 
 require('./bootstrap');
+
 import Vue from 'vue';
 import Vuetify from 'vuetify';
-import 'vuetify/dist/vuetify.min.css';
-
-// import { CometChat } from "@cometchat-pro/chat";
-
 
 Vue.use(Vuetify);
+
+import 'vuetify/dist/vuetify.min.css';
 
 
 /**
@@ -44,3 +43,13 @@ const app = new Vue({
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+
+require('select2');
+require('moment');
+require('datatables.net');
+require('datatables.net-bs4');
+require('datatables.net-dt');
+require('pdfmake');
+require('jszip');
+require('dropzone');
+require('admin-lte');

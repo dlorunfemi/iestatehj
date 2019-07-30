@@ -9,29 +9,132 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
-@import '~bootstrap/scss/bootstrap';
 
 // Fontawesome
-@import "~@fortawesome/fontawesome-free/scss/fontawesome"; 
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
 
-@import "~select2/src/scss/core";
-
-
-@import "~datatables.net-dt/css/jquery.dataTables";
-
-
-@import "~datatables.net-bs/css/dataTables.bootstrap";
-
-// @import "~bootstrap-datetimepicker/src/less/bootstrap-datetimepicker";
-
-
-@import "~dropzone/dist/dropzone";
-
-
-@import "~admin-lte/dist/css/AdminLTE";
-
-
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+@font-face {
+ font-family:"Font Awesome 5 Brands";
+ font-style:normal;
+ font-weight:normal;
+ font-display:auto;
+ src:url(../webfonts/fa-brands-400.eot);
+ src:url(../webfonts/fa-brands-400.eot?#iefix) format("embedded-opentype"),
+ url(../webfonts/fa-brands-400.woff2) format("woff2"),
+ url(../webfonts/fa-brands-400.woff) format("woff"),
+ url(../webfonts/fa-brands-400.ttf) format("truetype"),
+ url(../webfonts/fa-brands-400.svg#fontawesome) format("svg")
 }
+.fab {
+ font-family:"Font Awesome 5 Brands"
+}
+@font-face {
+ font-family:"Font Awesome 5 Free";
+ font-style:normal;
+ font-weight:400;
+ font-display:auto;
+ src:url(../webfonts/fa-regular-400.eot);
+ src:url(../webfonts/fa-regular-400.eot?#iefix) format("embedded-opentype"),
+ url(../webfonts/fa-regular-400.woff2) format("woff2"),
+ url(../webfonts/fa-regular-400.woff) format("woff"),
+ url(../webfonts/fa-regular-400.ttf) format("truetype"),
+ url(../webfonts/fa-regular-400.svg#fontawesome) format("svg")
+}
+.far {
+ font-weight:400
+}
+@font-face {
+ font-family:"Font Awesome 5 Free";
+ font-style:normal;
+ font-weight:900;
+ font-display:auto;
+ src:url(../webfonts/fa-solid-900.eot);
+ src:url(../webfonts/fa-solid-900.eot?#iefix) format("embedded-opentype"),
+ url(../webfonts/fa-solid-900.woff2) format("woff2"),
+ url(../webfonts/fa-solid-900.woff) format("woff"),
+ url(../webfonts/fa-solid-900.ttf) format("truetype"),
+ url(../webfonts/fa-solid-900.svg#fontawesome) format("svg")
+}
+.fa,
+.far,
+.fas {
+ font-family:"Font Awesome 5 Free"
+}
+.fa,
+.fas {
+ font-weight:900
+}
+
+
+// @import "~select2/src/scss/core";
+
+
+// @import "~datatables.net-dt/css/jquery.dataTables";
+
+
+// // @import "~datatables.net-bs/css/dataTables.bootstrap";
+
+// // @import "~bootstrap-datetimepicker/src/less/bootstrap-datetimepicker";
+
+
+// @import "~dropzone/dist/dropzone";
+
+
+// @import "~admin-lte/dist/css/adminlte"
+
+.ck-editor__editable,
+textarea {
+    min-height: 150px;
+}
+
+.datatable {
+    width: 100% !important;
+}
+
+.dataTables_length,
+.dataTables_filter,
+.dt-buttons {
+    margin-bottom: 0.333em;
+}
+
+.dt-buttons .btn {
+    margin-left: 0.333em;
+    border-radius: 0;
+}
+
+.table.datatable {
+    box-sizing: border-box;
+    border-collapse: collapse;
+}
+
+table.dataTable thead th {
+    border-bottom: 2px solid #dee2e6;
+}
+
+.dataTables_wrapper.no-footer .dataTables_scrollBody {
+    border-bottom: 1px solid #dee2e6;
+}
+
+.select2 {
+    max-width: 100%;
+    width: 100%;
+}
+
+table.dataTable thead .sorting,
+table.dataTable thead .sorting_asc,
+table.dataTable thead .sorting_desc {
+    background-image: none;
+}
+
+.btn-group-xs > .btn,
+.btn-xs {
+    padding: 1px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+}
+
+a:not([href]):not([tabindex]) {
+    color: #c2c7d0;
+    text-decoration: none;
+  }
