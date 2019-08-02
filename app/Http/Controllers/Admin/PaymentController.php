@@ -15,6 +15,7 @@ use App\Tenant;
 use App\User;
 use App\Vacancy;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class PaymentController extends Controller
 {
@@ -24,9 +25,14 @@ class PaymentController extends Controller
     {
         abort_unless(\Gate::allows('payment_access'), 403);
 
-        $payments = Payment::all();
+        $payments = Payment::latest()->get();
+        // $payments = DB::table('payments')->latest()->first();
+        $auth = Auth::user();
 
-        return view('admin.payments.index', compact('payments'));
+        $P = Payment::all()->where('landlord_id', 130)->sum('amount_paid');
+        // dd($payments);
+
+        return view('admin.payments.index', compact('payments', 'auth'));
     }
 
     public function create()
@@ -82,7 +88,7 @@ class PaymentController extends Controller
         if($payment->service_charge !== null) {
             Landlord::find($payment->landlord_id)->increment('service_charge', $payment->service_charge);
         }
-        
+
 
         foreach ($request->input('document', []) as $file) {
             $payment->addMedia(storage_path('tmp/uploads/' . $file))->toMediaCollection('document');
@@ -109,9 +115,11 @@ class PaymentController extends Controller
 
         $created_bies = User::all()->pluck('name', 'id')->prepend(trans('global.pleaseSelect'), '');
 
+        $auth = Auth::user();
+
         $payment->load('property', 'landlord', 'tenant', 'apartment', 'is_confirm_by', 'is_confirmed_gm_name', 'is_confirmed_ceo_name', 'cancelled_by', 'created_by', 'updated_by');
 
-        return view('admin.payments.edit', compact('properties', 'landlords', 'tenants', 'apartments', 'is_confirm_bies', 'is_confirmed_gm_names', 'created_bies', 'payment'));
+        return view('admin.payments.edit', compact('properties', 'landlords', 'tenants', 'apartments', 'is_confirm_bies', 'is_confirmed_gm_names', 'created_bies', 'payment', 'auth'));
     }
 
         public function update(UpdatePaymentRequest $request, Payment $payment)
@@ -119,6 +127,8 @@ class PaymentController extends Controller
             abort_unless(\Gate::allows('payment_edit'), 403);
 
             $payment->update($request->all());
+
+            // dd($payment);
 
             if (count($payment->document) > 0) {
                 foreach ($payment->document as $media) {
@@ -139,12 +149,28 @@ class PaymentController extends Controller
             return redirect()->route('admin.payments.index');
         }
 
+        public function confirm($request, Payment $payment)
+        {
+            // abort_unless(\Gate::allows('payment_index'), 403);
+
+            $id = (int)$request;
+            dd($payment);
+
+            $payment->update($id->all());
+
+
+
+
+            return redirect()->route('admin.payments.index');
+        }
+
+
         public function show(Payment $payment)
         {
             abort_unless(\Gate::allows('payment_show'), 403);
 
             $payment->load('property', 'landlord', 'tenant', 'apartment', 'is_confirm_by', 'is_confirmed_gm_name', 'is_confirmed_ceo_name', 'cancelled_by', 'created_by', 'updated_by');
-            
+
             $auth = Auth::user();
             // return json_encode($auth->roles[0]['title']);
 

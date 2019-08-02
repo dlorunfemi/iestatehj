@@ -3,7 +3,7 @@
 <div class="container-fluid">
     <!-- Small boxes (Stat box) -->
         <div class="row">
-            <div class="col-lg-3 col-6">
+            <div class="col-lg-4 col-6">
               <!-- small box -->
               <div class="small-box bg-info">
                 <div class="inner">
@@ -18,7 +18,7 @@
               </div>
             </div>
             <!-- ./col -->
-            <div class="col-lg-3 col-6">
+            <div class="col-lg-4 col-6">
               <!-- small box -->
               <div class="small-box bg-success">
                 <div class="inner">
@@ -33,9 +33,9 @@
               </div>
             </div>
             <!-- ./col -->
-            <div class="col-lg-3 col-6">
+            <div class="col-lg-4 col-6">
               <!-- small box -->
-              <div class="small-box bg-warning" style="color: white !important;">
+              <div class="small-box bg-danger" style="color: white !important;">
                 <div class="inner">
                   <h3>{{ number_format($settings3['total_number']) }}</h3>
 
@@ -48,7 +48,7 @@
               </div>
             </div>
             <!-- ./col -->
-            <div class="col-lg-3 col-6">
+            {{-- <div class="col-lg-3 col-6">
               <!-- small box -->
               <div class="small-box bg-danger">
                 <div class="inner">
@@ -61,7 +61,7 @@
                 </div>
                 <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
               </div>
-            </div>
+            </div> --}}
             <!-- ./col -->
         </div>
         <!-- /.row -->

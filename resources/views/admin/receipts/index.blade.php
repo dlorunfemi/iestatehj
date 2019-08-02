@@ -43,16 +43,20 @@
                                 {{ $receipt->amount_paid ?? '' }}
                             </td>
                             <td>
-                                @can('payment_show')
-                                    <a class="btn btn-xs btn-primary" href="#" data-remoe="{{ route('admin.receipts.show', $receipt->id) }}" data-toggle="modal" data-target="#exampleModal">
-                                        {{ trans('global.view') }}
-                                    </a>
-                                @endcan
-                                @can('payment_edit')
-                                    <a class="btn btn-xs btn-info" href="{{ route('admin.receipts.download', $receipt->id) }}">
-                                        {{ trans('global.edit') }}
-                                    </a>
-                                @endcan
+                                @if( $receipt->is_confirmed == "Confirmed")
+                                    @can('receipt_print')
+                                        <a class="btn btn-xs btn-primary" href="#" data-remoe="{{ route('admin.receipts.show', $receipt->id) }}" data-toggle="modal" data-target="#exampleModal">
+                                            {{ trans('global.print') }}
+                                        </a>
+                                    @endcan
+                                    @can('receipt_download')
+                                        <a class="btn btn-xs btn-info" href="{{ route('admin.receipts.download', $receipt->id) }}">
+                                            {{ trans('global.download') }}
+                                        </a>
+                                    @endcan
+                                @else
+                                    <span class="text-muted">Payment not confirmed</span>
+                                @endif
                             </td>
 
                         </tr>

@@ -1,20 +1,26 @@
 @extends('layouts.admin')
 @section('content')
-
+<div style="margin-bottom: 10px;" class="row">
+        <div class="col-lg-12 ">
+            <a class="btn btn-success" href="{{ route("admin.payments.index") }}">
+                {{ trans('global.back') }} To {{ trans('global.payment.title_singular') }}
+            </a>
+        </div>
+    </div>
 <div class="card">
     <div class="card-header">
         {{ trans('global.show') }} {{ trans('global.payment.title') }}
     </div>
     <div class="card-body">
-        @if( $auth->roles[0]['title'] === 'Admin' || $auth->roles[0]['title'] === 'Ceo' || $auth->roles[0]['title'] === 'Gm')
-            <form action="{{ route("admin.payments.update", [$payment->id]) }}" method="POST" enctype="multipart/form-data">
-                @csrf
-                @method('PUT')
-                <div class="form-group">
-                    <input type="submit" name="confirm" class="form-control btn btn-success" value="Confirm Payment">
-                </div>
-            </form>
-        @endif
+        @can('payment_confirm')
+            @if( $auth->roles[0]['title'] === 'Admin' || $auth->roles[0]['title'] === 'Ceo' || $auth->roles[0]['title'] === 'Gm' || $auth->roles[0]['title'] === 'Accountant')
+                @if( $payment->is_confirmed !== "Confirmed")
+                    <a class="btn form-control btn btn-success" href="{{ route('admin.payments.edit', $payment->id) }}">
+                        {{ trans('global.confirm') }}
+                    </a>
+                @endif
+            @endif
+        @endcan
         <table class="table table-bordered table-striped">
             <tbody>
                 <tr>
@@ -54,7 +60,7 @@
                         {{ trans('global.payment.fields.annual_charge') }}
                     </th>
                     <td>
-                        ${{ $payment->annual_charge }}
+                        NGN {{ $payment->annual_charge }}
                     </td>
                 </tr>
                 <tr>
@@ -62,7 +68,7 @@
                         {{ trans('global.payment.fields.service_charge') }}
                     </th>
                     <td>
-                        ${{ $payment->service_charge }}
+                        NGN {{ $payment->service_charge ?? 0 }}
                     </td>
                 </tr>
                 <tr>
@@ -70,7 +76,7 @@
                         {{ trans('global.payment.fields.legal_fee') }}
                     </th>
                     <td>
-                        ${{ $payment->legal_fee }}
+                        NGN {{ $payment->legal_fee  ?? 0 }}
                     </td>
                 </tr>
                 <tr>
@@ -78,7 +84,7 @@
                         {{ trans('global.payment.fields.caution_deposit') }}
                     </th>
                     <td>
-                        ${{ $payment->caution_deposit }}
+                        NGN {{ $payment->caution_deposit  ?? 0 }}
                     </td>
                 </tr>
                 <tr>
@@ -86,7 +92,7 @@
                         {{ trans('global.payment.fields.agency_fee') }}
                     </th>
                     <td>
-                        ${{ $payment->agency_fee }}
+                        NGN {{ $payment->agency_fee ?? 0  }}
                     </td>
                 </tr>
                 <tr>
@@ -94,7 +100,7 @@
                         {{ trans('global.payment.fields.management_fee') }}
                     </th>
                     <td>
-                        ${{ $payment->management_fee }}
+                        NGN {{ $payment->management_fee ?? 0  }}
                     </td>
                 </tr>
                 <tr>
@@ -102,7 +108,7 @@
                         {{ trans('global.payment.fields.amount_paid') }}
                     </th>
                     <td>
-                        ${{ $payment->amount_paid }}
+                        NGN {{ $payment->amount_paid }}
                     </td>
                 </tr>
                 <tr>
@@ -110,7 +116,7 @@
                         {{ trans('global.payment.fields.landlord_account') }}
                     </th>
                     <td>
-                        ${{ $payment->landlord_account }}
+                        NGN {{ $payment->landlord_account  ?? 0  }}
                     </td>
                 </tr>
                 <tr>
@@ -118,7 +124,7 @@
                         {{ trans('global.payment.fields.company_account') }}
                     </th>
                     <td>
-                        ${{ $payment->company_account }}
+                        NGN {{ $payment->company_account  ?? 0  }}
                     </td>
                 </tr>
                 <tr>
@@ -209,7 +215,7 @@
                         {{ $payment->is_confirmed_date }}
                     </td>
                 </tr>
-                <tr>
+                {{-- <tr>
                     <th>
                         {{ trans('global.payment.fields.is_confirmed_gm') }}
                     </th>
@@ -256,8 +262,8 @@
                     <td>
                         {{ $payment->is_confirmed_ceo_date }}
                     </td>
-                </tr>
-                <tr>
+                </tr> --}}
+                {{-- <tr>
                     <th>
                         {{ trans('global.payment.fields.is_cancelled') }}
                     </th>
@@ -280,7 +286,7 @@
                     <td>
                         {{ $payment->cancelled_by->name ?? '' }}
                     </td>
-                </tr>
+                </tr> --}}
                 <tr>
                     <th>
                         {{ trans('global.payment.fields.is_full_payment') }}
@@ -305,14 +311,14 @@
                         {{ $payment->created_by->name ?? '' }}
                     </td>
                 </tr>
-                <tr>
+                {{-- <tr>
                     <th>
                         {{ trans('global.payment.fields.updated_by') }}
                     </th>
                     <td>
                         {{ $payment->updated_by->name ?? '' }}
                     </td>
-                </tr>
+                </tr> --}}
             </tbody>
         </table>
     </div>

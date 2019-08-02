@@ -1,6 +1,12 @@
 @extends('layouts.admin')
 @section('content')
-
+<div style="margin-bottom: 10px;" class="row">
+        <div class="col-lg-12 ">
+            <a class="btn btn-success" href="{{ route("admin.payments.index") }}">
+                {{ trans('global.back') }} To {{ trans('global.payment.title_singular') }}
+            </a>
+        </div>
+    </div>
 <div class="card">
     <div class="card-header">
         {{ trans('global.edit') }} {{ trans('global.payment.title_singular') }}
@@ -10,7 +16,7 @@
         <form action="{{ route("admin.payments.update", [$payment->id]) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
-            <div class="form-group {{ $errors->has('property_id') ? 'has-error' : '' }}">
+            {{-- <div class="form-group {{ $errors->has('property_id') ? 'has-error' : '' }}">
                 <label for="property">{{ trans('global.payment.fields.property') }}*</label>
                 <select name="property_id" id="property" class="form-control select2">
                     @foreach($properties as $id => $property)
@@ -258,8 +264,8 @@
                     {{ trans('global.payment.fields.document_helper') }}
                 </p>
             </div>
-            <div class="form-group {{ $errors->has('note') ? 'has-error' : '' }}">
-                <label for="note">{{ trans('global.payment.fields.note') }}</label>
+            {{-- <div class="form-group {{ $errors->has('note') ? 'has-error' : '' }}"> --}}
+                {{-- <label for="note">{{ trans('global.payment.fields.note') }}</label>
                 <textarea id="note" name="note" class="form-control ">{{ old('note', isset($payment) ? $payment->note : '') }}</textarea>
                 @if($errors->has('note'))
                     <p class="help-block">
@@ -269,7 +275,7 @@
                 <p class="helper-block">
                     {{ trans('global.payment.fields.note_helper') }}
                 </p>
-            </div>
+            </div> --}}
             <div class="form-group {{ $errors->has('is_confirmed') ? 'has-error' : '' }}">
                 <label for="is_confirmed">{{ trans('global.payment.fields.is_confirmed') }}</label>
                 <select id="is_confirmed" name="is_confirmed" class="form-control">
@@ -284,7 +290,7 @@
                     </p>
                 @endif
             </div>
-            <div class="form-group {{ $errors->has('is_confirm_by_id') ? 'has-error' : '' }}">
+            {{-- <div class="form-group {{ $errors->has('is_confirm_by_id') ? 'has-error' : '' }}">
                 <label for="is_confirm_by">{{ trans('global.payment.fields.is_confirm_by') }}*</label>
                 <select name="is_confirm_by_id" id="is_confirm_by" class="form-control select2">
                     @foreach($is_confirm_bies as $id => $is_confirm_by)
@@ -308,8 +314,8 @@
                 <p class="helper-block">
                     {{ trans('global.payment.fields.is_confirmed_date_helper') }}
                 </p>
-            </div>
-            <div class="form-group {{ $errors->has('is_confirmed_gm') ? 'has-error' : '' }}">
+            </div> --}}
+            {{-- <div class="form-group {{ $errors->has('is_confirmed_gm') ? 'has-error' : '' }}">
                 <label for="is_confirmed_gm">{{ trans('global.payment.fields.is_confirmed_gm') }}</label>
                 <select id="is_confirmed_gm" name="is_confirmed_gm" class="form-control">
                     <option value="" disabled {{ old('is_confirmed_gm', null) === null ? 'selected' : '' }}>@lang('global.pleaseSelect')</option>
@@ -386,8 +392,8 @@
                 <p class="helper-block">
                     {{ trans('global.payment.fields.is_confirmed_ceo_date_helper') }}
                 </p>
-            </div>
-            <div class="form-group {{ $errors->has('is_cancelled') ? 'has-error' : '' }}">
+            </div> --}}
+            {{-- <div class="form-group {{ $errors->has('is_cancelled') ? 'has-error' : '' }}">
                 <label for="is_cancelled">{{ trans('global.payment.fields.is_cancelled') }}</label>
                 <select id="is_cancelled" name="is_cancelled" class="form-control">
                     <option value="" disabled {{ old('is_cancelled', null) === null ? 'selected' : '' }}>@lang('global.pleaseSelect')</option>
@@ -453,8 +459,8 @@
                         {{ $errors->first('is_part_payment') }}
                     </p>
                 @endif
-            </div>
-            <div class="form-group {{ $errors->has('updated_by_id') ? 'has-error' : '' }}">
+            </div> --}}
+            {{-- <div class="form-group {{ $errors->has('updated_by_id') ? 'has-error' : '' }}">
                 <label for="updated_by">{{ trans('global.payment.fields.updated_by') }}</label>
                 <select name="updated_by_id" id="updated_by" class="form-control select2">
                     @foreach($updated_bies as $id => $updated_by)
@@ -466,8 +472,12 @@
                         {{ $errors->first('updated_by_id') }}
                     </p>
                 @endif
-            </div>
+            </div> --}}
             <div>
+                <input type="hidden" id="cancelled_by" name="cancelled_by_id" value="{{ $auth->id }}">
+                <input type="hidden" id="id_confirmed_by" name="id_confirmed_by_id" value="{{ $auth->id }}">
+                <input type="hidden" id="is_confirm_date" name="is_confirm_date" value="{{ Carbon\Carbon::now() }}">
+                <input type="hidden" id="updated_by" name="updated_by_id" value="{{ $auth->id }}">
                 <input class="btn btn-danger" type="submit" value="{{ trans('global.save') }}">
             </div>
         </form>

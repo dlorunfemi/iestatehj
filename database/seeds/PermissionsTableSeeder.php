@@ -7,12 +7,13 @@ class PermissionsTableSeeder extends Seeder
 {
     public function run()
     {
-        $permissions = [[
-            'id'         => '1',
-            'title'      => 'user_management_access',
-            'created_at' => '2019-05-14 10:45:21',
-            'updated_at' => '2019-05-14 10:45:21',
-        ],
+        $permissions = [
+            [
+                'id'         => '1',
+                'title'      => 'user_management_access',
+                'created_at' => '2019-05-14 10:45:21',
+                'updated_at' => '2019-05-14 10:45:21',
+            ],
             [
                 'id'         => '2',
                 'title'      => 'permission_create',
@@ -525,10 +526,29 @@ class PermissionsTableSeeder extends Seeder
             ],
             [
                 'id'         => '87',
+                'title'      => 'payment_confirm',
+                'created_at' => '2019-05-14 10:45:21',
+                'updated_at' => '2019-05-14 10:45:21',
+            ],
+            [
+                'id'         => '88',
                 'title'      => 'receipt_access',
                 'created_at' => '2019-05-14 10:45:21',
                 'updated_at' => '2019-05-14 10:45:21',
-            ]];
+            ],
+            [
+                'id'         => '89',
+                'title'      => 'receipt_print',
+                'created_at' => '2019-05-14 10:45:21',
+                'updated_at' => '2019-05-14 10:45:21',
+            ],
+            [
+                'id'         => '90',
+                'title'      => 'receipt_download',
+                'created_at' => '2019-05-14 10:45:21',
+                'updated_at' => '2019-05-14 10:45:21',
+            ]
+        ];
 
         Permission::insert($permissions);
     }

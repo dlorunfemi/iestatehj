@@ -38,7 +38,7 @@
                             {{ trans('global.payment.fields.tenancy') }}
                         </th>
                         <th>
-                            {{ trans('global.payment.fields.confirmed') }}
+                            {{ trans('global.status') }}
                         </th>
                         <th>
                             &nbsp;
@@ -67,17 +67,23 @@
                                 {{ $payment->rent_from ?? '' }} -<br/> {{ $payment->rent_to ?? '' }}
                             </td>
                             <td>
-                                {{ $payment->is_confirm_by->name ?? '' }}
+                                @if( $payment->is_confirmed == "Confirmed")
+                                    {{ App\Payment::IS_CONFIRMED_SELECT["Confirmed"] }}
+                                @else
+                                    {{ App\Payment::IS_CONFIRMED_SELECT["Pending"] }}
+                                @endif
                             </td>
                             <td>
+                                @can('payment_confirm')
+                                    @if( $payment->is_confirmed !== "Confirmed")
+                                        <a class="btn btn-xs btn-success" href="{{ route('admin.payments.edit', $payment->id) }}">
+                                            {{ trans('global.confirm') }}
+                                        </a>
+                                    @endif
+                                @endcan
                                 @can('payment_show')
                                     <a class="btn btn-xs btn-primary" href="{{ route('admin.payments.show', $payment->id) }}">
                                         {{ trans('global.view') }}
-                                    </a>
-                                @endcan
-                                @can('payment_edit')
-                                    <a class="btn btn-xs btn-info" href="{{ route('admin.payments.edit', $payment->id) }}">
-                                        {{ trans('global.edit') }}
                                     </a>
                                 @endcan
                                 @can('payment_delete')

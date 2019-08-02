@@ -23,7 +23,7 @@ class ReceiptController extends Controller
     {
         abort_unless(\Gate::allows('receipt_access'), 403);
 
-        $receipts = Payment::all();
+        $receipts = Payment::latest()->get();
 
         return view('admin.receipts.index', compact('receipts'));
     }

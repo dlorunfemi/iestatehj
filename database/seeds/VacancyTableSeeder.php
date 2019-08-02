@@ -10554,6 +10554,84 @@ class VacancyTableSeeder extends Seeder
                 "property_tag_id" => 5,
                 "description" => "Third and second room by the left hand side",
                 "rent" => 24000.00
+            ],
+            [
+                "id" =>  812,
+                "created_at" => "2019-07-12 16:19:45",
+                "updated_at" => "2019-07-12 16:19:45",
+                "created_by_id" => 1,
+                "updated_by_id" => null,
+                "deleted_at" => null,
+                "property_id" => 45,
+                "is_vacant" => "Yes",
+                "property_tag_id" => 6,
+                "description" => "third floor by the right",
+                "rent" => 24000.00
+            ],
+            [
+                "id" =>  813,
+                "created_at" => "2019-07-12 16:22:43",
+                "updated_at" => "2019-07-15 16:43:39",
+                "created_by_id" => 1,
+                "updated_by_id" => null,
+                "deleted_at" => null,
+                "property_id" => 45,
+                "is_vacant" => "No",
+                "property_tag_id" => 6,
+                "description" => "fourth shop ",
+                "rent" => 24000.00
+            ],
+            [
+                "id" =>  814,
+                "created_at" => "2019-07-18 09:54:04",
+                "updated_at" => "2019-07-18 10:13:46",
+                "created_by_id" => 1,
+                "updated_by_id" => null,
+                "deleted_at" => null,
+                "property_id" => 122,
+                "is_vacant" => "No",
+                "property_tag_id" => 6,
+                "description" => "1st Shop by the left",
+                "rent" => 50000.00
+            ],
+            [
+                "id" =>  815,
+                "created_at" => "2019-07-18 09:55:35",
+                "updated_at" => "2019-07-18 09:55:35",
+                "created_by_id" => 1,
+                "updated_by_id" => null,
+                "deleted_at" => null,
+                "property_id" => 122,
+                "is_vacant" => "Yes",
+                "property_tag_id" => 6,
+                "description" => "2nd Shop by the left",
+                "rent" => 50000.00
+            ],
+            [
+                "id" =>  816,
+                "created_at" => "2019-07-18 09:56:17",
+                "updated_at" => "2019-07-18 09:56:17",
+                "created_by_id" => 1,
+                "updated_by_id" => null,
+                "deleted_at" => null,
+                "property_id" => 122,
+                "is_vacant" => "Yes",
+                "property_tag_id" => 6,
+                "description" => "3rd Shop by the left",
+                "rent" => 50000.00
+            ],
+            [
+                "id" =>  817,
+                "created_at" => "2019-07-31 09:22:07",
+                "updated_at" => "2019-07-31 09:25:45",
+                "created_by_id" => 1,
+                "updated_by_id" => null,
+                "deleted_at" => null,
+                "property_id" => 166,
+                "is_vacant" => "No",
+                "property_tag_id" => 8,
+                "descriptin" => "First room at the boys quarters ",
+                "rent" => 24000.00
             ]
         ];
         
