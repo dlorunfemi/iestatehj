@@ -5,6 +5,7 @@
 /vendor
 /.idea
 /.vscode
+/vscode-root
 /nbproject
 /.vagrant
 .env
