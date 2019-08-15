@@ -167,6 +167,7 @@ return [
          */
         Bugsnag\BugsnagLaravel\BugsnagServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,
+        Riskihajar\Terbilang\TerbilangServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -229,6 +230,7 @@ return [
         'View'         => Illuminate\Support\Facades\View::class,
         'Bugsnag'      => Bugsnag\BugsnagLaravel\Facades\Bugsnag::class,
         'PDF'          => Barryvdh\DomPDF\Facade::class,
+        'Notoword'     => Riskihajar\Terbilang\Facades\Terbilang::class,
 
     ],
 

@@ -754,6 +754,7 @@ return [
             'ceo_helper'              => '',
             'ceo_conf_date'           => 'Ceo Conf Date',
             'ceo_conf_date_helper'    => '',
+            'landlord'                => 'Landlord',
             'is_returned'             => 'Returned',
             'is_returned_helper'      => '',
             'return_user'             => 'Return by',

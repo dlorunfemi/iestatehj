@@ -45,7 +45,7 @@
                             <td>
                                 @if( $receipt->is_confirmed == "Confirmed")
                                     @can('receipt_print')
-                                        <a class="btn btn-xs btn-primary" href="#" data-remoe="{{ route('admin.receipts.show', $receipt->id) }}" data-toggle="modal" data-target="#exampleModal">
+                                        <a class="btn btn-xs btn-primary" href="{{ route('admin.receipts.show', $receipt->id) }}" >
                                             {{ trans('global.print') }}
                                         </a>
                                     @endcan
@@ -70,6 +70,45 @@
 
 @endsection
 @section('scripts')
+@parent
+<script>
+    $(function () {
+    let deleteButtonTrans = '{{ trans('global.datatables.delete') }}'
+    let deleteButton = {
+        text: deleteButtonTrans,
+        url: "{{ route('admin.payments.massDestroy') }}",
+        className: 'btn-danger',
+        action: function (e, dt, node, config) {
+        var ids = $.map(dt.rows({ selected: true }).nodes(), function (entry) {
+            return $(entry).data('entry-id')
+        });
+
+        if (ids.length === 0) {
+            alert('{{ trans('global.datatables.zero_selected') }}')
+
+            return
+        }
+
+        if (confirm('{{ trans('global.areYouSure') }}')) {
+            $.ajax({
+            headers: {'x-csrf-token': _token},
+            method: 'POST',
+            url: config.url,
+            data: { ids: ids, _method: 'DELETE' }})
+            .done(function () { location.reload() })
+        }
+        }
+    }
+    let dtButtons = $.extend(true, [], $.fn.dataTable.defaults.buttons)
+    // @can('payment_delete')
+    // // dtButtons.push(deleteButton)
+    // @endcan
+
+    $('.datatable:not(.ajaxTable)').DataTable({ buttons: dtButtons })
+    })
+
+</script>
+
 <script>
     $('#exampleModal').on('show.bs.modal', function (e) {
         $('.wrapper').fadeOut();

@@ -111,7 +111,7 @@
   }
   let dtButtons = $.extend(true, [], $.fn.dataTable.defaults.buttons)
 @can('tenant_delete')
-  dtButtons.push(deleteButton)
+  // dtButtons.push(deleteButton)
 @endcan
 
   $('.datatable:not(.ajaxTable)').DataTable({ buttons: dtButtons })

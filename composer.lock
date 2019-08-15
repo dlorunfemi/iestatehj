@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "417e8cba91a689a80d6b5ceec988de15",
+    "content-hash": "7cd80723c31b5ddf6ce17eaf15682f65",
     "packages": [
         {
             "name": "barryvdh/laravel-dompdf",
@@ -3510,6 +3510,62 @@
                 "uri"
             ],
             "time": "2018-01-15T21:00:49+00:00"
+        },
+        {
+            "name": "riskihajar/terbilang",
+            "version": "1.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/riskihajar/terbilang.git",
+                "reference": "e43c7f90851736c6e929cba99a19a4adfcb57c4e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/riskihajar/terbilang/zipball/e43c7f90851736c6e929cba99a19a4adfcb57c4e",
+                "reference": "e43c7f90851736c6e929cba99a19a4adfcb57c4e",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~4.2||~5",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Riskihajar\\Terbilang\\TerbilangServiceProvider"
+                    ],
+                    "aliases": {
+                        "Terbilang": "Riskihajar\\Terbilang\\Facades\\Terbilang"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Riskihajar\\Terbilang\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "riskihajar",
+                    "email": "riskihajar@gmail.com",
+                    "homepage": "http://riskihajar.com"
+                }
+            ],
+            "description": "Convert number & date to words in any language for Laravel 4 | 5",
+            "homepage": "https://github.com/riskihajar/terbilang",
+            "keywords": [
+                "date to words",
+                "laravel",
+                "number to roman",
+                "number to words",
+                "terbilang"
+            ],
+            "time": "2018-03-19T00:13:25+00:00"
         },
         {
             "name": "sabberworm/php-css-parser",

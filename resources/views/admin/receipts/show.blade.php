@@ -92,55 +92,58 @@
                     border-bottom: 1px solid #000 !important;
                 }
             </style>
-            <div class="row">
-                <div class="col">
-                    <div class="d-flex justify-content-center">
-                        <img src="{{ asset('images/logo.jpeg') }}" alt="logo" class="img img-responsive">
-                    </div>
-                    <div class="d-flex justify-content-end" id="pi">
-                    <button onclick="myPrint('pr', 'pi')"><span class="fas fa-print fa-1x text-dark"></span></button>
+            <center>
+                <div class="row">
+                    <div class="col">
+                        <div class="d-flex justify-content-center">
+                            <img src="{{ asset('images/logo.jpeg') }}" alt="logo" class="img img-responsive">
+                        </div>
+                        <div class="d-flex justify-content-end" id="pi">
+                        <button onclick="myPrint('pr', 'pi')"><span class="fas fa-print fa-1x text-dark"></span></button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="row mt-3">
-                <div class="col-12 text-center">
-                    <p class=""><span class="receipt-title">Receipt</span></p>
+
+                <div class="row mt-3">
+                    <div class="col-12 text-center">
+                        <p class=""><span class="receipt-title">Receipt</span></p>
+                    </div>
+                    <table >
+                        <tbody>
+                            <tr>
+                                <td align="left" class="sub-text">Receipt No. : <span class="text-muted">{{ $receipt->id }}</span></td>
+                                <td align="right" class="sub-text">Date : <span class="text-muted">{{ $receipt->payment_date }}</span></td>
+                            </tr>
+                            <tr><td></td></tr>
+                            <tr>
+                                <td class="content-border">Received from</td>
+                                <td align="center" class="content-border">{{ $receipt->tenant->name }}</td>
+                            </tr>
+                            <tr><td></td></tr>
+                            <tr>
+                                <td class="content-border">the sum of</td>
+                                <td align="center" class="content-border">{{ ucwords($wc) }} Only</td>
+                            </tr>
+                            <tr><td></td></tr>
+                            <tr>
+                                <td colspan="2" class="content-border" style="line-height:26px;">Being full/part/balance payment for : {{ ucwords($receipt->apartment->description) }} of {{ ucwords($receipt->property->name) }}</td>
+                            </tr>
+                            <tr><td></td></tr>
+                            <tr>
+                                <td colspan="2" class="sub-text border-bottom">Tenancy Period: <span class="text-center text-muted">{{ $receipt->rent_from }} - {{ $receipt->rent_to }}</span></td>
+                            </tr>
+                            <!-- <tr><td></td></tr> -->
+                            <tr>
+                                <td class="p-0 sub-text"><span class="border">{{ $receipt->amount_paid }}</span></td>
+                                <td class="" align="right">
+                                    <p class="pt-2 mb-0 sub-text">Officer's Name: <span class="text-center text-muted">{{ $receipt->is_confirm_by->name }}</span></p>
+                                    <p class="pt-2 mb-0 sub-text">Accountant in Charge: <span class="text-center text-muted">{{ $receipt->is_confirm_by->name }}</span></p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <table >
-                    <tbody>
-                        <tr>
-                            <td align="left" class="sub-text">Receipt No. : <span class="text-muted">{{ $receipt->id }}</span></td>
-                            <td align="right" class="sub-text">Date : <span class="text-muted">{{ $receipt->payment_date }}</span></td>
-                        </tr>
-                        <tr><td></td></tr>
-                        <tr>
-                            <td class="content-border">Received from</td>
-                            <td align="center" class="content-border">{{ $receipt->tenant->name }}</td>
-                        </tr>
-                        <tr><td></td></tr>
-                        <tr>
-                            <td class="content-border">the sum of</td>
-                            <td align="center" class="content-border">{{ ucwords($cT->toWords($receipt->amount_paid, 'NGN')) }} Only</td>
-                        </tr>
-                        <tr><td></td></tr>
-                        <tr>
-                            <td colspan="2" class="content-border" style="line-height:26px;">Being full/part/balance payment for : {{ ucwords($receipt->apartment->description) }} of {{ ucwords($receipt->property->name) }}</td>
-                        </tr>
-                        <tr><td></td></tr>
-                        <tr>
-                            <td colspan="2" class="sub-text border-bottom">Tenancy Period: <span class="text-center text-muted">{{ $receipt->rent_from }} - {{ $receipt->rent_to }}</span></td>
-                        </tr>
-                        <!-- <tr><td></td></tr> -->
-                        <tr>
-                            <td class="p-0 sub-text"><span class="border">{{ $receipt->amount_paid }}</span></td>
-                            <td class="" align="right">
-                                <p class="pt-2 mb-0 sub-text">Officer's Name: <span class="text-center text-muted">{{ $receipt->is_confirm_by->name }}</span></p>
-                                <p class="pt-2 mb-0 sub-text">Accountant in Charge: <span class="text-center text-muted">{{ $receipt->is_confirm_by->name }}</span></p>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            </center>
         </div>
     </section>
 

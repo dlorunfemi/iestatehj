@@ -15,6 +15,7 @@ use PDF;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use NumberToWords\NumberToWords;
+use Notoword;
 // use App\Http\Controllers\Admin\ReceiptController;
 
 class ReceiptController extends Controller
@@ -29,29 +30,36 @@ class ReceiptController extends Controller
     }
 
     public function show(Payment $receipt)
-        {
-            // abort_unless(\Gate::allows('receipt_access'), 403);
-
-            $numberToWords = new NumberToWords();
-            $cT = $numberToWords->getCurrencyTransformer('en');
-            // dd($receipt);
-
-            $receipt->load('property', 'landlord', 'tenant', 'apartment', 'is_confirm_by', 'is_confirmed_gm_name', 'is_confirmed_ceo_name', 'cancelled_by', 'created_by', 'updated_by');
-            // \dd($receipt);
-            return view('admin.receipts.show', compact('receipt', 'cT'));
-        }
-
-        public function download($id)
     {
-            // abort_unless(\Gate::allows('receipt_access'), 403);
-            $numberToWords = new NumberToWords();
-            $cT = $numberToWords->getCurrencyTransformer('en');
-            $receipt = Payment::findOrFail($id);
-            $receipt->load('property', 'landlord', 'tenant', 'apartment', 'is_confirm_by', 'is_confirmed_gm_name', 'is_confirmed_ceo_name', 'cancelled_by', 'created_by', 'updated_by');
-            // dd($receipt);
-            // $pdf = PDF::loadView('admin.receipts.show', compact('receipt', 'cT'));
-            $pdf = PDF::loadView('admin.receipts.show', compact('receipt', 'cT'));
-            // dd($pdf);
-            return $pdf->download('receipt.pdf');
-        }
+        // abort_unless(\Gate::allows('receipt_access'), 403);
+
+
+        $receipt->load('property', 'landlord', 'tenant', 'apartment', 'is_confirm_by', 'is_confirmed_gm_name', 'is_confirmed_ceo_name', 'cancelled_by', 'created_by', 'updated_by');
+        $wc = Notoword::make($receipt->amount_paid, " naira");
+        // dd($wc);
+        return view('admin.receipts.beb', compact('receipt', 'wc'));
+    }
+
+    public function print($id)
+    {
+        // abort_unless(\Gate::allows('receipt_access'), 403);
+
+        $receipt = Payment::findOrFail($id);
+        $receipt->load('property', 'landlord', 'tenant', 'apartment', 'is_confirm_by', 'is_confirmed_gm_name', 'is_confirmed_ceo_name', 'cancelled_by', 'created_by', 'updated_by');
+        $wc = Notoword::make($receipt->amount_paid, " naira");
+        return view('admin.receipts.print', compact('receipt', 'wc'));
+    }
+
+    public function download($id)
+    {
+        // abort_unless(\Gate::allows('receipt_access'), 403);
+
+        $receipt = Payment::findOrFail($id);
+        $receipt->load('property', 'landlord', 'tenant', 'apartment', 'is_confirm_by', 'is_confirmed_gm_name', 'is_confirmed_ceo_name', 'cancelled_by', 'created_by', 'updated_by');
+        $wc = Notoword::make($receipt->amount_paid, " naira");
+        $pdf = PDF::loadView('admin.receipts.print', compact('receipt', 'wc'));
+        // dd($pdf);
+
+        return $pdf->download('receipt.pdf');
+    }
 }
