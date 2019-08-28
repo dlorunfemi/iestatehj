@@ -21,7 +21,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
     <link href="{{ asset('css/adminltev3.css') }}" rel="stylesheet" />
     <link href="{{ asset('css/app.css') }}" rel="stylesheet" />
-    {{-- <link href="{{ asset('css/custom.css') }}" rel="stylesheet" /> --}}
+    <link href="{{ asset('css/custom.css') }}" rel="stylesheet" />
     @yield('styles')
 </head>
 
@@ -157,6 +157,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.full.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.js"></script> --}}
     <script type="text/javascript">
+
       $(function() {
         let copyButtonTrans = '{{ trans('global.datatables.copy') }}'
         let csvButtonTrans = '{{ trans('global.datatables.csv') }}'

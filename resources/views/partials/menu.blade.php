@@ -30,43 +30,28 @@
                     </a>
                 </li>
                 @can('landlord_access')
-                <li class="nav-item has-treeview {{ request()->is('admin/landlords*') ? 'menu-open' : '' }} {{ request()->is('admin/landlord-banks*') ? 'menu-open' : '' }}">
-                    <a class="nav-link nav-dropdown-toggle">
-                        <i class="fas fa-user-shield">
+                    <li class="nav-item">
+                        <a href="{{ route("admin.landlords.index") }}" class="nav-link {{ request()->is('admin/landlords') || request()->is('admin/landlords/*') ? 'active' : '' }}">
+                            <i class="fas fa-user-shield">
 
-                        </i>
-                        <p>
-                            <span>{{ trans('global.landlordManagement.title') }}</span>
-                            <i class="right fa fa-angle-left"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        @can('landlord_access')
-                            <li class="nav-item">
-                                <a href="{{ route("admin.landlords.index") }}" class="nav-link {{ request()->is('admin/landlords') || request()->is('admin/landlords/*') ? 'active' : '' }}">
-                                    <i class="far fa-circle">
+                            </i>
+                            <p>
+                                <span>{{ trans('global.landlord.title') }}</span>
+                            </p>
+                        </a>
+                    </li>
+                @endcan
+                @can('tenant_access')
+                    <li class="nav-item">
+                        <a href="{{ route("admin.tenants.index") }}" class="nav-link {{ request()->is('admin/tenants') || request()->is('admin/tenants/*') ? 'active' : '' }}">
+                            <i class="fas fa-user-tag">
 
-                                    </i>
-                                    <p>
-                                        <span>{{ trans('global.landlord.title') }}</span>
-                                    </p>
-                                </a>
-                            </li>
-                        @endcan
-                        @can('landlord_bank_access')
-                            <li class="nav-item">
-                                <a href="{{ route("admin.landlord-banks.index") }}" class="nav-link {{ request()->is('admin/landlord-banks') || request()->is('admin/landlord-banks/*') ? 'active' : '' }}">
-                                    <i class="far fa-circle">
-
-                                    </i>
-                                    <p>
-                                        <span>{{ trans('global.landlordBank.title') }}</span>
-                                    </p>
-                                </a>
-                            </li>
-                        @endcan
-                    </ul>
-                </li>
+                            </i>
+                            <p>
+                                <span>{{ trans('global.tenant.title') }}</span>
+                            </p>
+                        </a>
+                    </li>
                 @endcan
                 @can('property_management_access')
                     <li class="nav-item has-treeview {{ request()->is('admin/property-categories*') ? 'menu-open' : '' }} {{ request()->is('admin/property-tags*') ? 'menu-open' : '' }} {{ request()->is('admin/properties*') ? 'menu-open' : '' }} {{ request()->is('admin/vacancies*') ? 'menu-open' : '' }}">
@@ -129,18 +114,6 @@
                                 </li>
                             @endcan
                         </ul>
-                    </li>
-                @endcan
-                @can('tenant_access')
-                    <li class="nav-item">
-                        <a href="{{ route("admin.tenants.index") }}" class="nav-link {{ request()->is('admin/tenants') || request()->is('admin/tenants/*') ? 'active' : '' }}">
-                            <i class="fas fa-user-tag">
-
-                            </i>
-                            <p>
-                                <span>{{ trans('global.tenant.title') }}</span>
-                            </p>
-                        </a>
                     </li>
                 @endcan
                 @can('payment_access')
@@ -254,7 +227,7 @@
                         </ul>
                     </li>
                 @endcan
-                @can('message_access')
+                @can('message_acces')
                     <li class="nav-item">
                         <a href="{{ route("admin.messages.index") }}" class="nav-link {{ request()->is('admin/messages') || request()->is('admin/messages/*') ? 'active' : '' }}">
                             <i class="fas fa-comments">
@@ -266,7 +239,7 @@
                         </a>
                     </li>
                 @endcan
-                @can('email_access')
+                @can('email_acces')
                     <li class="nav-item">
                         <a href="{{ route("admin.emails.index") }}" class="nav-link {{ request()->is('admin/emails') || request()->is('admin/emails/*') ? 'active' : '' }}">
                             <i class="fas fa-envelope">
@@ -278,7 +251,7 @@
                         </a>
                     </li>
                 @endcan
-                @can('report_access')
+                @can('report_acces')
                     <li class="nav-item">
                         <a href="{{ route("admin.reports.index") }}" class="nav-link {{ request()->is('admin/reports') || request()->is('admin/reports/*') ? 'active' : '' }}">
                             <i class="fas fa-file-alt">
