@@ -50,7 +50,7 @@
                                         </a>
                                     @endcan
                                     @can('receipt_download')
-                                        <a class="btn btn-xs btn-info" href="{{ route('admin.receipts.print', $receipt->id) }}">
+                                        <a class="btn btn-xs btn-info" href="{{ route('admin.receipts.download', $receipt->id) }}">
                                             {{ trans('global.print') }}
                                         </a>
                                     @endcan
