@@ -99,7 +99,7 @@
                     <span class="text-muted well well-sm no-shadow">
                         {{ ucwords($wc) }} Only
                     </span></p>
-                    <p class="pt-2 mb-0 sub-text">Officer's Name: <span class="text-center text-muted">{{ $receipt->is_confirm_by->name }}</span></p>
+                    <p class="pt-2 mb-0 sub-text">Officer's Name: <span class="text-center text-muted">{{ $receipt->created_by->name }}</span></p>
                     <p class="pt-2 mb-0 sub-text">Accountant in Charge: <span class="text-center text-muted">{{ $receipt->is_confirm_by->name }}</span></p>
                     </div>
 
