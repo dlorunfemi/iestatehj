@@ -109,8 +109,10 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::delete('receipts/destroy', 'ReceiptController@massDestroy')->name('receipts.massDestroy');
 
     Route::resource('receipts', 'ReceiptController', ['except' => ['create', 'store', 'edit', 'update', 'destroy']]);
-    Route::get('receipts/{id}/download', 'ReceiptController@download')->name('receipts.download');
-    Route::get('receipts/{id}/print/', 'ReceiptController@print')->name('receipts.print');
+    Route::get('receipts/{id}/download', 'ReceiptController@download')->
+    name('receipts.download');
+    Route::get('receipts/{id}/print/', 'ReceiptController@print')->
+    name('receipts.print');
 
     Route::delete('landlord-banks/destroy', 'LandlordBankController@massDestroy')->name('landlord-banks.massDestroy');
 

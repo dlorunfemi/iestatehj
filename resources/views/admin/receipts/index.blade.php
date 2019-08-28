@@ -46,12 +46,12 @@
                                 @if( $receipt->is_confirmed == "Confirmed")
                                     @can('receipt_print')
                                         <a class="btn btn-xs btn-primary" href="{{ route('admin.receipts.show', $receipt->id) }}" >
-                                            {{ trans('global.print') }}
+                                            {{ trans('global.show') }}
                                         </a>
                                     @endcan
                                     @can('receipt_download')
-                                        <a class="btn btn-xs btn-info" href="{{ route('admin.receipts.download', $receipt->id) }}">
-                                            {{ trans('global.download') }}
+                                        <a class="btn btn-xs btn-info" href="{{ route('admin.receipts.print', $receipt->id) }}">
+                                            {{ trans('global.print') }}
                                         </a>
                                     @endcan
                                 @else
