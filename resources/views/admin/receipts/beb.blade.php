@@ -106,7 +106,7 @@
                         <hr>
                     </div>
                     <div class="mx-3 ">
-                        <a href="{{ route('admin.receipts.print', $receipt->id) }}" target="_blank" class="btn btn-block btn-success"><i class="fa fa-print"></i> Print</a>
+                        <a href="{{ route('admin.receipts.download', $receipt->id) }}" target="_blank" class="btn btn-block btn-success"><i class="fa fa-print"></i> Print</a>
                         {{-- <a href="{{ route('admin.receipts.download', $receipt->id) }}" target="_blank" class="btn btn-primary ml-2"><i class="fa fa-download"></i> Generate PDF</a> --}}
                     </div>
                     </div>
