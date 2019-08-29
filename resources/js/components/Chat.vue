@@ -25,8 +25,7 @@
                 </file-upload>
             </v-flex>
             <v-flex xs6 >
-                <v-text-field
-                  rows=2  v-model="message" label="Enter Message" single-line @keyup.enter="sendMessage"></v-text-field>
+                <v-text-field rows=2  v-model="message" label="Enter Message" single-line @keyup.enter="sendMessage"></v-text-field>
             </v-flex>
             {{message}}
             <v-flex xs4>

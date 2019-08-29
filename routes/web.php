@@ -21,6 +21,10 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
 
     Route::resource('users', 'UsersController');
 
+    Route::get('profile', 'ProfileController@index')->name('profile');
+
+    Route::post('profile/update', 'ProfileController@update')->name('profile.update');
+
     Route::delete('property-categories/destroy', 'PropertyCategoryController@massDestroy')->name('property-categories.massDestroy');
 
     Route::resource('property-categories', 'PropertyCategoryController');
@@ -100,9 +104,12 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     // Route::get('messages', 'MessageController@index')->name('messages.index');
     Route::get('messages/private', 'MessageController@private')->name('message.private');
     Route::get('messages/users', 'MessageController@users')->name('message.users');
+    Route::get('messages', 'MessageController@index')->name('messages.index');
 
-    Route::get('messages', 'MessageController@fetchMessages')->name('messages.index');;
-    Route::post('messages', 'MessageController@sendMessage');
+    Route::get('messages/{id}', 'MessageController@getMessagesFor');
+    Route::post('messages/send', 'MessageController@send');
+    // Route::get('messages', 'MessageController@fetchMessages')->name('messages.index');;
+    // Route::post('messages', 'MessageController@sendMessage');
     // Route::get('messages/private-messages/{user}', 'MessageController@privateMessages')->name('privateMessages');
     // Route::post('messages/private-messages/{user}', 'MessageController@sendPrivateMessage')->name('privateMessages.store');
 

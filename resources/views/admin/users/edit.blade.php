@@ -53,6 +53,13 @@
                 </p>
             </div>
             <div class="form-group {{ $errors->has('roles') ? 'has-error' : '' }}">
+                <label for="profile_image">Profile Image</label>
+                <input id="profile_image" type="file" class="form-control" name="profile_image">
+                @if (auth()->user()->image)
+                    <code>{{ auth()->user()->image }}</code>
+                @endif
+            </div>
+            <div class="form-group {{ $errors->has('roles') ? 'has-error' : '' }}">
                 <label for="roles">{{ trans('global.user.fields.roles') }}*
                     <span class="btn btn-info btn-xs select-all">Select all</span>
                     <span class="btn btn-info btn-xs deselect-all">Deselect all</span></label>

@@ -31,10 +31,12 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'phone_no',
         'password',
         'created_at',
         'updated_at',
         'deleted_at',
+        'profile_image',
         'remember_token',
         'email_verified_at',
     ];
@@ -64,6 +66,11 @@ class User extends Authenticatable
     public function roles()
     {
         return $this->belongsToMany(Role::class);
+    }
+
+    public function getImageAttribute()
+    {
+        return $this->profile_image;
     }
 
     /**

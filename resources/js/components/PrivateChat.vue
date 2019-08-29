@@ -31,14 +31,9 @@
 
         <div class="floating-div">
             <picker v-if="emoStatus" set="emojione" @select="onInput" title="Pick your emoji…" />
-
         </div>
 
-        <v-footer
-                height="auto"
-                fixed
-                color="grey"
-        >
+        <v-footer height="auto" fixed color="grey" >
             <v-layout row >
                 <v-flex class="ml-2 text-right" xs1>
                     <v-btn @click="toggleEmo" fab dark small color="pink">
@@ -47,38 +42,18 @@
                 </v-flex>
 
                 <v-flex xs1 class="text-center">
-                    <file-upload
-                            :post-action="'/private-messages/'+activeFriend"
-                            ref='upload'
-                            v-model="files"
-                            @input-file="$refs.upload.active = true"
-                            :headers="{'X-CSRF-TOKEN': token}"
-                    >
+                    <file-upload :post-action="'/private-messages/'+activeFriend" ref='upload' v-model="files" @input-file="$refs.upload.active = true" :headers="{'X-CSRF-TOKEN': token}">
                         <v-icon class="mt-3">attach_file</v-icon>
                     </file-upload>
-
                 </v-flex>
                 <v-flex xs6 >
-                    <v-text-field
-                            rows=2
-                            v-model="message"
-                            label="Enter Message"
-                            single-line
-                            @keyup.enter="sendMessage"
-                    ></v-text-field>
+                    <v-text-field rows=2 v-model="message" label="Enter Message" single-line @keyup.enter="sendMessage" ></v-text-field>
                 </v-flex>
 
                 <v-flex xs4>
-                    <v-btn
-                            @click="sendMessage"
-                            dark class="mt-3 ml-2 white--text" small color="green">send</v-btn>
-
-
+                    <v-btn @click="sendMessage" dark class="mt-3 ml-2 white--text" small color="green">send</v-btn>
                 </v-flex>
-
             </v-layout>
-
-
         </v-footer>
 
 

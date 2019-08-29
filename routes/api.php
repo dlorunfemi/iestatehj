@@ -1,5 +1,10 @@
 <?php
 
+Route::middleware('auth:api')->get('/user', function (Request $request) {
+    return $request->user();
+});
+
+
 Route::group(['prefix' => 'v1', 'as' => 'admin.', 'namespace' => 'Api\V1\Admin'], function () {
     Route::apiResource('permissions', 'PermissionsApiController');
 

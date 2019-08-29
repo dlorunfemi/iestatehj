@@ -15,18 +15,22 @@
 //     return (int) $user->id === (int) $id;
 // });
 
-Broadcast::channel('iestate', function ($user) {
-    return auth()->check();
-});
+// Broadcast::channel('iestate', function ($user) {
+//     return auth()->check();
+// });
 
-Broadcast::channel('privatechat.{receiverid}', function ($user,$receiverid) {
+// Broadcast::channel('privatechat.{receiverid}', function ($user,$receiverid) {
 
-    return auth()->check();
-});
+//     return auth()->check();
+// });
 
-Broadcast::channel('plchat', function ($user) {
+// Broadcast::channel('plchat', function ($user) {
 
-    if(auth()->check()){
-        return $user;
-    }
+//     if(auth()->check()){
+//         return $user;
+//     }
+// });
+
+Broadcast::channel('messages.{id}', function ($user, $id) {
+    return $user->id === (int) $id;
 });

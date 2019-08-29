@@ -9,10 +9,11 @@
         <!-- Sidebar user (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
-              <img src="{{ asset('images/user.png') }}" class="img-circle elevation-2" alt="User Image">
+              <img src="{{ asset('images/'.auth()->user()->image) }}" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
                 <a href="{{ route('admin.home') }}" class="d-block display-6 text-left">{{ Auth::user()->name  }}</a>
+                <a class="dropdown-item" href="{{ route('admin.profile') }}">Profile</a>
             </div>
           </div>
 
@@ -227,7 +228,7 @@
                         </ul>
                     </li>
                 @endcan
-                @can('message_acces')
+                @can('message_access')
                     <li class="nav-item">
                         <a href="{{ route("admin.messages.index") }}" class="nav-link {{ request()->is('admin/messages') || request()->is('admin/messages/*') ? 'active' : '' }}">
                             <i class="fas fa-comments">

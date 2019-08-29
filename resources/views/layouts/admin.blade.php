@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+    
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -39,20 +39,20 @@
             </ul>
 
                 <!-- SEARCH FORM -->
-            <form class="form-inline ml-3">
-                <div class="input-group input-group-sm">
-                <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+                <form class="form-inline ml-3">
+                    <div class="input-group input-group-sm">
+                        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
                 <div class="input-group-append">
                     <button class="btn btn-navbar" type="submit">
-                    <i class="fa fa-search"></i>
+                        <i class="fa fa-search"></i>
                     </button>
                 </div>
-                </div>
+            </div>
             </form>
-
+            
             <!-- Right navbar links -->
             {{-- @if(count(config('panel.available_languages', [])) > 1) --}}
-                <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ml-auto">
                     <li class="nav-item dropdown">
                         <a class="nav-link" data-toggle="dropdown" href="#">
                             {{ strtoupper(app()->getLocale()) }}
@@ -60,7 +60,7 @@
                         <div class="dropdown-menu dropdown-menu-right">
                             @foreach(config('panel.available_languages') as $langLocale => $langName)
                                 <a class="dropdown-item" href="{{ url()->current() }}?change_language={{ $langLocale }}">{{ strtoupper($langLocale) }} ({{ $langName }})</a>
-                            @endforeach
+                                @endforeach
                         </div>
                     </li>
                     <!-- Notifications Dropdown Menu -->
@@ -88,18 +88,18 @@
                         </a>
                         <div class="dropdown-divider"></div>
                         <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
-                        </div>
+                    </div>
                     </li>
                 </ul>
             {{-- @endif --}}
-
+            
         </nav>
 
         @include('partials.menu')
         <div class="content-wrapper" style="min-height: 917px;">
-            <!-- Main content -->
+                <!-- Main content -->
             <section class="content" style="padding-top: 20px">
-                @if(session('message'))
+                    @if(session('message'))
                     <div class="row mb-2">
                         <div class="col-lg-12">
                             <div class="alert alert-success" role="alert">{{ session('message') }}</div>
@@ -117,18 +117,18 @@
             </div>
             <strong>Copyright &copy; 2014-2019</strong> {{ trans('global.allRightsReserved') }}
         </footer>
-
+        
 
         <form id="logoutform" action="{{ route('logout') }}" method="POST" style="display: none;">
-            {{ csrf_field() }}
+                {{ csrf_field() }}
         </form>
     </div>
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-body p-0 my-3">
-
+              
           </div>
         </div>
       </div>
@@ -240,7 +240,7 @@
         $.fn.dataTable.ext.classes.sPageButton = '';
       });
     </script>
-    <script src="{{ asset('js/main.js') }}"></script>
+    {{-- <script src="{{ asset('js/main.js') }}"></script> --}}
 
     @yield('scripts')
 
