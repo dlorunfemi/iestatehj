@@ -32,6 +32,7 @@
         "bootstrap-datetimepicker": "0.0.7",
         "datatables.net": "^1.10.19",
         "datatables.net-dt": "^1.10.19",
+        "dayjs": "^1.8.16",
         "dropzone": "^5.5.1",
         "emoji-mart-vue": "^2.6.6",
         "font-awesome": "^4.7.0",

@@ -1,8 +1,14 @@
 @extends('layouts.admin')
 
+@section('styles')
+    <style>
+      .chat {
+          overflow: hidden;
+      }
+    </style>
+@endsection
 @section('content')
-                <div class="card card-default">
-                    <div class="card-header">Messages</div>
-                    <chat-app :user="{{auth()->user()}}"></chat-app>
-                </div>
+
+        <chat-app :user="{{auth()->user()}}" class="chat"></chat-app>
+
 @endsection

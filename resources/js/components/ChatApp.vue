@@ -1,8 +1,22 @@
 <template>
-    <div class="chat-app">
-        <Conversation :contact="selectedContact" :messages="messages" @new="saveNewMessage"/>
-        <ContactsList :contacts="contacts" @selected="startConversationWith"/>
-    </div>
+    <v-app class="chat-app">
+        <v-content>
+            <v-container>
+                <v-toolbar>
+                    <v-toolbar-title>Messages</v-toolbar-title>
+                </v-toolbar>
+                <v-card>
+                    <v-layout >
+                        <ContactsList :contacts="contacts" @selected="startConversationWith"/>
+                        <Conversation :contact="selectedContact" :messages="messages" @new="saveNewMessage"/>
+                    </v-layout>
+                </v-card>
+            </v-container>
+        </v-content>
+        <v-footer></v-footer>
+    </v-app>
+    <!-- <div class="chat-app">
+    </div> -->
 </template>
 
 <script>
@@ -20,6 +34,7 @@
             return {
                 selectedContact: null,
                 messages: [],
+                onlineFriends:[],
                 contacts: []
             };
         },
@@ -70,6 +85,7 @@
                 })
             }
         },
+
         components: {Conversation, ContactsList}
     }
 </script>
@@ -77,6 +93,9 @@
 
 <style lang="scss" scoped>
 .chat-app {
-    display: flex;
+    height: 50%;
+        overflow-y: none;
+
+
 }
 </style>

@@ -20,7 +20,7 @@
               </div>
 
               <v-flex class="caption font-italic">
-                  {{message.created_at}}
+                  {{ message.created_at }}
               </v-flex>
           </div>
 

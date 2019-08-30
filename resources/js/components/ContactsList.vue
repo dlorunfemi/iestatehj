@@ -1,123 +1,74 @@
 <template>
-    <div class="contacts-list">
-        <ul>
-            <li v-for="contact in sortedContacts" :key="contact.id" @click="selectContact(contact)" :class="{ 'selected': contact == selected }">
-                <div class="avatar">
-                    <img :src="'/images/' + contact.profile_image" :alt="contact.name">
-                </div>
-                <div class="contact">
-                    <p class="name">{{ contact.name }}</p>
-                    <p class="email">{{ contact.email }}</p>
-                </div>
-                <span class="unread" v-if="contact.unread">{{ contact.unread }}</span>
-            </li>
-        </ul>
-    </div>
+  <v-flex class="online-users" xs4>
+    <v-list subheader>
+      <v-subheader>Contact List</v-subheader>
+      <v-list-tile
+        v-for="contact in sortedContacts"
+        avatar
+        :key="contact.id"
+        @click="selectContact(contact)"
+        :class="{ 'selected': contact == selected }"
+      >
+        <v-list-tile-avatar>
+          <img :src="'/images/' + contact.profile_image" :alt="contact.name" />
+        </v-list-tile-avatar>
+
+        <v-list-tile-content>
+          <v-list-tile-title v-html="contact.name"></v-list-tile-title>
+          <v-list-tile-sub-title v-html="contact.email"></v-list-tile-sub-title>
+        </v-list-tile-content>
+
+        <v-list-tile-action>
+          <v-badge overlap color="grey">
+            <template v-slot:badge v-if="contact.unread">
+              <samll class="text-xs-center caption">{{ contact.unread }}</samll>
+            </template>
+            <v-icon :color="contact.unread ? 'teal' : 'grey'">chat_bubble</v-icon>
+          </v-badge>
+        </v-list-tile-action>
+      </v-list-tile>
+    </v-list>
+  </v-flex>
 </template>
 
 <script>
-    export default {
-        props: {
-            contacts: {
-                type: Array,
-                default: []
-            }
-        },
-        data() {
-            return {
-                selected: this.contacts.length ? this.contacts[0] : null
-            };
-        },
-        methods: {
-            selectContact(contact) {
-                this.selected = contact;
-
-                this.$emit('selected', contact);
-            }
-        },
-        computed: {
-            sortedContacts() {
-                return _.sortBy(this.contacts, [(contact) => {
-                    if (contact == this.selected) {
-                        return Infinity;
-                    }
-
-                    return contact.unread;
-                }]).reverse();
-            }
-        }
+export default {
+  props: {
+    contacts: {
+      type: Array,
+      default: []
     }
+  },
+  data() {
+    return {
+      selected: this.contacts.length ? this.contacts[0] : null
+    };
+  },
+  methods: {
+    selectContact(contact) {
+      this.selected = contact;
+
+      this.$emit("selected", contact);
+    }
+  },
+  computed: {
+    sortedContacts() {
+      return _.sortBy(this.contacts, [
+        contact => {
+          if (contact == this.selected) {
+            return Infinity;
+          }
+
+          return contact.unread;
+        }
+      ]).reverse();
+    }
+  }
+};
 </script>
+<style scoped>
 
-<style lang="scss" scoped>
-.contacts-list {
-    flex: 2;
-    max-height: 600px;
-    overflow: scroll;
-    border-left: 1px solid #a6a6a6;
-    
-    ul {
-        list-style-type: none;
-        padding-left: 0;
-
-        li {
-            display: flex;
-            padding: 2px;
-            border-bottom: 1px solid #aaaaaa;
-            height: 80px;
-            position: relative;
-            cursor: pointer;
-
-            &.selected {
-                background: #dfdfdf;
-            }
-
-            span.unread {
-                background: #82e0a8;
-                color: #fff;
-                position: absolute;
-                right: 11px;
-                top: 20px;
-                display: flex;
-                font-weight: 700;
-                min-width: 20px;
-                justify-content: center;
-                align-items: center;
-                line-height: 20px;
-                font-size: 12px;
-                padding: 0 4px;
-                border-radius: 3px;
-            }
-
-            .avatar {
-                flex: 1;
-                display: flex;
-                align-items: center;
-
-                img {
-                    width: 35px;
-                    border-radius: 50%;
-                    margin: 0 auto;
-                }
-            }
-
-            .contact {
-                flex: 3;
-                font-size: 10px;
-                overflow: hidden;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-
-                p {
-                    margin: 0;
-
-                    &.name {
-                        font-weight: bold;
-                    }
-                }
-            }
-        }
-    }
+.selected {
+  background: green;
 }
 </style>
