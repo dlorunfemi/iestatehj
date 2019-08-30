@@ -1,7 +1,7 @@
 <template>
     <div class="composer">
         <v-layout row >
-            <v-flex class="ml-2 text-right" xs1>
+            <!-- <v-flex class="ml-2 text-right" xs1>
                 <v-btn @click="toggleEmo" fab dark small color="pink">
                     <v-icon>insert_emoticon </v-icon>
                 </v-btn>
@@ -11,7 +11,8 @@
                 <file-upload :post-action="'/private-messages/'+activeFriend" ref='upload' v-model="files" @input-file="$refs.upload.active = true" :headers="{'X-CSRF-TOKEN': token}">
                     <v-icon class="mt-3">attach_file</v-icon>
                 </file-upload>
-            </v-flex>
+            </v-flex> -->
+            <v-flex xs2></v-flex>
             <v-flex xs8 >
                 <v-text-field rows=2 v-model="message" label="Enter Message" single-line @keyup.enter="send" ></v-text-field>
             </v-flex>
@@ -38,7 +39,7 @@
         methods: {
             send(e) {
                 e.preventDefault();
-                
+
                 if (this.message == '') {
                     return;
                 }
@@ -47,7 +48,7 @@
                 this.message = '';
             },
             toggleEmo(){
-                this.emoStatus= !this.emoStatus;
+                // this.emoStatus= !this.emoStatus;
             },
         }
     }
