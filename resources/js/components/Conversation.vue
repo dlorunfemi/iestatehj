@@ -2,9 +2,9 @@
     <v-flex class="messages mb-5" xs8>
         <h1>{{ contact ? contact.name : 'Select a Contact' }}</h1>
         <MessagesFeed :contact="contact" :messages="messages"/>
-        <div class="floating-div">
+        <!-- <div class="floating-div">
             <picker v-if="emoStatus" set="emojione" @select="onInput" title="Pick your emoji…" />
-        </div>
+        </div> -->
         <MessageComposer @send="sendMessage"/>
     </v-flex>
 </template>
