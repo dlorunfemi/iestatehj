@@ -24,15 +24,15 @@ class MessageController extends Controller
 	 *
 	 * @return \Illuminate\Http\Response
 	 */
-    
+
     public function index()
 	{
 	  	return view('admin.messages.index');
     }
-    
+
     public function users()
     {
-        
+
         // get all users except the authenticated one
         $contacts = User::where('id', '!=', auth()->id())->get();
         // get a collection of items where sender_id is the user who sent us a message
@@ -69,7 +69,7 @@ class MessageController extends Controller
 
     public function send(Request $request)
     {
-        
+
         $message = Message::create([
             'user_id' => auth()->id(),
             'receiver_id' => $request->contact_id,
@@ -77,7 +77,7 @@ class MessageController extends Controller
         ]);
         broadcast(new NewMessage($message));
         return response()->json($message);
-    }  
+    }
 
 	// public function fetchMessages()
     // {
