@@ -13,7 +13,7 @@
             </div>
             <div class="info">
                 <a href="{{ route('admin.home') }}" class="d-block display-6 text-left">{{ Auth::user()->name  }}</a>
-                <a class="dropdown-item" href="{{ route('admin.profile') }}">Profile</a>
+                {{-- <a class="dropdown-item" href="{{ route('admin.profile') }}">Profile</a> --}}
             </div>
           </div>
 
