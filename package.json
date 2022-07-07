@@ -39,7 +39,7 @@
         "jquery-ujs": "^1.2.2",
         "jszip": "^3.2.1",
         "laravel-echo": "^1.5.4",
-        "moment": "^2.24.0",
+        "moment": "^2.29.4",
         "pdfmake": "^0.1.57",
         "pusher-js": "^4.4.0",
         "select2": "^4.0.7",
