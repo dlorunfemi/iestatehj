@@ -37,7 +37,7 @@
         "emoji-mart-vue": "^2.6.6",
         "font-awesome": "^4.7.0",
         "jquery-ujs": "^1.2.2",
-        "jszip": "^3.2.1",
+        "jszip": "^3.7.0",
         "laravel-echo": "^1.5.4",
         "moment": "^2.24.0",
         "pdfmake": "^0.1.57",
